@@ -52,6 +52,7 @@
                 flex: 0 0 35.69645785503444%;
                 max-width: 35.69645785503444%;
                 margin-top: 2.3em;
+                // height: calc(100% + 50px);
                 & .skill-item {
                     @include flex_100;
                     margin-bottom: 1.5625em;
@@ -102,9 +103,11 @@
         @include row_R;
         justify-content: center;
 
+        // flex-flow: column;
         & .experience {
             flex: 0 0 48.19645785503444%;
             max-width: 48.19645785503444%;
+            // margin-top: 3.7185em;
             & h3.title {
                 @include h3;
                 margin-bottom: 1.1875em;
@@ -278,7 +281,7 @@
                         font-weight: 600;
                         line-height: 1.5625em;
                         color: var(--bg-black-700);
-                        margin: 1.0625em 0 0.625em 0;
+                        margin: 1.5625em 0 0.625em 0;
                         .close {
                             display: none;
                         }
@@ -293,20 +296,36 @@
                     }
                     ul {
                         li.ul-anime {
+                            transition: transform 0.2s ease-in-out;
                             margin: 0 0 0.3906em 0;
+                            font-family: "Poppins", sans-serif;
+                            font-size: 1em;
+                            line-height: 1.5625em;
+                            color: var(--text-black-700);
                             width: 100%;
+                            i {
+                                color: var(--text-black-500);
+                                color: var(--skin-color);
+                                margin-right: 0.5em;
+                            }
                             .close {
+                                // display: none;
                                 opacity: 0;
                             }
                             &.open {
                                 -webkit-animation: openClose 0.5s ease-in-out;
                                 animation: openClose 0.5s ease-in-out;
+                                &::before {
+                                    font-family: "Font Awesome", sans-serif;
+                                }
                             }
                         }
                     }
                 }
             }
             .close {
+                -webkit-animation: closeOpen 0.45s ease-in-out;
+                animation: closeOpen 0.45s ease-in-out;
                 opacity: 0;
             }
             .open {
@@ -336,5 +355,19 @@
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes closeOpen {
+    0% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    33% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
     }
 }

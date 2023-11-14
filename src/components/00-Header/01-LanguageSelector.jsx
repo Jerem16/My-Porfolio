@@ -1,11 +1,15 @@
-// LanguageSelector.js
-import React, { useState, useRef } from "react";
+import React, { useState, useRef} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../redux/reducers/languageSlice";
 import { setClass } from "../../redux/reducers/classesSlice";
 
 import LanguageIcon from "../99-Svg_Icon/LanguageIcon";
-import LanguageOptions from "./02-LanguageOptions";
+
+import en from "../../assets/img/flag/en.svg";
+import fr from "../../assets/img/flag/fr.svg";
+import de from "../../assets/img/flag/de.svg";
+import it from "../../assets/img/flag/it.svg";
+import es from "../../assets/img/flag/es.svg";
 
 import "./languageSelector.scss";
 
@@ -47,11 +51,60 @@ const LanguageSelector = ({ text }) => {
             </p>
 
             <span className="language-menu">
-                <LanguageOptions
-                    isSelectorOpen={isSelectorOpen}
-                    changeLanguage={changeLanguage}
-                    activeLanguage={activeLanguage}
-                />
+                {isSelectorOpen && (
+                    <>
+                        <img
+                            className={`flagLogo ${
+                                activeLanguage === "en" ? "active" : ""
+                            }`}
+                            onClick={() => changeLanguage("en")}
+                            src={en}
+                            alt="flag-en"
+                            width={30}
+                            height={30}
+                        />
+                        <img
+                            className={`flagLogo ${
+                                activeLanguage === "fr" ? "active" : ""
+                            }`}
+                            onClick={() => changeLanguage("fr")}
+                            src={fr}
+                            alt="flag-fr"
+                            width={30}
+                            height={30}
+                        />
+                        <img
+                            className={`flagLogo ${
+                                activeLanguage === "de" ? "active" : ""
+                            }`}
+                            onClick={() => changeLanguage("de")}
+                            src={de}
+                            alt="flag-de"
+                            width={30}
+                            height={30}
+                        />
+                        <img
+                            className={`flagLogo ${
+                                activeLanguage === "it" ? "active" : ""
+                            }`}
+                            onClick={() => changeLanguage("it")}
+                            src={it}
+                            alt="flag-it"
+                            width={30}
+                            height={30}
+                        />
+                        <img
+                            className={`flagLogo ${
+                                activeLanguage === "es" ? "active" : ""
+                            }`}
+                            onClick={() => changeLanguage("es")}
+                            src={es}
+                            alt="flag-es"
+                            width={30}
+                            height={30}
+                        />
+                    </>
+                )}
             </span>
         </li>
     );

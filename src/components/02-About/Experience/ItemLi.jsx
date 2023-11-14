@@ -1,7 +1,7 @@
 import React from "react";
 import shortid from "shortid";
 
-const ItemLi = ({ entry }) => {
+const ItemLi = ({ description, entry }) => {
     return (
         <ul className={`ul-anime open`}>
             {entry.description.itemLi.map((item, itemIndex) => (

@@ -1,6 +1,4 @@
 import React from "react";
-import CircleLoader from "../99-Svg_Icon/CircleLoader";
-
 import "./loader.scss";
 
 const Loader = () => {
@@ -14,9 +12,5 @@ const Loader = () => {
 export default Loader;
 
 export const Loading = () => {
-    return (
-        <div className="loading">
-            <CircleLoader />
-        </div>
-    );
+    return <div className="loading"></div>;
 };

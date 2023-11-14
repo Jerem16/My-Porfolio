@@ -1,13 +1,10 @@
 @media screen and (max-width: 620px) {
-    .modal {
-        position: fixed;
-    }
     .home {
         .row {
             min-width: calc(100% - 0px);
             min-height: initial;
             height: calc(100% - 200px);
-            padding: 0px 0.5em 1.5em;
+            padding: 0px 0.5em 1.5em ;
             max-height: 82vh;
             .home-info {
                 order: 5;
@@ -193,17 +190,16 @@
         &-content {
             .row {
                 .buttons {
-                    position: static !important;
-                    display: flex !important;
-                    flex-flow: row wrap !important;
-                    border: 1px solid #000;
+                    position: static;
+                    display: flex;
+                    flex-flow: row wrap;
                     & .btn_right {
-                        position: relative !important;
+                        position: relative;
                         display: block;
                         flex: 1;
                     }
                     .btn_left {
-                        position: relative !important;
+                        position: relative;
                         display: block;
                         flex: 1;
                         top: -27.5px;
@@ -313,13 +309,6 @@
 }
 
 @media screen and (max-width: 410px) {
-    @media screen and (max-height: 720px) {
-        .home {
-            .row {
-                min-height: 600px;
-            }
-        }
-    }
     .backgroundX {
         display: none;
     }

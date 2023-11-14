@@ -7,25 +7,6 @@ import NavMenu from "./NavMenu";
 import dataBase from "../../assets/data/header.json";
 import "./header.scss";
 
-const AsideBackground = () => (
-    <div className="aside_bg">
-        <div className="aside_bg_top"></div>
-        <div className="aside_bg_center"></div>
-        <div className="aside_bg_bottom"></div>
-    </div>
-);
-
-const Logo = ({ data }) => (
-    <div className="logo">
-        <a rel="nofollow" href="#home">
-            <div>
-                <span>{data.logoTitle}</span>
-                {data.logoSpanTitle}
-            </div>
-        </a>
-    </div>
-);
-
 function Header() {
     const data = dataBase;
     const dispatch = useDispatch();
@@ -58,8 +39,25 @@ function Header() {
             {(headerData) => (
                 <header>
                     <div className={`aside`}>
-                        <AsideBackground />
-                        <Logo data={data} />
+                        <div className="aside_bg">
+                            <div className="aside_bg_top"></div>
+                            <div className="aside_bg_center"></div>
+                            <div className="aside_bg_bottom"></div>
+                        </div>
+
+                        <div className="logo">
+                            <a
+                                rel="nofollow"
+                                href="#home"
+                            >
+                                <div
+                                
+                                >
+                                    <span>{data.logoTitle}</span>
+                                    {data.logoSpanTitle}
+                                </div>
+                            </a>
+                        </div>
 
                         {isMobile ? (
                             <NavMenu

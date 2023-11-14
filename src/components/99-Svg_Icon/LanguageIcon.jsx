@@ -1,6 +1,7 @@
 import React from "react";
 import "./languageIcon.scss";
 
+
 const LanguageIcon = ({ addClass }) => {
     return (
         <span className={`form_lang-icon ${addClass}`}>

@@ -12,7 +12,7 @@
 .contact-sub-title {
     color: var(--text-black-900);
     text-align: center;
-    font-size: 0.9375em; 
+    font-size: 0.9375em; /* Converti depuis 15px */
     margin-bottom: 60px;
 }
 .row-col {
@@ -44,13 +44,13 @@
             display: inline-block;
 
             .fa {
-                font-size: 1.5625em;
+                font-size: 1.5625em; /* Converti depuis 25px */
                 color: var(--skin-color);
             }
         }
 
         h4 {
-            font-size: 1.125em; 
+            font-size: 1.125em; /* Converti depuis 18px */
             font-weight: 700;
             color: var(--text-black-900);
             text-transform: capitalize;
@@ -109,6 +109,50 @@
             }
         }
     }
+    .modal {
+        // position: fixed;
+        height: auto;
+        // position: fixed;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: transparent !important;
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+
+        .content {
+            position: relative;
+            top: 0;
+            overflow: hidden;
+            margin-right: 1%;
+            min-width: 300px;
+            min-height: 100px;
+            border-radius: 0.4375em;
+            width: 62.5em;
+            @include drop-shadow(1em 1em 1em rgba(0, 0, 0, 0.15));
+            margin: auto;
+            button {
+                position: absolute;
+                top: 1.125em;
+                left: calc(100% - 2.25em);
+                border: none;
+                background-color: transparent;
+
+                &:hover {
+                    // @include transform(scale(1.1));
+                }
+                svg {
+                    position: relative;
+                }
+                cursor: pointer;
+            }
+        }
+    }
 }
 .error-message {
     color: var(--skin-color);
@@ -121,7 +165,13 @@
     margin-left: 27px;
 }
 #modalContact {
-
+    // overflow: hidden;
+    // width: 100%;
+    position: relative;
+    top: 0;
+    // height: 100%;
+    // height: 200px;
+    // width: 100%;
     padding: 25px;
     text-align: center;
     background-color: var(--bg-black-100);

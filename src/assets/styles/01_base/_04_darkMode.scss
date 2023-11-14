@@ -1,4 +1,12 @@
 body.dark {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-75: #292929;
+    --bg-black-50: #393939;
+    --text-black-900: #fff;
+    --text-black-700: #e9e9e9e9;
+    --text-black-500: #d3d3d3;
+
     .service .service_container .service-item .service-item-inner {
         border: 1px solid var(--bg-black-50);
         border-right-color: #222222;
@@ -25,9 +33,9 @@ body.dark {
     }
     .btn,
     .btn_a {
-        @include drop-shadow(0.15625em 0.3125em 0.9375em  rgba(0, 0, 0, 0.25));
+        box-shadow: 0.15625em 0.3125em 0.9375em rgba-color(black, 0.25);
         &::after {
-            @include drop-shadow(0.125em 0.25em 1.875em  rgba(0, 0, 0, 0.65));
+            box-shadow: 0.125em 0.25em 1.875em rgba(0, 0, 0, 0.65);
         }
     }
     & .timeline-date {
@@ -116,6 +124,7 @@ body.dark {
             }
             .logo {
                 background-color: rgba-color($bg-black-900-dark, 0.5);
+                // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
             }
@@ -157,6 +166,7 @@ body.dark {
             }
             .nav {
                 background-color: rgba-color($bg-black-900-light, 0.75);
+                // box-shadow: 0 4px 30px rgba(48, 46, 77, 0.1);
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
                 li.head-btn {
