@@ -322,7 +322,30 @@
                 min-height: 600px;
             }
         }
+        .modal .content {
+            #modalPortfolio {
+                .modalPortfolio-description {
+                    ul {
+                        li.ul-anime {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+        #modalService .service-item-inner ul {
+            max-width: calc(100% - 1em);
+            li {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin: 0;
+            }
+        }
     }
+
     .backgroundX {
         display: none;
     }
@@ -442,12 +465,6 @@
         }
     }
 
-    #tablet {
-        display: flex;
-    }
-    #desktop {
-        display: none;
-    }
     .home,
     .about,
     .service,
@@ -523,12 +540,6 @@
         }
     }
 
-    #tablet {
-        display: flex;
-    }
-    #desktop {
-        display: none;
-    }
     .home,
     .about,
     .service,
