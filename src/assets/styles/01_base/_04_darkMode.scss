@@ -1,0 +1,177 @@
+body.dark {
+    .service .service_container .service-item .service-item-inner {
+        border: 1px solid var(--bg-black-50);
+        border-right-color: #222222;
+        border-bottom-color: #222222;
+        &:hover {
+            border-right-color: #292929;
+            border-bottom-color: #292929;
+            box-shadow: 0 0 1.25em invert-rgba($shadow-rgba);
+        }
+    }
+    .about-content .timeline {
+        box-shadow: 0 0 0px invert-rgba($shadow-rgba);
+        &:hover {
+            box-shadow: 0 0 1.25em invert-rgba($shadow-rgba);
+        }
+    }
+    .about-content
+        .timeline
+        .timeline-item
+        .timeline-text
+        div.div-anime
+        .technologies {
+        @include drop-shadow(var(--skin-color-darked) 0px 0px 0.625em);
+    }
+    .btn,
+    .btn_a {
+        @include drop-shadow(0.15625em 0.3125em 0.9375em  rgba(0, 0, 0, 0.25));
+        &::after {
+            @include drop-shadow(0.125em 0.25em 1.875em  rgba(0, 0, 0, 0.65));
+        }
+    }
+    & .timeline-date {
+        i {
+            color: darkgoldenrod;
+        }
+    }
+
+    .modal {
+        background-color: rgba-color($bg-black-900-dark, 0.5);
+
+        .content {
+            @include drop-shadow(0 0 0px rgba(0, 0, 0, 0));
+            box-shadow: 0 0 1.25em invert-rgba($shadow-rgba);
+            #modalEvent,
+            #modalPortfolio,
+            #modalContact {
+                background-color: var(--bg-black-100);
+                border: 1px solid var(--bg-black-50);
+                border-radius: 0.625em;
+                .portfolio-item-inner {
+                    &:hover {
+                        box-shadow: 0 0 1.25em rgba(48, 46, 77, 0);
+                        .icon {
+                            font-size: 1.5625em;
+                            color: var(--bg-black-100);
+                            background-color: var(--skin-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+body.dark {
+    .about {
+        & .timeline {
+            & .timeline-item {
+                & .timeline-text {
+                    &:hover {
+                        .bd_Bottom {
+                            border-bottom: 1px solid var(--skin-color-dark);
+                            .fa-Circle {
+                                background: var(--skin-color-dark);
+                            }
+                        }
+                    }
+                    &_add {
+                        .bd_Bottom {
+                            border-bottom: 1px solid var(--skin-color-darked);
+                            .fa-Circle {
+                                background: var(--skin-color-darked);
+                                .icon {
+                                    color: var(--bg-black-100);
+                                }
+                            }
+                        }
+                    }
+                    .bd_Last {
+                        // border-bottom: 1px solid var(--skin-color-dark);
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body.dark {
+        .aside {
+            background-color: rgba-color($bg-black-900-dark, 0.5);
+            box-shadow: 0 0.25em 1.875em rgba(0, 0, 0, 0.1);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+
+            // @include drop-shadow(0 4px 30px rgba(48, 46, 77, 10.1));
+
+            &_bg {
+                &_bottom {
+                    background-color: rgba-color($bg-black-900-dark, 0.5);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                }
+            }
+            .logo {
+                background-color: rgba-color($bg-black-900-dark, 0.5);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+            }
+            .nav {
+                background-color: rgba-color($bg-black-900-dark, 0.75);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+            }
+            .switcher-container {
+                .style-switcher {
+                    background-color: rgba-color($bg-black-900-dark, 0.05);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                    border: none;
+                }
+            }
+        }
+    }
+    body.light {
+        .aside {
+            @include drop-shadow(0 4px 15px rgba(48, 46, 77, 0.1));
+            background-color: rgba-color($bg-black-900-light, 0.5);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            &_bg {
+                &_bottom {
+                    background-color: rgba-color($bg-black-900-light, 0.5);
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                }
+            }
+            .logo {
+                background-color: rgba-color($bg-black-900-light, 0.5);
+                box-shadow: 0 4px 7.5px rgba(48, 46, 77, 0.1);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+            }
+            .nav {
+                background-color: rgba-color($bg-black-900-light, 0.75);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                li.head-btn {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            .switcher-container {
+                .style-switcher {
+                    background-color: rgba-color($bg-black-900-light, 0.05);
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                    border: none;
+                }
+            }
+        }
+    }
+}

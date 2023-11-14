@@ -1,0 +1,81 @@
+@import "../../assets/styles/00_utils/4_fonts";
+@import "../../assets/styles/00_utils/1_variables";
+@import "../../assets/styles/00_utils/2_functions";
+@import "../../assets/styles/00_utils/3_mixins";
+
+.btn,
+a.btn_a {
+    border: none;
+    display: inline-flex;
+    white-space: nowrap;
+    text-decoration: none;
+    @include p;
+    line-height: 1.5em;
+    color: white;
+
+    padding: 0.75em 2.1875em 0.75em 2.1875em;
+    border-radius: 2.5em;
+
+    transition: all 0.3s ease;
+
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    -webkit-font-smoothing: antialiased;
+    @include drop-shadow(0 0.25em 0.9375em rgba(48, 46, 77, 0.1));
+
+    margin: 1.875em 0 3.625em 0.4375em;
+    background: linear-gradient(
+        -193.33deg,
+        var(--skin-color-light) 0%,
+        var(--skin-color) 50%,
+        var(--skin-color-dark) 100%
+    );
+
+    &:hover {
+        transform: scale(1.05);
+        transform-origin: center;
+        text-decoration: none;
+
+        &::after {
+            opacity: 1;
+            background-color: white;
+            padding: 0.9375em 2.1875em 0.9375em 2.1875em;
+            transition: all 450ms;
+        }
+    }
+    &:visited {
+        color: #fff;
+    }
+
+    &::after {
+        @include after_Before;
+        @include p;
+        line-height: 1.575em;
+        text-decoration: none;
+        border: none;
+        border-radius: 2.5em;
+        z-index: -1;
+        opacity: 0;
+        -webkit-font-smoothing: antialiased;
+        background: linear-gradient(
+            -193.33deg,
+            var(--skin-color-dark) 0%,
+            var(--skin-color) 50%,
+            var(--skin-color-light) 100%
+        );
+        background: linear-gradient(
+            -193.33deg,
+            var(--skin-color-light) 0%,
+            var(--skin-color) 50%,
+            var(--skin-color-dark) 100%
+        );
+        @include drop-shadow(0 0.25em 0.9375em rgba(48, 46, 77, 0.1));
+        transition: all 450ms;
+    }
+}
+
+.btn_left {
+    margin: 3em 0.937em 0 0;
+}
