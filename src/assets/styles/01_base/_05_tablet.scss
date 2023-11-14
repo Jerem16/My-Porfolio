@@ -94,6 +94,13 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .open {
+        .modal {
+            width: calc(100% - 0em);
+            @include transform(translateX(0));
+            z-index: 100000;
+        }
+    }
     .home {
         .row {
             max-width: calc(100% - 280px);
