@@ -1,10 +1,3 @@
-@media screen and (max-width: 1110px) {
-    .home {
-        .row {
-            // max-width: calc(100% - 180px);
-        }
-    }
-}
 @media screen and (max-width: 1080px) {
     .home {
         .row {
@@ -734,7 +727,6 @@
                     margin: 0 0 30px 0;
                 }
                 .row {
-                    // education + exp
                     max-width: calc(100% - 40px);
                     margin-bottom: 30px;
                 }
@@ -802,7 +794,6 @@
                 .row-col {
                     gap: 15px;
                     flex-flow: row wrap;
-                    // margin: 15px 0;
                 }
             }
         }
@@ -844,47 +835,45 @@
                             .quote-description {
                                 margin: 0;
                             }
-                            .home-quote {
-                            }
-                        }
-                        .content-inner {
-                            padding: 1em 0em;
-                            text-align: center;
-                            &_description {
-                                font-style: normal;
-                            }
-                            &_quote {
-                                padding-left: 10px;
+                            .content-inner {
+                                padding: 1em 0em;
+                                text-align: center;
+                                &_description {
+                                    font-style: normal;
+                                }
+                                &_quote {
+                                    padding-left: 10px;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
-    .contact {
-        .row_center {
-            .row-col {
-                gap: 15px;
-                flex-flow: row wrap;
-                margin: 0 0 22.5px 0;
+        .contact {
+            .row_center {
+                .row-col {
+                    gap: 15px;
+                    flex-flow: row wrap;
+                    margin: 0 0 22.5px 0;
+                }
             }
-        }
-        &-info-item {
-            min-width: calc(50% - 15px);
-            text-align: center;
-            margin-bottom: 0;
-            padding: 7.5px;
-            h4 {
-                font-size: 1em;
+            &-info-item {
+                min-width: calc(50% - 15px);
+                text-align: center;
+                margin-bottom: 0;
+                padding: 7.5px;
+                h4 {
+                    font-size: 1em;
+                }
             }
-        }
-        .contact-form .form-item,
-        .contact-form .col-12 .form-item {
-            margin-bottom: 22.5px;
-        }
-        .contact-content .row {
-            gap: 22.5px;
+            .contact-form .form-item,
+            .contact-form .col-12 .form-item {
+                margin-bottom: 22.5px;
+            }
+            .contact-content .row {
+                gap: 22.5px;
+            }
         }
     }
 }

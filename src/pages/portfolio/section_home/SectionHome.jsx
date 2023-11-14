@@ -6,7 +6,6 @@ import HomeInfo from "../../../components/01-Home/HomeInfo";
 import HomeImage from "../../../components/01-Home/HomeImage";
 import useLangData from "../../../utils/useLangData";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
-import "./home.scss";
 import BackgroundX from "../../../components/99-Svg_Icon/BackgroundX";
 import BackgroundY from "../../../components/99-Svg_Icon/BackgroundY";
 function SectionHome() {

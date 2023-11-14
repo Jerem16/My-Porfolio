@@ -1,5 +1,5 @@
 import React from "react";
-import "./gitHub.scss";
+
 
 const GitHub = ({ addClass }) => {
     return (
