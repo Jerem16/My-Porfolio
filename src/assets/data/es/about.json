@@ -52,6 +52,7 @@
     "experience": [
         {
             "sectionTitle": "Experiencia",
+            "classTitle": "experiencia",
             "sectionId": "Exp1",
             "year": "2021 - 2022",
             "title": "Desarrollador Web",
@@ -96,6 +97,8 @@
             "year": "2022 - 2023",
             "title": "Desarrollador Web / Integrador Web",
             "techTitle": "Tecnologías ",
+            "siteLink": "Enlace al sitio web",
+            "githubLink": "Enlace al repositorio",
             "entries": [
                 {
                     "size": 25,
@@ -108,7 +111,7 @@
                         "CSS": true
                     },
                     "description": {
-                        "paragraph": "Completado de la página de inicio del sitio Riding Cities (agencia Webonzaï).",
+                        "paragraph": "Completar la página de inicio del sitio Riding Cities (agencia Webonzaï).",
                         "itemLi": []
                     }
                 },
@@ -118,6 +121,8 @@
                     "index": "random-index-7",
                     "jobTitle": "Booki",
                     "addClass": "timeline-text_add ",
+                    "siteLink": "https://jerem16.github.io/Booki/index.html",
+                    "githubLink": "https://github.com/Jerem16/Jeremy_L_Projet_03",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -125,7 +130,7 @@
                     "description": {
                         "paragraph": "Integración de la interfaz web para Booki.",
                         "itemLi": [
-                            "Transformación de maquetas en código HTML/CSS.",
+                            "Transformación de maquetas a código HTML/CSS.",
                             "Creación de una interfaz web receptiva",
                             "Optimización del rendimiento y compatibilidad con navegadores modernos."
                         ]
@@ -137,18 +142,20 @@
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
                     "addClass": "timeline-text_add ",
+                    "siteLink": "https://jerem16.github.io/ohmyfood/loader.html",
+                    "githubLink": "https://github.com/Jerem16/Jeremy_L_Projet_04",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
                         "Sass": true
                     },
                     "description": {
-                        "paragraph": "Desarrollador Junior en OhMyFood - Creación de un sitio web Mobile-First",
+                        "paragraph": "Desarrollador Junior en OhMyFood - Creación de un sitio Mobile-First",
                         "itemLi": [
-                            "Integración de maquetas en versión móvil y PC de escritorio.",
+                            "Integración de maquetas en versiones móviles y de PC de escritorio.",
                             "Desarrollo de un sitio web receptivo con animaciones.",
-                            "Colaboración estrecha con el diseñador de experiencia de usuario y cumplimiento del informe creativo.",
-                            "Creación de una plataforma que enumera los menús de restaurantes gourmet con un sistema de reserva y composición de menú personalizado."
+                            "Colaboración estrecha con el diseñador UX y cumplimiento del brief creativo.",
+                            "Creación de una plataforma que lista los menús de restaurantes gourmet con un sistema de reserva y composición de menú personalizado."
                         ]
                     }
                 },
@@ -158,13 +165,15 @@
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
                     "addClass": "timeline-text_add ",
+                    "siteLink": "https://jerem16.github.io/print_it/index.html",
+                    "githubLink": "https://github.com/Jerem16/Projet_05v2",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Desarrollador Front-End Freelance en Print-It - Proyecto de Carrusel",
+                        "paragraph": "Desarrollador Front-End Freelance en Print-It - Proyecto Carrusel",
                         "itemLi": [
                             "Dinamización de un sitio web estático.",
                             "Implementación de un carrusel.",
@@ -184,12 +193,12 @@
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Desarrollador Front-End en ArchiWebos - Integración de un sitio de portafolio para un arquitecto de interiores",
+                        "paragraph": "Desarrollador Front-End en ArchiWebos - Integración de un sitio portfolio para una arquitecta de interiores",
                         "itemLi": [
-                            "Diseño del sitio de portafolio del arquitecto de interiores basado en una maqueta.",
+                            "Diseño del sitio portfolio de la arquitecta de interiores, según una maqueta.",
                             "Desarrollo de la página de presentación con integración de una galería de filtros.",
                             "Creación de la página de inicio de sesión del administrador.",
-                            "Creación del modal para cargar medios."
+                            "Diseño de la modal para cargar medios."
                         ]
                     }
                 },
@@ -207,11 +216,11 @@
                         "wakelet": true
                     },
                     "description": {
-                        "paragraph": "Jefe de Proyecto en Desarrollo Web en Webgencia - Proyecto 'Menu Maker by Qwenta'",
+                        "paragraph": "Jefe de Proyecto en Desarrollo Web en Webgencia - Proyecto “Menu Maker by Qwenta”",
                         "itemLi": [
-                            "Misión de planificación y gestión del proyecto para el desarrollo de un 'Menu Maker' para Qwenta.",
+                            "Misión de planificación y gestión de proyecto para el desarrollo de un “Menu Maker” para Qwenta.",
                             "Colaboración con el Product Owner, preparación de una reunión de validación del proyecto con Qwenta.",
-                            "Tareas principales: vigilancia, especificaciones técnicas, planificación del proyecto."
+                            "Principales tareas: investigación, especificaciones técnicas, planificación de proyecto."
                         ]
                     }
                 },
@@ -221,6 +230,8 @@
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
                     "addClass": "timeline-text_add ",
+                    "siteLink": "https://jerem16.github.io/react_kasa_page/",
+                    "githubLink": "https://github.com/Jerem16/React_kasa",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -229,10 +240,10 @@
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Desarrollador Front-End Freelance para Kasa - Reestructuración del sitio",
+                        "paragraph": "Desarrollador Front-End Freelance para Kasa - Rediseño del sitio",
                         "itemLi": [
-                            "Transición de ASP.NET a una pila JavaScript (NodeJS/React).",
-                            "Desarrollo de la aplicación React a partir de maquetas.",
+                            "Cambio de ASP.NET a una pila JavaScript (NodeJS/React).",
+                            "Desarrollo de la aplicación React según maquetas.",
                             "Cumplimiento de las restricciones técnicas y funcionales.",
                             "Uso de datos (archivo JSON).",
                             "Desarrollo de componentes React.",
@@ -247,6 +258,8 @@
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
                     "addClass": "timeline-text_add ",
+                    "siteLink": "https://jerem16.github.io/nina_carducci/index.html",
+                    "githubLink": "https://github.com/Jerem16/Nina_Carducci",
                     "technologies": {
                         "SEO": true,
                         "HTML": true,
@@ -260,9 +273,9 @@
                             "Identificación de problemas de rendimiento y SEO.",
                             "Optimización global, imágenes y código, rendimiento y accesibilidad.",
                             "Meta descripción (palabras clave auditadas).",
-                            "Metaetiquetas, redes sociales.",
-                            "Optimización local (Schema.org), adición de información (dirección, número de teléfono, horarios, contacto, etc.).",
-                            "Informe de optimización de auditoría Google Rich Snippet, extensión Wave."
+                            "Meta etiquetas, redes sociales.",
+                            "SEO local (Schema.org), añadir información (dirección, número de teléfono, horarios, contacto, etc.).",
+                            "Informe de optimización de la auditoría de fragmentos enriquecidos de Google, extensión Wave."
                         ]
                     }
                 },
@@ -282,10 +295,10 @@
                     "description": {
                         "paragraph": "Optimización y depuración, finalización del sitio 77events",
                         "itemLi": [
-                            "Diseño y realización de pruebas unitarias y pruebas de integración.",
+                            "Diseño y realización de pruebas unitarias y de integración.",
                             "Corrección de errores.",
                             "Validación de pruebas, verificación del comportamiento de los componentes.",
-                            "Redacción del manual de recetas (adición de escenarios de prueba)."
+                            "Redacción del manual de recetas (agregando escenarios de prueba)."
                         ]
                     }
                 },
@@ -294,6 +307,8 @@
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
                     "addClass": "timeline-text_add ",
+                    "siteLink": "https://jerem16.github.io/argent_bank/",
+                    "githubLink": "https://github.com/Jerem16/Front_ArgentBank-website",
                     "technologies": {
                         "React": true,
                         "Redux": true,
@@ -306,8 +321,8 @@
                         "itemLi": [
                             "Creación de una aplicación web completa y receptiva con React.",
                             "Uso de Redux para gestionar los estados de la aplicación.",
-                            "Creación de una API para implementar funciones de autenticación, inicio de sesión, cierre de sesión y visualización del perfil del usuario.",
-                            "Aplicación de las mejores prácticas de Green Code, optimización de imágenes, creación de componentes reutilizables."
+                            "Creación de una API para implementar las funciones de autenticación, inicio de sesión, cierre de sesión y visualización del perfil del usuario.",
+                            "Aplicación de las buenas prácticas de Green Code, optimización de imágenes, creación de componentes reutilizables."
                         ]
                     }
                 }

@@ -814,6 +814,7 @@
             object-fit: cover;
             width: 100%;
             border-radius: 0.35em;
+            max-height: calc(100vh - 30vh);
         }
     }
     .modalPortfolio-description {
