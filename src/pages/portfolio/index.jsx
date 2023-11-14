@@ -1,16 +1,12 @@
 import React, { useState, lazy, Suspense } from "react";
-import SectionContact from "./section_contact/SectionContact";
-import SectionPortfolio from "./section_portfolio/SectionPortfolio";
-import SectionServices from "./section_services/SectionServices";
+
 import SectionHome from "./section_home/SectionHome";
-import SectionAbout from "./section_about/SectionAbout";
 import Header from "../../components/00-Header/00-Header";
 import { useDispatch, useSelector } from "react-redux";
 import { setModalContact } from "../../redux/reducers/classesSlice";
 import PortfolioModalContent from "../../components/04-portfolio/PortfolioModalContent";
 import ModalService from "../../components/Modal/ModalService/ModalService";
 import ModalForm from "../../components/Modal/ModalForm/ModalForm";
-import Modal from "../../components/Modal/Modal";
 import "./index.scss";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
@@ -64,33 +60,35 @@ function MainPortfolio() {
                         openModalPortfolio={openModalPortfolio}
                     />
                     <LazySectionContact />
+                    {selectedPortfolio && (
+                        <LazyModal
+                            opened={true}
+                            Content={
+                                <PortfolioModalContent
+                                    selectedPortfolio={selectedPortfolio}
+                                    closeModal={closeModal}
+                                />
+                            }
+                        />
+                    )}
+                    {selectedService && (
+                        <LazyModal
+                            opened={true}
+                            Content={
+                                <ModalService
+                                    selectedService={selectedService}
+                                    closeModal={closeModal}
+                                />
+                            }
+                        />
+                    )}
+                    <LazyModal
+                        opened={modalContact}
+                        Content={
+                            <LazyModalForm closeModal={closeModalContact} />
+                        }
+                    />
                 </Suspense>
-                {selectedPortfolio && (
-                    <Modal
-                        opened={true}
-                        Content={
-                            <PortfolioModalContent
-                                selectedPortfolio={selectedPortfolio}
-                                closeModal={closeModal}
-                            />
-                        }
-                    />
-                )}
-                {selectedService && (
-                    <Modal
-                        opened={true}
-                        Content={
-                            <ModalService
-                                selectedService={selectedService}
-                                closeModal={closeModal}
-                            />
-                        }
-                    />
-                )}
-                <Modal
-                    opened={modalContact}
-                    Content={<ModalForm closeModal={closeModalContact} />}
-                />
             </main>
         </>
     );

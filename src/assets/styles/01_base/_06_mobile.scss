@@ -222,8 +222,8 @@
         flex-flow: column wrap;
         gap: 30px;
         .service-item {
-            flex: 0 0 100%;
-            max-width: 100%;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
             gap: 45px;
             .service-item-inner {
                 .icon {
