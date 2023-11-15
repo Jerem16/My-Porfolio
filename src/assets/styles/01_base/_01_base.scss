@@ -56,7 +56,8 @@ body.dark {
 
 ul {
     list-style: none;
-    li, .ul-anime {
+    li,
+    .ul-anime {
         transition: transform 0.2s ease-in-out;
         font-size: 1em;
         line-height: 1.5625em;
@@ -67,6 +68,9 @@ ul {
             margin-right: 0.5em;
         }
     }
+}
+.flag i {
+    margin-right: 0;
 }
 .section {
     display: flex;
