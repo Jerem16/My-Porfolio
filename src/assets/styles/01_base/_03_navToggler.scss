@@ -10,8 +10,10 @@
 
 .modal {
     width: 100%;
+
     @include transition(all, 0.5s, ease);
-    z-index: 10000000;
+    // z-index: 1000000 !important;
+    overflow-x: hidden !important;
 }
 
 .open {
@@ -39,9 +41,6 @@
         width: calc(100% + 0em);
         @include transform(translateX(0));
         animation: slide 0.4s ease reverse;
-    }
-    .modal {
-        width: 100%;
     }
     .bgDraw2 {
         height: calc(50vh - 19.237vw - 0vw);

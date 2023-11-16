@@ -331,6 +331,8 @@
         .modal .content {
             #modalPortfolio {
                 .modalPortfolio-description {
+                    max-height: 335px !important;
+                    overflow-y: scroll;
                     ul {
                         li.ul-anime {
                             overflow: hidden;
