@@ -20,12 +20,11 @@ function App() {
     };
 
     return (
-        <ScrollToTop>
-            <div className={`${navToggler}`} id="top" style={themeClasses}>
-                <NavToggler />
-                <MainPortfolio />
-            </div>
-        </ScrollToTop>
+        // <ScrollToTop>  </ScrollToTop>
+        <div className={`${navToggler}`} id="top" style={themeClasses}>
+            <NavToggler />
+            <MainPortfolio />
+        </div>
     );
 }
 

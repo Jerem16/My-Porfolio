@@ -54,7 +54,7 @@ function MainPortfolio() {
             <main className="main-content">
                 <SectionHome />
                 <Suspense fallback={<div>Loading...</div>}>
-                    <LazySectionAbout />{" "}
+                    <LazySectionAbout />
                     {selectedService && (
                         <LazyModal
                             opened={true}
@@ -81,12 +81,14 @@ function MainPortfolio() {
                     <LazySectionPortfolio
                         openModalPortfolio={openModalPortfolio}
                     />
-                    <LazyModal
-                        addClass={"contactModal"}
-                        opened={modalContact}
-                        Content={<ModalForm closeModal={closeModalContact} />}
-                    />
                     <LazySectionContact />
+
+                    <LazyModal
+                        opened={modalContact}
+                        Content={
+                            <LazyModalForm closeModal={closeModalContact} />
+                        }
+                    />
                 </Suspense>
             </main>
         </>
