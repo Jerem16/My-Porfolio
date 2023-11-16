@@ -54,23 +54,7 @@ function MainPortfolio() {
             <main className="main-content">
                 <SectionHome />
                 <Suspense fallback={<div>Loading...</div>}>
-                    <LazySectionAbout />
-                    <LazySectionServices openModalService={openModalService} />
-                    <LazySectionPortfolio
-                        openModalPortfolio={openModalPortfolio}
-                    />
-                    <LazySectionContact />
-                    {selectedPortfolio && (
-                        <LazyModal
-                            opened={true}
-                            Content={
-                                <PortfolioModalContent
-                                    selectedPortfolio={selectedPortfolio}
-                                    closeModal={closeModal}
-                                />
-                            }
-                        />
-                    )}
+                    <LazySectionAbout />{" "}
                     {selectedService && (
                         <LazyModal
                             opened={true}
@@ -82,12 +66,27 @@ function MainPortfolio() {
                             }
                         />
                     )}
-                    <LazyModal
-                        opened={modalContact}
-                        Content={
-                            <LazyModalForm closeModal={closeModalContact} />
-                        }
+                    <LazySectionServices openModalService={openModalService} />
+                    {selectedPortfolio && (
+                        <LazyModal
+                            opened={true}
+                            Content={
+                                <PortfolioModalContent
+                                    selectedPortfolio={selectedPortfolio}
+                                    closeModal={closeModal}
+                                />
+                            }
+                        />
+                    )}
+                    <LazySectionPortfolio
+                        openModalPortfolio={openModalPortfolio}
                     />
+                    <LazyModal
+                        addClass={"contactModal"}
+                        opened={modalContact}
+                        Content={<ModalForm closeModal={closeModalContact} />}
+                    />
+                    <LazySectionContact />
                 </Suspense>
             </main>
         </>

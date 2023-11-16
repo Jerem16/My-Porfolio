@@ -1,40 +1,34 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const Modal = ({ opened, Content, closeIcon }) => {
+const Modal = ({ opened, Content, closeIcon, addClass }) => {
     // eslint-disable-next-line
     const [isOpened, setIsOpened] = useState(opened);
 
     useEffect(() => {
-        const adjustModalPosition = () => {
-            const modal = document.querySelector(".modal");
-            if (modal) {
-                const screenHeight = window.innerHeight;
-                const scrollY = window.scrollY || window.pageYOffset;
-
-                const newTop = scrollY / screenHeight;
-                const newTop1 = newTop * 100;
-
-                modal.style.top = `${newTop1}vh`;
-            }
-        };
-
         if (opened) {
+            const adjustModalPosition = () => {
+                const modal = document.querySelector(".modal");
+                if (modal) {
+                    // Ne modifiez pas directement la position ici
+                }
+            };
+
             adjustModalPosition();
             window.addEventListener("resize", adjustModalPosition);
-            window.addEventListener("scroll", adjustModalPosition);
-        }
+            // Supprimez l'écouteur d'événements de défilement
 
-        return () => {
-            window.removeEventListener("resize", adjustModalPosition);
-            window.removeEventListener("scroll", adjustModalPosition);
-        };
+            return () => {
+                window.removeEventListener("resize", adjustModalPosition);
+                // Supprimez l'écouteur d'événements de défilement
+            };
+        }
     }, [opened]);
 
     return (
         <>
             {opened && (
-                <div className={`modal`}>
+                <div className={`modal ${addClass}`}>
                     <div className="content sideAnime">
                         {Content}
                         <button
