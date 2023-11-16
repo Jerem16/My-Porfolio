@@ -86,9 +86,7 @@ function MainPortfolio() {
                     <LazyModal
                         addClass={"contactModal"}
                         opened={modalContact}
-                        Content={
-                            <LazyModalForm closeModal={closeModalContact} />
-                        }
+                        Content={<ModalForm closeModal={closeModalContact} />}
                     />
                 </Suspense>
             </main>
