@@ -132,15 +132,6 @@ const ContactForm = ({
         };
     }, [formSubmitted]);
 
-    if (state.succeeded && showModal) {
-        return (
-            <Modal
-                addClass={"contactModal"}
-                opened={modalContact}
-                Content={<ModalForm closeModal={closeModalContact} />}
-            />
-        );
-    }
 
     return (
         <form className="contact-form" ref={formRef} onSubmit={sendContact}>
