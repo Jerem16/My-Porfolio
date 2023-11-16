@@ -32,9 +32,10 @@ function NavItem({ handleClick, startLinks }) {
                 offset={0}
                 duration={500}
                 to={initClass}
+                onClick={handleClick}
             >
                 <i className={`icon ${data.startLinks[0].icon}`}></i>
-                <span onClick={handleClick}>{startLinks[0].text}</span>
+                <span>{startLinks[0].text}</span>
             </Link>
         </li>
     );

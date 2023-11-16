@@ -23,11 +23,12 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
                             offset={data.navLinks[index].offset}
                             duration={500}
                             to={data.navLinks[index].to}
+                            onClick={handleClick}
                         >
                             <i
                                 className={`icon ${data.navLinks[index].icon}`}
                             ></i>
-                            <span onClick={handleClick}>{link.text}</span>
+                            <span>{link.text}</span>
                         </Link>
                     </li>
                 ))}
