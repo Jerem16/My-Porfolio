@@ -106,7 +106,6 @@ ul {
     min-height: 100vh;
     top: 0 !important;
     left: 0;
-    // top: 0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,10 +138,6 @@ ul {
                 position: relative;
             }
             cursor: pointer;
-        }
-        #modalPortfolio,
-        #modalService {
-            
         }
     }
 }

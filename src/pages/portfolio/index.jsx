@@ -21,9 +21,9 @@ const LazySectionContact = lazy(() =>
 );
 const LazyModal = lazy(() => import("../../components/Modal/Modal"));
 
-const LazyModalForm = lazy(() =>
-    import("../../components/Modal/ModalForm/ModalForm")
-);
+// const LazyModalForm = lazy(() =>
+//     import("../../components/Modal/ModalForm/ModalForm")
+// );
 
 function MainPortfolio() {
     const dispatch = useDispatch();

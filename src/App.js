@@ -2,7 +2,6 @@ import React from "react";
 import NavToggler from "./components/00-Header/NavToggler";
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
-import ScrollToTop from "./utils/ScrollToTopOnMount";
 import "./assets/styles/main.scss";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
     };
 
     return (
-        // <ScrollToTop>  </ScrollToTop>
         <div className={`${navToggler}`} id="top" style={themeClasses}>
             <NavToggler />
             <MainPortfolio />
