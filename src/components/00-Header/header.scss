@@ -151,7 +151,6 @@
                 max-width: 2.953125em;
                 margin-right: 1em;
                 fill: var(--text-black-900);
-
                 .icon-fsa {
                     max-width: 2.953125em;
                     font-size: 1em;
@@ -245,29 +244,7 @@
             }
         }
     }
-    @-webkit-keyframes fa-spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
 
-        to {
-            -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-        }
-    }
-
-    @keyframes fa-spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-
-        to {
-            -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-        }
-    }
     .switcher-container {
         position: relative;
         top: 1.5625em;
@@ -276,7 +253,11 @@
         height: 6.25em;
         width: calc(100% + 0em);
         max-width: 18.75em;
-        .style-switcher {
+        .switcher-color {
+            border: 1px solid transparent;
+            border-radius: 0.3125vw;
+            border-bottom-left-radius: 0px;
+            background-color: var(--bg-black-900);
             display: flex;
             flex-flow: column;
             justify-content: space-around;
@@ -285,14 +266,12 @@
             height: 6.25em;
             top: 0.315em;
             left: 2.765625em;
-            padding: 0.703125em;
-            padding-right: 1.40625em;
-            border: 1px solid transparent;
-            border-radius: 0.3125vw;
-            border-bottom-left-radius: 0px;
-            background-color: var(--bg-black-900);
             position: absolute;
             bottom: 0em;
+        }
+        .style-switcher {
+            padding: 0.703125em;
+            padding-right: 1.40625em;
             z-index: 101;
             transition: all 0.3s ease;
             @include transform(translateY(12.5em));
@@ -339,5 +318,17 @@
                 }
             }
         }
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
     }
 }

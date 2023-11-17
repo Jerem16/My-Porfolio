@@ -65,7 +65,7 @@ function ThemeSelector() {
                     {isDarkMode ? <Sun /> : <Moon />}
                 </div>
             </div>
-            <div className={`style-switcher ${isSelectorOpen ? "open" : ""}`}>
+            <div className={`style-switcher switcher-color ${isSelectorOpen ? "open" : ""}`}>
                 <h4>Theme Colors</h4>
                 <div className="colors">
                     <span

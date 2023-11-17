@@ -397,10 +397,9 @@
 
         .icon {
             display: inline-block;
-
+            fill: var(--skin-color);
             .icon-fsa {
                 font-size: 1.5625em;
-                fill: var(--skin-color);
             }
         }
 
@@ -963,12 +962,11 @@
                 text-align: center;
                 color: var(--skin-color);
                 transition: all 0.3s ease;
-
+                fill: var(--skin-color);
                 width: 60px;
                 height: 60px;
                 line-height: 66px;
                 .icon-fsa {
-                    fill: var(--skin-color);
                     font-size: 1em;
                     margin: 0 auto;
                     padding: 0;
@@ -981,13 +979,11 @@
                 box-shadow: 0 0 1.25em rgba(48, 46, 77, 0.15);
                 .icon {
                     font-size: 1.5625em;
-                    color: var(--bg-black-100);
+                    // color: var(--bg-black-100);
                     background-color: var(--skin-color);
+                    fill: var(--bg-black-100);
                     .icon-fsa {
-                        fill: var(--bg-black-100);
                         font-size: 1.2em;
-                        // height: 1em;
-                        // line-height: 60px;
                     }
                 }
             }
@@ -1028,8 +1024,8 @@
             line-height: 3.75em;
             font-size: 1.5625em;
             background-color: var(--skin-color);
+            fill: var(--bg-black-100);
             .icon-fsa {
-                fill: var(--bg-black-100);
                 font-size: 1.5625em;
             }
         }
