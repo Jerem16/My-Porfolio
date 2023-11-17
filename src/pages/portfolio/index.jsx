@@ -7,6 +7,7 @@ import { setModalContact } from "../../redux/reducers/classesSlice";
 import PortfolioModalContent from "../../components/04-portfolio/PortfolioModalContent";
 import ModalService from "../../components/Modal/ModalService/ModalService";
 import ModalForm from "../../components/Modal/ModalForm/ModalForm";
+import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
@@ -21,9 +22,6 @@ const LazySectionContact = lazy(() =>
 );
 const LazyModal = lazy(() => import("../../components/Modal/Modal"));
 
-// const LazyModalForm = lazy(() =>
-//     import("../../components/Modal/ModalForm/ModalForm")
-// );
 
 function MainPortfolio() {
     const dispatch = useDispatch();
@@ -53,7 +51,7 @@ function MainPortfolio() {
 
             <main className="main-content">
                 <SectionHome />
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loader />}>
                     <LazySectionAbout />
                     {selectedService && (
                         <LazyModal

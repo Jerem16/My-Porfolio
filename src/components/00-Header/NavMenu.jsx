@@ -25,10 +25,17 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
                             to={data.navLinks[index].to}
                             onClick={handleClick}
                         >
-                            <i
-                                className={`icon ${data.navLinks[index].icon}`}
-                            ></i>
-                            <span>{link.text}</span>
+                            <span className="icon">
+                                <svg
+                                    viewBox={data.navLinks[index].viewBox}
+                                    height="1em"
+                                    xmlSpace="preserve"
+                                    className="icon-fsa"
+                                >
+                                    <path d={data.navLinks[index].icon} />
+                                </svg>
+                            </span>
+                            {link.text}
                         </Link>
                     </li>
                 ))}

@@ -6,7 +6,6 @@ import contactIcon from "../../assets/data/contactIcon.json";
 import TopContact from "./TopContact";
 import SubContact from "./SubContact";
 
-
 const LayoutContact = ({ setIsSuccessModalOpen, isSuccessModalOpen }) => {
     return (
         <ContactDataLoader>
@@ -17,7 +16,8 @@ const LayoutContact = ({ setIsSuccessModalOpen, isSuccessModalOpen }) => {
                         <div className="row-col">
                             {contactIcon.contactInfoItem.map((item, index) => (
                                 <ContactInfoItem
-                                    iconClass={item.icon}
+                                    viewBox={item.viewBox}
+                                    icon={item.icon}
                                     title={
                                         data.contact.contactInfo[index].title
                                     }

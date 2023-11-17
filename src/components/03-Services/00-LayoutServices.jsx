@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceItem from "./ServiceItem";
 import ServiceDataLoader from "./ServiceDataLoader";
+import serviceIcon from "../../assets/data/serviceIcon.json";
 
 const ServicesComponent = ({ openModalService }) => {
     return (
@@ -21,7 +22,8 @@ const ServicesComponent = ({ openModalService }) => {
                                     onClick={() => openModalService(service)}
                                 >
                                     <ServiceItem
-                                        iconClass={service.icon}
+                                        viewBox={serviceIcon[index].viewBox}
+                                        iconClass={serviceIcon[index].icon}
                                         title={service.title}
                                         description={service.description}
                                     />

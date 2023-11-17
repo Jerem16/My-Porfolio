@@ -1,5 +1,6 @@
 import React from "react";
 import shortid from "shortid";
+import Check from "../../99-Svg_Icon/check";
 
 const ItemLi = ({ entry }) => {
     return (
@@ -12,7 +13,7 @@ const ItemLi = ({ entry }) => {
                         transitionDelay: `${itemIndex * 0.1}s`,
                     }}
                 >
-                    <i className="fas fa-check"></i>
+                     <Check />
                     {item}
                 </li>
             ))}

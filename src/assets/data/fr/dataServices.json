@@ -4,7 +4,6 @@
             "id": "S1",
             "h2": "Services",
             "title": "Web/Developer",
-            "icon": "fa fa-mobile-alt",
             "description": "Développement de sites web responsives.",
             "modalDescription": "Conception et développement de sites web responsives.",
             "details": [
@@ -21,10 +20,8 @@
         {
             "id": "S2",
             "title": "Web/Integrator",
-            "icon": "fa fa-laptop-code",
             "description": "Des sites web, Dynamiques, Interactifs et Conviviaux.",
             "modalDescription": "Création de sites web, dynamiques, interactifs et conviviaux.",
-
             "details": [
                 "Concevez des interfaces utilisateur élégantes et intuitives pour une expérience utilisateur optimale.",
                 "Intégrez des données en temps réel en utilisant des API de pointe.",
@@ -39,10 +36,8 @@
         {
             "id": "S3",
             "title": "Web/UX/Design",
-            "icon": "fa fa-palette",
             "description": "Réalisez vos rêves ! Transformez-les en réalité !",
             "modalDescription": "Vous avez des rêves ? Faites-en une réalité !",
-
             "details": [
                 "Transformez vos créations graphiques en sites web interactifs.",
                 "Notre service d'intégration de maquettes Figma et PSD en HTML/CSS est à votre disposition !",
@@ -57,7 +52,6 @@
         {
             "id": "S4",
             "title": "Code/Crafters",
-            "icon": "fa fa-code",
             "description": "Une gamme de services complète pour votre site.",
             "modalDescription": "Nous vous proposont une gamme complète de services, pour garantir la performance et la pertinence de votre site web.",
             "details": [
@@ -74,10 +68,8 @@
         {
             "id": "S5",
             "title": "SEO",
-            "icon": "fa fa-search",
             "description": "La gamme de services, qui maximise la visibilité de votre site web.",
             "modalDescription": "La gamme de services, qui maximise la visibilité de votre site web.",
-
             "details": [
                 "Parce que nous comprenons l'importance du SEO pour la croissance de votre entreprise en ligne.",
                 "Une gamme complète de services pour garantir la performance et la pertinence de votre site.",
@@ -94,7 +86,6 @@
         {
             "id": "S6",
             "title": "Freelance/Consulting",
-            "icon": "fa fa-bullhorn",
             "description": "Partenaire pour une Consultation en Ligne Réussie",
             "modalDescription": "Partenaire pour une Consultation en Ligne Réussie",
             "details": [

@@ -4,7 +4,6 @@
             "id": "S1",
             "h2": "Dienstleistungen",
             "title": "Web/Entwickler",
-            "icon": "fa fa-mobile-alt",
             "description": "Entwicklung von responsiven Websites.",
             "modalDescription": "Konzeption und Entwicklung von responsiven Websites.",
             "details": [
@@ -21,7 +20,6 @@
         {
             "id": "S2",
             "title": "Web/Integrator",
-            "icon": "fa fa-laptop-code",
             "description": "Dynamische, interaktive und benutzerfreundliche Websites.",
             "modalDescription": "Erstellung von dynamischen, interaktiven und benutzerfreundlichen Websites.",
             "details": [
@@ -38,7 +36,6 @@
         {
             "id": "S3",
             "title": "Web/UX/Design",
-            "icon": "fa fa-palette",
             "description": "Verwirklichen Sie Ihre Träume! Machen Sie sie zur Realität!",
             "modalDescription": "Haben Sie Träume? Lassen Sie sie Wirklichkeit werden!",
             "details": [
@@ -55,7 +52,6 @@
         {
             "id": "S4",
             "title": "Code/Crafters",
-            "icon": "fa fa-code",
             "description": "Ein umfassendes Dienstleistungsangebot für Ihre Website.",
             "modalDescription": "Möchten Sie Ihre Online-Präsenz optimieren?",
             "modalDescription2": "Wir bieten Ihnen ein umfassendes Dienstleistungsangebot, um die Leistung und Relevanz Ihrer Website zu gewährleisten.",
@@ -73,7 +69,6 @@
         {
             "id": "S5",
             "title": "SEO",
-            "icon": "fa fa-search",
             "description": "Das Serviceangebot zur Maximierung der Sichtbarkeit Ihrer Website.",
             "modalDescription": "Das Serviceangebot zur Maximierung der Sichtbarkeit Ihrer Website.",
             "details": [
@@ -92,7 +87,6 @@
         {
             "id": "S6",
             "title": "Freelance/Beratung",
-            "icon": "fa fa-bullhorn",
             "description": "Ihr Partner für erfolgreiche Online-Beratung",
             "modalDescription": "Ihr Partner für erfolgreiche Online-Beratung",
             "details": [

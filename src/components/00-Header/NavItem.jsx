@@ -34,8 +34,17 @@ function NavItem({ handleClick, startLinks }) {
                 to={initClass}
                 onClick={handleClick}
             >
-                <i className={`icon ${data.startLinks[0].icon}`}></i>
-                <span>{startLinks[0].text}</span>
+                <span className="icon">
+                    <svg
+                        viewBox={data.startLinks[0].viewBox}
+                        height="1em"
+                        xmlSpace="preserve"
+                        className="icon-fsa"
+                    >
+                        <path d={data.startLinks[0].icon} />
+                    </svg>
+                </span>
+                {startLinks[0].text}
             </Link>
         </li>
     );

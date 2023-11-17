@@ -94,13 +94,14 @@
             a.active-link,
             a.active-link .icon {
                 color: var(--text-black-900);
+                fill: var(--text-black-900);
             }
             .activeStart {
                 span {
                     color: var(--text-black-900);
                 }
                 .icon {
-                    color: var(--text-black-900);
+                    fill: var(--text-black-900);
                 }
             }
         }
@@ -119,6 +120,9 @@
             a,
             .lang {
                 flex: 2;
+                display: inline-flex;
+                flex-flow: row;
+                align-items: center;
                 min-width: 90px;
                 font-size: 1em;
                 font-weight: 600;
@@ -131,17 +135,27 @@
             a.active-link,
             a.active-link .icon {
                 color: var(--skin-color);
+                fill: var(--skin-color);
             }
             a,
             .icon {
                 color: var(--text-black-900);
+                fill: var(--text-black-900);
             }
             .icon {
                 flex: 1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
                 max-width: 2.953125em;
                 margin-right: 1em;
-                color: var(--text-black-900);
-                padding: 1em;
+                fill: var(--text-black-900);
+
+                .icon-fsa {
+                    max-width: 2.953125em;
+                    font-size: 1em;
+                }
             }
             .lang-icon {
                 flex: 1;
@@ -155,12 +169,12 @@
                     color: var(--skin-color);
                 }
                 .icon {
-                    color: var(--skin-color);
+                    fill: var(--skin-color);
                 }
                 a.active-link {
                     color: var(--skin-color);
                     .icon {
-                        color: var(--skin-color);
+                        fill: var(--skin-color);
                     }
                 }
             }
@@ -169,12 +183,12 @@
                     color: var(--skin-color);
                 }
                 .icon {
-                    color: var(--skin-color);
+                    fill: var(--skin-color);
                 }
             }
         }
         &.langOpen {
-            height:  24.625em;
+            height: 24.625em;
         }
     }
     .switcher-block {
@@ -199,12 +213,59 @@
             left: -0.4em;
             cursor: pointer;
             transition: all 0.3s ease;
+            fill: var(--text-black-900);
+            .style-switcher-toggler,
+            .day-night {
+                display: inline-flex;
+                flex-flow: column nowrap;
+                align-items: flex-end;
+                justify-content: space-around;
+                margin: 0 auto;
+            }
             &.style-switcher-toggler {
                 top: 0.65em;
             }
             &.day-night {
                 top: 3.125em;
             }
+            .cog,
+            .sun,
+            .moon {
+                width: 1.05em;
+                height: 1.05em;
+                font-size: 1.0125em;
+                line-height: 2.03125em;
+                position: relative;
+                top: 0.165em;
+                left: -0.0265em;
+            }
+            .cog {
+                -webkit-animation: fa-spin 2s linear infinite;
+                animation: fa-spin 2s linear infinite;
+            }
+        }
+    }
+    @-webkit-keyframes fa-spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+        }
+    }
+
+    @keyframes fa-spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
         }
     }
     .switcher-container {

@@ -3,7 +3,23 @@
 @import "../../assets/styles/00_utils/1_variables";
 @import "../../assets/styles/00_utils/2_functions";
 @import "../../assets/styles/00_utils/3_mixins";
-
+.icon-fsa,
+.check,
+.icon {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    transition: all 0.05s linear;
+}
+.check {
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.125em;
+}
 .about {
     &-content {
         width: 100%;
@@ -176,7 +192,7 @@
                         .fa-Circle {
                             background: var(--skin-color);
                             i {
-                                color: white;
+                                fill: white;
                             }
                         }
                     }
@@ -202,11 +218,11 @@
                             background: var(--skin-color-light);
                             opacity: 1;
                             // transition: all 0.35s ease-in-out;
-                            i {
+                            svg {
                                 display: block;
-                                font-size: 0.78125em;
+                                font-size: 0.8em;
 
-                                color: var(--bg-black-75);
+                                fill: var(--bg-black-75);
                             }
                         }
                     }
@@ -382,9 +398,9 @@
         .icon {
             display: inline-block;
 
-            .fa {
+            .icon-fsa {
                 font-size: 1.5625em;
-                color: var(--skin-color);
+                fill: var(--skin-color);
             }
         }
 
@@ -937,7 +953,10 @@
             border-radius: 0.625em;
             cursor: pointer;
             .icon {
-                display: block;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-around;
+                align-items: center;
                 margin: 0 auto;
                 border-radius: 50%;
                 font-size: 2.5em;
@@ -947,7 +966,15 @@
 
                 width: 60px;
                 height: 60px;
-                line-height: 60px;
+                line-height: 66px;
+                .icon-fsa {
+                    fill: var(--skin-color);
+                    font-size: 1em;
+                    margin: 0 auto;
+                    padding: 0;
+
+                    line-height: 60px;
+                }
             }
             &:hover {
                 transform: scale(1.05);
@@ -956,6 +983,12 @@
                     font-size: 1.5625em;
                     color: var(--bg-black-100);
                     background-color: var(--skin-color);
+                    .icon-fsa {
+                        fill: var(--bg-black-100);
+                        font-size: 1.2em;
+                        // height: 1em;
+                        // line-height: 60px;
+                    }
                 }
             }
             h3 {
@@ -968,6 +1001,7 @@
         }
     }
 }
+
 #modalService {
     overflow: hidden;
     max-width: auto;
@@ -983,17 +1017,21 @@
         width: 84%;
         margin: auto;
         .icon {
-            display: block;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            align-items: center;
             width: 3.75em;
             height: 3.75em;
             margin: 0 auto 1.875em;
             border-radius: 50%;
             line-height: 3.75em;
-            text-align: center;
-            transition: all 0.3s ease;
             font-size: 1.5625em;
-            color: var(--bg-black-100);
             background-color: var(--skin-color);
+            .icon-fsa {
+                fill: var(--bg-black-100);
+                font-size: 1.5625em;
+            }
         }
         h4 {
             @include h4;

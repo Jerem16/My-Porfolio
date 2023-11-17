@@ -6,7 +6,9 @@ import {
     changeDarkTheme,
     changeDarkedTheme,
 } from "../../../redux/reducers/themeSlice";
-
+import Sun from "../../99-Svg_Icon/sun";
+import Moon from "../../99-Svg_Icon/moon";
+import Cog from "../../99-Svg_Icon/cog";
 function ThemeSelector() {
     const dispatch = useDispatch();
 
@@ -36,10 +38,10 @@ function ThemeSelector() {
             document.body.classList.add("dark");
         }
 
-        const dayNightIcon = document.querySelector(".day-night i");
+        const dayNightIcon = document.querySelector(".day-night svg");
         if (dayNightIcon) {
-            dayNightIcon.classList.remove("fa-sun", "fa-moon");
-            dayNightIcon.classList.add(isDarkMode ? "fa-sun" : "fa-moon");
+            dayNightIcon.classList.remove("sun", "moon");
+            dayNightIcon.classList.add(isDarkMode ? "sun" : "moon");
         }
     }, [isDarkMode]);
 
@@ -57,12 +59,10 @@ function ThemeSelector() {
                     className="s-icon style-switcher-toggler"
                     onClick={toggleSelector}
                 >
-                    <i className="fas fa-cog fa-spin"></i>
+                    <Cog />
                 </div>
                 <div className="s-icon day-night" onClick={toggleDarkMode}>
-                    <i
-                        className={`fas ${isDarkMode ? "fa-sun" : "fa-moon"}`}
-                    ></i>
+                    {isDarkMode ? <Sun /> : <Moon />}
                 </div>
             </div>
             <div className={`style-switcher ${isSelectorOpen ? "open" : ""}`}>

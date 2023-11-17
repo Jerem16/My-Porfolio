@@ -4,7 +4,6 @@
             "id": "S1",
             "h2": "Services",
             "title": "Web/Developer",
-            "icon": "fa fa-mobile-alt",
             "description": "Responsive website development.",
             "modalDescription": "Design and development of responsive websites.",
             "details": [
@@ -21,7 +20,6 @@
         {
             "id": "S2",
             "title": "Web/Integrator",
-            "icon": "fa fa-laptop-code",
             "description": "Dynamic and Interactive, websites.",
             "modalDescription": "Creating dynamic, interactive, and user-friendly websites.",
 
@@ -39,7 +37,6 @@
         {
             "id": "S3",
             "title": "Web/UX/Design",
-            "icon": "fa fa-palette",
             "description": "Bring your dreams come true ! Turn them into reality !",
             "modalDescription": "Bring your dreams to life! Transform them into reality!",
 
@@ -57,7 +54,6 @@
         {
             "id": "S4",
             "title": "Code/Crafters",
-            "icon": "fa fa-code",
             "description": "A complete range of services for your website.",
             "modalDescription": "Looking to optimize your online presence? We offer a complete range of services to ensure the performance and relevance of your website.",
 
@@ -75,7 +71,6 @@
         {
             "id": "S5",
             "title": "SEO",
-            "icon": "fa fa-search",
             "description": "The service range that maximizes the visibility of your site.",
             "modalDescription": "The service range that maximizes the visibility of your website.",
 
@@ -95,7 +90,6 @@
         {
             "id": "S6",
             "title": "Freelance/Consulting",
-            "icon": "fa fa-bullhorn",
             "description": "Your partner for successful online consultation.",
             "modalDescription": "Your partner for successful online consultation.",
             "details": [

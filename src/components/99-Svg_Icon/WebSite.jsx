@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const WebSite = ({ addClass }) => {
     return (
         <span className={`${addClass}`}>
