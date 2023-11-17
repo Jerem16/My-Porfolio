@@ -1,14 +1,13 @@
 import React from "react";
-import shortid from "shortid";
 import tech from "../../../assets/data/technology.json";
 
 function TechnologyIcons({ entry }) {
     return (
         <div className="technologies">
-            {Object.keys(tech.technologyImages).map((technology) =>
+            {Object.keys(tech.technologyImages).map((technology, index) =>
                 entry.technologies &&
                 entry.technologies[technology] === true ? (
-                    <div key={shortid.generate()}>
+                    <div key={`Tech_${index * 100}`}>
                         <abbr
                             title={
                                 tech.technologySymbols[technology]

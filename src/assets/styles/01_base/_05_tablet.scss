@@ -94,6 +94,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .aside {
+        @include transform(translateX(-100vw));
+    }
     .open {
         .modal {
             width: calc(100% - 0em);
@@ -101,7 +104,7 @@
             z-index: 100000;
         }
         .aside {
-            @include transform(translateX(-100vw));
+            @include transform(translateX(0vw));
         }
         .main-content {
             width: 100%;
@@ -115,6 +118,9 @@
             width: 100%;
             @include transform(translateX(0));
             animation: slide 0.4s ease reverse;
+        }
+        .aside {
+            @include transform(translateX(-100vw));
         }
     }
     .modal {

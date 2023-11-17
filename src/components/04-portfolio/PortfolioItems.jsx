@@ -1,7 +1,6 @@
 import React from "react";
 import portfolio_img from "../../assets/data/portfolio_img.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import shortid from "shortid";
 
 const PortfolioItems = React.memo(({ openModal }) => {
     return portfolio_img.map((item) => {
@@ -14,7 +13,7 @@ const PortfolioItems = React.memo(({ openModal }) => {
         return (
             <div
                 className="service-item"
-                key={shortid.generate()}
+                key={item.id}
                 onClick={() => openModal(item)}
             >
                 <div className="portfolio-item-inner shadow-dark">

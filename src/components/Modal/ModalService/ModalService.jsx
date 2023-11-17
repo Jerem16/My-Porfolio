@@ -1,9 +1,10 @@
 import React from "react";
-import shortid from "shortid";
+
 import ServiceDataLoader from "../../03-Services/ServiceDataLoader";
 import CloseIcon from "../../99-Svg_Icon/CloseIcon";
 import serviceIcon from "../../../assets/data/serviceIcon.json";
 import Check from "../../99-Svg_Icon/check";
+
 const ModalService = ({ selectedService, closeModal }) => {
     return (
         <ServiceDataLoader>
@@ -38,9 +39,11 @@ const ModalService = ({ selectedService, closeModal }) => {
                                         <p>{serviceItem.modalDescription}</p>
                                         <ul>
                                             {serviceItem.details.map(
-                                                (detail) => (
+                                                (detail, index) => (
                                                     <li
-                                                        key={shortid.generate()}
+                                                        key={`ServLi_${
+                                                            index * 70
+                                                        }`}
                                                     >
                                                         <Check />
                                                         {detail}

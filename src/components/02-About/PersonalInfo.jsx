@@ -1,11 +1,10 @@
 import React from "react";
-import shortid from "shortid";
 
 function PersonalInfo({ info }) {
     return (
         <>
-            {Object.entries(info).map(([key, value]) => (
-                <div className="info-item" key={shortid.generate()}>
+            {Object.entries(info).map(([key, value, index]) => (
+                <div className="info-item" key={`Person.Inf_${key}`}>
                     <p>
                         {key} : <span>{value}</span>
                     </p>

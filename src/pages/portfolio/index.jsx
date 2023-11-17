@@ -11,6 +11,7 @@ import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
+
 const LazySectionServices = lazy(() =>
     import("./section_services/SectionServices")
 );
@@ -21,7 +22,6 @@ const LazySectionContact = lazy(() =>
     import("./section_contact/SectionContact")
 );
 const LazyModal = lazy(() => import("../../components/Modal/Modal"));
-
 
 function MainPortfolio() {
     const dispatch = useDispatch();

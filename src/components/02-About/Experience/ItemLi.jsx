@@ -1,5 +1,4 @@
 import React from "react";
-import shortid from "shortid";
 import Check from "../../99-Svg_Icon/check";
 
 const ItemLi = ({ entry }) => {
@@ -8,12 +7,12 @@ const ItemLi = ({ entry }) => {
             {entry.description.itemLi.map((item, itemIndex) => (
                 <li
                     className={`ul-anime open`}
-                    key={shortid.generate()}
+                    key={`itemLi_${itemIndex + 1}`}
                     style={{
                         transitionDelay: `${itemIndex * 0.1}s`,
                     }}
                 >
-                     <Check />
+                    <Check />
                     {item}
                 </li>
             ))}

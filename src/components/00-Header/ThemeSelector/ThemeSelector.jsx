@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
     changeTheme,
@@ -6,14 +6,51 @@ import {
     changeDarkTheme,
     changeDarkedTheme,
 } from "../../../redux/reducers/themeSlice";
-import Sun from "../../99-Svg_Icon/sun";
-import Moon from "../../99-Svg_Icon/moon";
-import Cog from "../../99-Svg_Icon/cog";
-function ThemeSelector() {
+import ThemeToggleButton from "./ThemeToggleButton";
+import ThemeDark from "./ThemeDark";
+
+const themeColors = [
+    {
+        id: "z1",
+        themeColor: "#ec1839",
+        lightTheme: "#ea5b71",
+        darkTheme: "#a1172c",
+        darkedTheme: "#581620",
+    },
+    {
+        id: "z2",
+        themeColor: "#fa5b0f",
+        lightTheme: "#ed8655",
+        darkTheme: "#aa4311",
+        darkedTheme: "#5c2b13",
+    },
+    {
+        id: "z3",
+        themeColor: "#37b182",
+        lightTheme: "#6fbd9f",
+        darkTheme: "#2b7a5c",
+        darkedTheme: "#204537",
+    },
+    {
+        id: "z4",
+        themeColor: "#1854b4",
+        lightTheme: "#5b81bf",
+        darkTheme: "#173e7c",
+        darkedTheme: "#162946",
+    },
+    {
+        id: "z5",
+        themeColor: "#f021b2",
+        lightTheme: "#e760be",
+        darkTheme: "#a31d7b",
+        darkedTheme: "#591946",
+    },
+];
+
+const ThemeSelector = () => {
     const dispatch = useDispatch();
 
     const [isSelectorOpen, setIsSelectorOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const toggleSelector = () => {
         setIsSelectorOpen(!isSelectorOpen);
@@ -24,109 +61,40 @@ function ThemeSelector() {
         dispatch(changeLightTheme(lightTheme));
         dispatch(changeDarkTheme(darkTheme));
         dispatch(changeDarkedTheme(darkedTheme));
-        setIsSelectorOpen(!isSelectorOpen);
+        setIsSelectorOpen(false);
     };
-
-    const toggleDarkMode = useCallback(() => {
-        setIsDarkMode(!isDarkMode);
-
-        if (isDarkMode) {
-            document.body.classList.remove("dark");
-            document.body.classList.add("light");
-        } else {
-            document.body.classList.remove("light");
-            document.body.classList.add("dark");
-        }
-
-        const dayNightIcon = document.querySelector(".day-night svg");
-        if (dayNightIcon) {
-            dayNightIcon.classList.remove("sun", "moon");
-            dayNightIcon.classList.add(isDarkMode ? "sun" : "moon");
-        }
-    }, [isDarkMode]);
-
-    useEffect(() => {
-        if (!document.body.classList.contains("dark")) {
-            toggleDarkMode();
-        }
-        // eslint-disable-next-line
-    }, []);
 
     return (
         <div className="switcher-container">
             <div className="switcher-block">
-                <div
-                    className="s-icon style-switcher-toggler"
-                    onClick={toggleSelector}
-                >
-                    <Cog />
-                </div>
-                <div className="s-icon day-night" onClick={toggleDarkMode}>
-                    {isDarkMode ? <Sun /> : <Moon />}
-                </div>
+                <ThemeToggleButton onClick={toggleSelector} />
+                <ThemeDark />
             </div>
-            <div className={`style-switcher switcher-color ${isSelectorOpen ? "open" : ""}`}>
+            <div
+                className={`style-switcher switcher-color ${
+                    isSelectorOpen ? "open" : ""
+                }`}
+            >
                 <h4>Theme Colors</h4>
                 <div className="colors">
-                    <span
-                        className="color-1"
-                        onClick={() =>
-                            changeToTheme(
-                                "#ec1839",
-                                "#ea5b71",
-                                "#a1172c",
-                                "#581620"
-                            )
-                        }
-                    ></span>
-                    <span
-                        className="color-2"
-                        onClick={() =>
-                            changeToTheme(
-                                "#fa5b0f",
-                                "#ed8655",
-                                "#aa4311",
-                                "#5c2b13"
-                            )
-                        }
-                    ></span>
-                    <span
-                        className="color-3"
-                        onClick={() =>
-                            changeToTheme(
-                                "#37b182",
-                                "#6fbd9f",
-                                "#2b7a5c",
-                                "#204537"
-                            )
-                        }
-                    ></span>
-                    <span
-                        className="color-4"
-                        onClick={() =>
-                            changeToTheme(
-                                "#1854b4",
-                                "#5b81bf",
-                                "#173e7c",
-                                "#162946"
-                            )
-                        }
-                    ></span>
-                    <span
-                        className="color-5"
-                        onClick={() =>
-                            changeToTheme(
-                                "#f021b2",
-                                "#e760be",
-                                "#a31d7b",
-                                "#591946"
-                            )
-                        }
-                    ></span>
+                    {themeColors.map((color, index) => (
+                        <span
+                            key={color.id}
+                            className={`color-${index + 1}`}
+                            onClick={() =>
+                                changeToTheme(
+                                    color.themeColor,
+                                    color.lightTheme,
+                                    color.darkTheme,
+                                    color.darkedTheme
+                                )
+                            }
+                        ></span>
+                    ))}
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default React.memo(ThemeSelector);

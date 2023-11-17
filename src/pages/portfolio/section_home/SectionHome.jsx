@@ -1,13 +1,27 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, lazy } from "react";
 import Typed from "typed.js";
-import CanvasBackground from "../../../components/CanvasBackground/CanvasBackground";
-import CanvasBackground2 from "../../../components/CanvasBackground/CanvasBackground2";
+// import CanvasBackground from "../../../components/CanvasBackground/CanvasBackground";
+// import CanvasBackground2 from "../../../components/CanvasBackground/CanvasBackground2";
 import HomeInfo from "../../../components/01-Home/HomeInfo";
 import HomeImage from "../../../components/01-Home/HomeImage";
 import useLangData from "../../../utils/useLangData";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
-import BackgroundX from "../../../components/99-Svg_Icon/BackgroundX";
-import BackgroundY from "../../../components/99-Svg_Icon/BackgroundY";
+// import BackgroundX from "../../../components/99-Svg_Icon/BackgroundX";
+// import BackgroundY from "../../../components/99-Svg_Icon/BackgroundY";
+
+const LazyBackgroundX = lazy(() =>
+    import("../../../components/99-Svg_Icon/BackgroundX")
+);
+const LazyBackgroundY = lazy(() =>
+    import("../../../components/99-Svg_Icon/BackgroundY")
+);
+const LazyCanvasBackground = lazy(() =>
+    import("../../../components/CanvasBackground/CanvasBackground")
+);
+const LazyCanvasBackground2 = lazy(() =>
+    import("../../../components/CanvasBackground/CanvasBackground2")
+);
+
 function SectionHome() {
     const data = useLangData("home.json");
 
@@ -41,14 +55,14 @@ function SectionHome() {
             {(homeData) => (
                 <section className="home section" id="home">
                     <div className="cont">
-                        <BackgroundX />
-                        <BackgroundY />
+                        <LazyBackgroundX />
+                        <LazyBackgroundY />
                     </div>
                     <div id="top"></div>
                     <div className="container">
                         <div className="row_top"></div>
                         <div className="bgDraw">
-                            <CanvasBackground />
+                            <LazyCanvasBackground />
                         </div>
 
                         <div className="row_center">
@@ -76,7 +90,7 @@ function SectionHome() {
                             </div>
                         </div>
                         <div className="bgDraw2">
-                            <CanvasBackground2 />
+                            <LazyCanvasBackground2 />
                         </div>
                         <div className="col_end"></div>
                     </div>

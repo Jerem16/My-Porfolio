@@ -9,9 +9,9 @@ function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
                 <i className="fa fa-calendar"></i> {experience.year}
             </h3>
             <h4 className="timeline-title">{experience.title}</h4>
-            {experience.entries.map((entry) => (
+            {experience.entries.map((entry, index) => (
                 <ExperienceEntry
-                    key={entry.index}
+                    key={`${entry.index}_exp_${index * 3}`}
                     entry={entry}
                     toggleArticle={toggleArticle}
                     openArticleStates={openArticleStates}
