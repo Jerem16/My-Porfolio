@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+
 const Cog = () => {
     return (
         <svg viewBox="0 0 512 512" height="1em" className="cog">

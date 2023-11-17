@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import ContactForm from "./02-ContactForm";
 import ContactInfoItem from "./01-ContactInfoItem";
 import ContactDataLoader from "./ContactDataLoader";

@@ -4,18 +4,14 @@ import React, {
     useRef,
     useEffect,
     useMemo,
-    lazy,
 } from "react";
 import PropTypes from "prop-types";
 import Field, { FIELD_TYPES } from "./Field/Field";
 import Button, { BUTTON_TYPES } from "../../components/Button/Button";
 import { useForm, ValidationError } from "@formspree/react";
-import ModalForm from "../Modal/ModalForm/ModalForm";
-import Modal from "../Modal/Modal";
-import { useDispatch, useSelector } from "react-redux";
-import { setModalContact } from "../../redux/reducers/classesSlice";
 
-const LazyModal = lazy(() => import("../Modal/Modal"));
+import { useDispatch } from "react-redux";
+import { setModalContact } from "../../redux/reducers/classesSlice";
 
 const ContactForm = ({
     onSuccess,
@@ -29,14 +25,9 @@ const ContactForm = ({
     formErrors,
 }) => {
     const dispatch = useDispatch();
-    const modalContact = useSelector((state) => state.classes.modalContact);
-    const closeModalContact = () => {
-        dispatch(setModalContact(false));
-    };
 
     const [sending, setSending] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [showModal, setShowModal] = useState(false); // Nouvelle variable d'état
     const [errorFields, setErrorFields] = useState({
         nom: "",
         email: "",
@@ -63,7 +54,6 @@ const ContactForm = ({
         }
 
         setFormSubmitted(false);
-        setShowModal(false); // Réinitialisez la variable showModal
     };
 
     const sendContact = useCallback(
@@ -98,7 +88,6 @@ const ContactForm = ({
                 setSending(false);
                 setFormSubmitted(true);
                 onSuccess();
-                setShowModal(true); // Affichez la modal ici
                 dispatch(setModalContact(true));
             } catch (err) {
                 setSending(false);
@@ -131,7 +120,6 @@ const ContactForm = ({
             }
         };
     }, [formSubmitted]);
-
 
     return (
         <form className="contact-form" ref={formRef} onSubmit={sendContact}>
