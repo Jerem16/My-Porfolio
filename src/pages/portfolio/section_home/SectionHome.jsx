@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, lazy } from "react";
+import React, { useEffect, useRef, lazy, Suspense } from "react";
 import Typed from "typed.js";
 // import CanvasBackground from "../../../components/CanvasBackground/CanvasBackground";
 // import CanvasBackground2 from "../../../components/CanvasBackground/CanvasBackground2";
@@ -55,14 +55,18 @@ function SectionHome() {
             {(homeData) => (
                 <section className="home section" id="home">
                     <div className="cont">
-                        <LazyBackgroundX />
-                        <LazyBackgroundY />
+                        <Suspense fallback={<></>}>
+                            <LazyBackgroundX />
+                            <LazyBackgroundY />
+                        </Suspense>
                     </div>
                     <div id="top"></div>
                     <div className="container">
                         <div className="row_top"></div>
                         <div className="bgDraw">
-                            <LazyCanvasBackground />
+                            <Suspense fallback={<></>}>
+                                <LazyCanvasBackground />
+                            </Suspense>
                         </div>
 
                         <div className="row_center">
@@ -90,7 +94,9 @@ function SectionHome() {
                             </div>
                         </div>
                         <div className="bgDraw2">
-                            <LazyCanvasBackground2 />
+                            <Suspense fallback={<></>}>
+                                <LazyCanvasBackground2 />
+                            </Suspense>
                         </div>
                         <div className="col_end"></div>
                     </div>
