@@ -1,8 +1,10 @@
-import React from "react";
-import NavToggler from "./components/00-Header/NavToggler";
+import React, { lazy, Suspense } from "react";
+// import NavToggler from "./components/00-Header/NavToggler";
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
 import "./assets/styles/main.scss";
+
+const LazyNavToggler = lazy(() => import("./components/00-Header/NavToggler"));
 
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
@@ -20,7 +22,9 @@ function App() {
 
     return (
         <div className={`${navToggler}`} id="top" style={themeClasses}>
-            <NavToggler />
+            <Suspense fallback={<></>}>
+                <LazyNavToggler />
+            </Suspense>
             <MainPortfolio />
         </div>
     );

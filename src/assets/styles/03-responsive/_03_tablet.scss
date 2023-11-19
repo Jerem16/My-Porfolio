@@ -114,6 +114,11 @@
         }
     }
     .close {
+        .modal {
+            width: calc(100% - 0em);
+            @include transform(translateX(0));
+            z-index: 100000;
+        }
         .main-content {
             width: 100%;
             @include transform(translateX(0));
@@ -124,10 +129,20 @@
         }
     }
     .modal {
-        position: sticky !important;
-        top: 0 !important;
         .content {
             width: calc(100vw - 127px);
+            #modalService {
+                .service-item-inner {
+                    ul {
+                        li {
+                            margin: 0;
+                        }
+                    }
+                    p {
+                        margin: 0.9375em 0;
+                    }
+                }
+            }
 
             button {
                 position: absolute;

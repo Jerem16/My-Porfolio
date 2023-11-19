@@ -33,6 +33,7 @@
         width: calc(100% - 16.875em);
         @include transform(translateX(16.875em));
         @include transition(all, 0.5s, ease);
+        top: inherit !important;
     }
 }
 
@@ -50,6 +51,7 @@
         width: calc(100% - 16.875em);
         @include transform(translateX(16.875em));
         @include transition(all, 0.5s, ease);
+        top: inherit !important;
     }
 }
 

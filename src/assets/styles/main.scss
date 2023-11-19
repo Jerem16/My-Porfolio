@@ -7,7 +7,20 @@
 @import "./01_base/02_pages";
 @import "./01_base/03_navToggler";
 @import "./01_base/04_darkMode";
-@import "./01_base/04_responsive";
-@import "./01_base/04_responsive1440";
-@import "./01_base/05_tablet.scss";
-@import "./01_base/06_mobile.scss";
+
+@import "./02-components/000_header.scss";
+@import "./02-components/001_header-languageSelector.scss";
+@import "./02-components/002_header-themeSelector.scss";
+@import "./02-components/010_home.scss";
+@import "./02-components/020_about";
+@import "./02-components/030_services";
+@import "./02-components/040_portfolio";
+@import "./02-components/050_contact";
+@import "./02-components/00_modal";
+
+@import "./03-responsive/01_4k-1600px";
+@import "./03-responsive/02_1440px-1080px";
+@import "./03-responsive/03_tablet";
+@import "./03-responsive/04_mobile";
+
+// @import "./04_modal/00_modal";

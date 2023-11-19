@@ -8,7 +8,7 @@ import PortfolioModalContent from "../../components/04-portfolio/PortfolioModalC
 import ModalService from "../../components/Modal/ModalService/ModalService";
 import ModalForm from "../../components/Modal/ModalForm/ModalForm";
 import Loader from "../../components/Loader/Loader";
-import "./index.scss";
+
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
 

@@ -1,14 +1,8 @@
 @media screen and (max-width: 620px) {
     .modal {
-        position: sticky !important;
+        position: fixed !important;
         top: 0 !important;
     }
-    .contactModal {
-        position: relative !important;
-        height: auto !important;
-        top: -100vh !important;
-    }
-
     .home {
         .row {
             min-width: calc(100% - 0px);
@@ -322,7 +316,7 @@
 }
 
 @media screen and (max-width: 410px) {
-    @media screen and (max-height: 720px) {
+    @media screen and (max-height: 990px) {
         .home {
             .row {
                 min-height: 600px;
@@ -333,6 +327,8 @@
                 .modalPortfolio-description {
                     max-height: 335px !important;
                     overflow-y: scroll;
+                    padding-right: 0.5em;
+                    margin: 0;
                     ul {
                         li.ul-anime {
                             overflow: hidden;

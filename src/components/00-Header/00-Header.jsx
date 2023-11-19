@@ -1,11 +1,9 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
-// import ThemeSelector from "./ThemeSelector/ThemeSelector";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../redux/reducers/classesSlice";
 import NavMenu from "./NavMenu";
 import dataBase from "../../assets/data/header.json";
-import "./header.scss";
 
 const LazyThemeSelector = lazy(() => import("./ThemeSelector/ThemeSelector"));
 

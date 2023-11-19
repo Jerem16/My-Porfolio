@@ -7,8 +7,6 @@ import { setClass } from "../../redux/reducers/classesSlice";
 import LanguageIcon from "../99-Svg_Icon/LanguageIcon";
 import LanguageOptions from "./02-LanguageOptions";
 
-import "./languageSelector.scss";
-
 const LanguageSelector = ({ text }) => {
     const dispatch = useDispatch();
     const selectedLanguage = useSelector((state) => state.language.language);

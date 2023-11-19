@@ -21,9 +21,10 @@ a.btn_a {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    box-shadow: 0 0.25em 0.9375em rgba(48, 46, 77, 0.1);
+    transform: scale(1);
 
     -webkit-font-smoothing: antialiased;
-    @include drop-shadow(0 0.25em 0.9375em rgba(48, 46, 77, 0.1));
 
     margin: 1.875em 0 3.625em 0.4375em;
     background: linear-gradient(
@@ -36,43 +37,13 @@ a.btn_a {
     &:hover {
         transform: scale(1.05);
         transform-origin: center;
-        text-decoration: none;
-
-        &::after {
-            opacity: 1;
-            background-color: white;
-            padding: 0.9375em 2.1875em 0.9375em 2.1875em;
-            transition: all 450ms;
-        }
-    }
-    &:visited {
-        color: #fff;
+        box-shadow: 0 0.25em 0.9375em rgba(48, 46, 77, 0.35);
     }
 
-    &::after {
+    &::before {
         @include after_Before;
-        @include p;
-        line-height: 1.575em;
-        text-decoration: none;
-        border: none;
-        border-radius: 2.5em;
         z-index: -1;
         opacity: 0;
-        -webkit-font-smoothing: antialiased;
-        background: linear-gradient(
-            -193.33deg,
-            var(--skin-color-dark) 0%,
-            var(--skin-color) 50%,
-            var(--skin-color-light) 100%
-        );
-        background: linear-gradient(
-            -193.33deg,
-            var(--skin-color-light) 0%,
-            var(--skin-color) 50%,
-            var(--skin-color-dark) 100%
-        );
-        @include drop-shadow(0 0.25em 0.9375em rgba(48, 46, 77, 0.1));
-        transition: all 450ms;
     }
 }
 
