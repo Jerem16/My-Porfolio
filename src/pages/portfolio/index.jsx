@@ -9,6 +9,8 @@ import Loader from "../../components/Loader/Loader";
 
 import Modal from "../../components/Modal/Modal";
 
+const LazyHeader = lazy(() => import("../../components/00-Header/00-Header"));
+
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
 
 const LazySectionServices = lazy(() =>
@@ -29,7 +31,9 @@ const LazyModalService = lazy(() =>
 const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
 );
-
+const LazyNavToggler = lazy(() =>
+    import("../../components/00-Header/NavToggler")
+);
 function MainPortfolio() {
     const dispatch = useDispatch();
     const modalContact = useSelector((state) => state.classes.modalContact);
@@ -55,6 +59,22 @@ function MainPortfolio() {
     return (
         <>
             <Header />
+            <Suspense fallback={<></>}>
+                <LazyNavToggler />
+            </Suspense>
+            <main className="main-content">
+                <SectionHome />
+                <Suspense fallback={<Loader />}>
+                    <LazySectionAbout />
+
+                    <LazySectionServices openModalService={openModalService} />
+
+                    <LazySectionPortfolio
+                        openModalPortfolio={openModalPortfolio}
+                    />
+                    <LazySectionContact />
+                </Suspense>
+            </main>
             {selectedService && (
                 <Modal
                     opened={true}
@@ -82,19 +102,6 @@ function MainPortfolio() {
                 opened={modalContact}
                 Content={<LazyModalForm closeModal={closeModalContact} />}
             />
-            <main className="main-content">
-                <SectionHome />
-                <Suspense fallback={<Loader />}>
-                    <LazySectionAbout />
-
-                    <LazySectionServices openModalService={openModalService} />
-
-                    <LazySectionPortfolio
-                        openModalPortfolio={openModalPortfolio}
-                    />
-                    <LazySectionContact />
-                </Suspense>
-            </main>
         </>
     );
 }
