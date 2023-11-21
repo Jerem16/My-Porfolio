@@ -6,11 +6,7 @@ const ContactDataLoader = ({ children }) => {
     const contactData = useLangData("contact.json");
 
     if (!contactData?.contact) {
-        return (
-            <div>
-                <Loader />
-            </div>
-        );
+        return <></>;
     }
 
     return children(contactData);

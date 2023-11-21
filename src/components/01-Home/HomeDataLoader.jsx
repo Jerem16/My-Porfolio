@@ -6,7 +6,7 @@ const HomeDataLoader = ({ children }) => {
     const homeData = useLangData("home.json");
 
     if (!homeData?.home || !homeData) {
-        return <div><Loader /></div>;
+        return <></>;
     }
 
     const typing = homeData.home;

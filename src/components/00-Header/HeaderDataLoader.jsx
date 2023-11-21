@@ -6,11 +6,7 @@ const HeaderDataLoader = ({ children }) => {
     const headerData = useLangData("headerNav.json");
 
     if (!headerData) {
-        return (
-            <div>
-                <Loader />
-            </div>
-        );
+        return <></>;
     }
 
     return children(headerData);

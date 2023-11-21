@@ -6,7 +6,7 @@ const PortfolioDataLoader = ({ children }) => {
     const portfolioData = useLangData("portfolioContent.json");
 
     if (!portfolioData) {
-        return <div> <Loader /></div>;
+        return <></>;
     }
 
     return children(portfolioData);

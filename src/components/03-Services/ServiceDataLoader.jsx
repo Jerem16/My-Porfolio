@@ -6,7 +6,7 @@ const ServiceDataLoader = ({ children }) => {
     const serviceData = useLangData("dataServices.json");
 
     if (!serviceData?.services) {
-        return <div><Loader /></div>;
+        return <></>;
     }
 
     return children(serviceData);

@@ -6,7 +6,7 @@ const ProfileDataLoader = ({ children }) => {
     const profileData = useLangData("about.json");
 
     if (!profileData?.profile) {
-        return <div><Loader /></div>;
+        return <></>;
     }
     return children(profileData);
 };
