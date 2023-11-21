@@ -1,5 +1,5 @@
+import React from "react";
 import Profile from "../../../components/02-About/00-LayoutProfile";
-
 
 function SectionAbout() {
     return (
@@ -11,4 +11,4 @@ function SectionAbout() {
     );
 }
 
-export default SectionAbout;
+export default React.memo(SectionAbout);

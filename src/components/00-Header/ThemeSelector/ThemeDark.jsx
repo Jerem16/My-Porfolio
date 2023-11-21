@@ -31,4 +31,4 @@ const ThemeDark = () => {
     );
 };
 
-export default ThemeDark;
+export default React.memo(ThemeDark);

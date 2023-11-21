@@ -26,4 +26,4 @@ const Jeremy = () => {
     );
 };
 
-export default Jeremy;
+export default React.memo(Jeremy);

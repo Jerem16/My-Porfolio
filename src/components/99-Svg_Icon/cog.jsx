@@ -8,4 +8,4 @@ const Cog = () => {
     );
 };
 
-export default Cog;
+export default React.memo(Cog);

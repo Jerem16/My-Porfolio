@@ -10,4 +10,4 @@ const HomeTitle = ({ welcome }) => {
     );
 };
 
-export default HomeTitle;
+export default React.memo(HomeTitle);

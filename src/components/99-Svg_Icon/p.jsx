@@ -11,4 +11,4 @@ const P = () => {
     );
 };
 
-export default P;
+export default React.memo(P);

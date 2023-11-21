@@ -11,4 +11,4 @@ function SectionPortfolio({ openModalPortfolio }) {
     );
 }
 
-export default SectionPortfolio;
+export default React.memo(SectionPortfolio);

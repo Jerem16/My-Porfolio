@@ -4,11 +4,9 @@ import SectionHome from "./section_home/SectionHome";
 import Header from "../../components/00-Header/00-Header";
 import { useDispatch, useSelector } from "react-redux";
 import { setModalContact } from "../../redux/reducers/classesSlice";
-import PortfolioModalContent from "../../components/04-portfolio/PortfolioModalContent";
-import ModalService from "../../components/Modal/ModalService/ModalService";
-import ModalForm from "../../components/Modal/ModalForm/ModalForm";
+
 import Loader from "../../components/Loader/Loader";
-import NavToggler from "../../components/00-Header/NavToggler";
+
 import Modal from "../../components/Modal/Modal";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
@@ -31,7 +29,7 @@ const LazyModalService = lazy(() =>
 const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
 );
-const LazyModal = lazy(() => import("../../components/Modal/Modal"));
+
 
 function MainPortfolio() {
     const dispatch = useDispatch();

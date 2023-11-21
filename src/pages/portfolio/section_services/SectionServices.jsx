@@ -11,4 +11,4 @@ function SectionServices({ openModalService }) {
     );
 }
 
-export default SectionServices;
+export default React.memo(SectionServices);

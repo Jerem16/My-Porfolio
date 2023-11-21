@@ -15,4 +15,4 @@ function SectionContact({ setIsSuccessModalOpen, isSuccessModalOpen }) {
     );
 }
 
-export default SectionContact;
+export default React.memo(SectionContact);

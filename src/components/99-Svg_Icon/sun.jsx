@@ -8,4 +8,4 @@ const Sun = () => {
     );
 };
 
-export default Sun;
+export default React.memo(Sun);

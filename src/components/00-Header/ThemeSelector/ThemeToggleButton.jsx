@@ -7,4 +7,4 @@ const ThemeToggleButton = ({ onClick, children }) => (
     </div>
 );
 
-export default ThemeToggleButton;
+export default React.memo(ThemeToggleButton);

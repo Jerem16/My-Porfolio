@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, lazy, Suspense } from "react";
 import Typed from "typed.js";
-// import CanvasBackground from "../../../components/CanvasBackground/CanvasBackground";
-// import CanvasBackground2 from "../../../components/CanvasBackground/CanvasBackground2";
+
 import HomeInfo from "../../../components/01-Home/HomeInfo";
 import HomeImage from "../../../components/01-Home/HomeImage";
 import useLangData from "../../../utils/useLangData";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
-// import BackgroundX from "../../../components/99-Svg_Icon/BackgroundX";
-// import BackgroundY from "../../../components/99-Svg_Icon/BackgroundY";
+
 
 const LazyBackgroundX = lazy(() =>
     import("../../../components/99-Svg_Icon/BackgroundX")
@@ -106,4 +104,4 @@ function SectionHome() {
     );
 }
 
-export default SectionHome;
+export default React.memo(SectionHome);

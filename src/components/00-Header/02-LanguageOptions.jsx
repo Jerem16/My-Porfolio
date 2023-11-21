@@ -1,4 +1,3 @@
-// LanguageOptions.js
 import React from "react";
 import en from "../../assets/img/flag/en.svg";
 import fr from "../../assets/img/flag/fr.svg";
