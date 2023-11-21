@@ -7,6 +7,14 @@
             }
         }
     }
+    ul {
+        list-style: none;
+        li i {
+            &.iLang {
+                // margin-left: 0.5em;
+            }
+        }
+    }
 }
 @media screen and (max-width: 1660px) {
     .home {
@@ -17,8 +25,7 @@
                 .home-title {
                     margin: 1.5em 0 0 0;
                     span.name {
-                        margin: 0 0.625em 0 0;
-                        font-size: 32px;
+                        // margin: 0 0.625em 0 0;
                     }
                 }
 
@@ -34,6 +41,14 @@
                         margin: 0;
                     }
                 }
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        li i {
+            &.iLang {
+                // margin-left: 1.2em;
             }
         }
     }
@@ -88,9 +103,14 @@
                 .home-title {
                     position: static;
                     span.name {
-                        position: static;
-                        top: 0;
+                        position: relative;
+                        top: 0.4em;
                         display: inline;
+                        width: auto;
+                        max-width: 45%;
+                        .jeremy {
+                            font-size: 38.5px;
+                        }
                     }
                 }
                 .hire-me {
@@ -136,7 +156,13 @@
                 span {
                     font-size: 40px;
                 }
-
+                .p-Letter {
+                    fill: var(--text-black-900);
+                    font-size: 0.855em;
+                    position: relative;
+                    top: 0.15em;
+                    left: -0.05em;
+                }
                 &::before {
                     width: 22.5px;
                     height: 22.5px;

@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../redux/reducers/classesSlice";
 import NavMenu from "./NavMenu";
 import dataBase from "../../assets/data/header.json";
+import P from "../99-Svg_Icon/p";
 
 const LazyThemeSelector = lazy(() => import("./ThemeSelector/ThemeSelector"));
 
@@ -19,7 +20,7 @@ const Logo = ({ data }) => (
     <div className="logo">
         <a rel="nofollow" href="#home">
             <div>
-                <span>{data.logoTitle}</span>
+                <P />
                 {data.logoSpanTitle}
             </div>
         </a>

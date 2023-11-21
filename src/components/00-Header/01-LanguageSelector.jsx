@@ -37,9 +37,8 @@ const LanguageSelector = ({ text }) => {
             onClick={toggleSelector}
             ref={flagRef}
         >
-            <i>
-                <LanguageIcon addClass="lang-icon" />
-            </i>
+            <LanguageIcon addClass="lang-icon" />
+
             <p className="lang" id="lang">
                 {text}
             </p>

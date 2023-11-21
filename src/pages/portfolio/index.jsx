@@ -8,7 +8,8 @@ import PortfolioModalContent from "../../components/04-portfolio/PortfolioModalC
 import ModalService from "../../components/Modal/ModalService/ModalService";
 import ModalForm from "../../components/Modal/ModalForm/ModalForm";
 import Loader from "../../components/Loader/Loader";
-
+import NavToggler from "../../components/00-Header/NavToggler";
+import Modal from "../../components/Modal/Modal";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
 
@@ -20,6 +21,15 @@ const LazySectionPortfolio = lazy(() =>
 );
 const LazySectionContact = lazy(() =>
     import("./section_contact/SectionContact")
+);
+const LazyPortfolioModalContent = lazy(() =>
+    import("../../components/04-portfolio/PortfolioModalContent")
+);
+const LazyModalService = lazy(() =>
+    import("../../components/Modal/ModalService/ModalService")
+);
+const LazyModalForm = lazy(() =>
+    import("../../components/Modal/ModalForm/ModalForm")
 );
 const LazyModal = lazy(() => import("../../components/Modal/Modal"));
 
@@ -48,44 +58,44 @@ function MainPortfolio() {
     return (
         <>
             <Header />
-
+            {selectedService && (
+                <Modal
+                    opened={true}
+                    Content={
+                        <LazyModalService
+                            selectedService={selectedService}
+                            closeModal={closeModal}
+                        />
+                    }
+                />
+            )}
+            {selectedPortfolio && (
+                <Modal
+                    opened={true}
+                    Content={
+                        <LazyPortfolioModalContent
+                            selectedPortfolio={selectedPortfolio}
+                            closeModal={closeModal}
+                        />
+                    }
+                />
+            )}
+            <Modal
+                addClass={"contactModal"}
+                opened={modalContact}
+                Content={<LazyModalForm closeModal={closeModalContact} />}
+            />
             <main className="main-content">
                 <SectionHome />
                 <Suspense fallback={<Loader />}>
                     <LazySectionAbout />
-                    {selectedService && (
-                        <LazyModal
-                            opened={true}
-                            Content={
-                                <ModalService
-                                    selectedService={selectedService}
-                                    closeModal={closeModal}
-                                />
-                            }
-                        />
-                    )}
+
                     <LazySectionServices openModalService={openModalService} />
-                    {selectedPortfolio && (
-                        <LazyModal
-                            opened={true}
-                            Content={
-                                <PortfolioModalContent
-                                    selectedPortfolio={selectedPortfolio}
-                                    closeModal={closeModal}
-                                />
-                            }
-                        />
-                    )}
+
                     <LazySectionPortfolio
                         openModalPortfolio={openModalPortfolio}
                     />
                     <LazySectionContact />
-
-                    <LazyModal
-                        addClass={"contactModal"}
-                        opened={modalContact}
-                        Content={<ModalForm closeModal={closeModalContact} />}
-                    />
                 </Suspense>
             </main>
         </>

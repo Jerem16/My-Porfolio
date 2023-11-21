@@ -14,7 +14,10 @@
                     top: 0;
                     width: 100%;
                     span.name {
+                        margin: auto;
                         display: block;
+                        max-width: inherit;
+                        width: 100%;
                     }
                 }
                 .home-card {
@@ -358,34 +361,37 @@
         .nav {
             border-radius: 15px;
             position: relative;
-            // top: -22.5px;
-            // left: calc(50vh - 120px);
             width: 240px;
             height: 380px;
-            // height: auto;
             padding: 15px;
             z-index: 10000;
-
-            // background-color: var(--bg-black-100);
 
             li,
             .head-btn {
                 height: 60px;
-                a {
+                a,
+                .lang {
                     display: inline;
                     flex: 2;
                     min-width: 131.25px;
                     padding: 15px;
                 }
-                .icon {
-                    display: inline;
+                .lang {
+                    min-width: inherit;
+                    position: relative;
+                    left: 0;
                 }
+
                 .icon,
                 .lang-icon {
                     flex: 1;
+                    display: inline;
                     max-width: 78.75px;
                     margin-right: 15px;
                     padding: 15px 15px 15px 22.5px;
+                }
+                .lang-icon {
+                    max-width: 35px;
                 }
             }
             .nav-language {

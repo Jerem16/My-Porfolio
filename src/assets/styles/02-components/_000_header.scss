@@ -50,9 +50,16 @@
             font-weight: 600;
             font-size: 1.8765em;
             letter-spacing: 0.1666em;
+            text-transform: lowercase;
             span {
-                font-family: "Clicker Script", cursive;
-                font-size: 1.35em;
+                font-size: 1.325em;
+            }
+            .p-Letter {
+                fill: var(--text-black-900);
+                font-size: 0.855em;
+                position: relative;
+                top: 0.15em;
+                left: -0.05em;
             }
 
             &::before {
@@ -141,7 +148,8 @@
                 color: var(--text-black-900);
                 fill: var(--text-black-900);
             }
-            .icon {
+            .icon,
+            .lang-icon {
                 flex: 1;
                 display: inline-flex;
                 align-items: center;
@@ -155,12 +163,8 @@
                     font-size: 1em;
                 }
             }
-            .lang-icon {
-                flex: 1;
-                max-width: 2.953125em;
-                margin-right: 1.7em;
-                color: var(--text-black-900);
-                padding: 1em 0 1em 0.8em;
+            .lang {
+                min-width: inherit;
             }
             &:hover {
                 a {
@@ -189,7 +193,4 @@
             height: 24.625em;
         }
     }
-
 }
-
-

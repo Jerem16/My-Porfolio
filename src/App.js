@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-// import NavToggler from "./components/00-Header/NavToggler";
+
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
 import "./assets/styles/main.scss";

@@ -75,13 +75,13 @@
                 span.name {
                     display: inline-block;
                     position: absolute;
-                    top: -0.275em;
-                    font-family: "Clicker Script", cursive;
-                    font-size: 1.5em;
-                    font-weight: 700;
-                    color: var(--skin-color);
+                    top: -0.25em;
+
                     margin-left: 0.4em;
                     width: 50%;
+                    .jeremy {
+                        font-size: 2em;
+                    }
                 }
             }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, Suspense } from "react";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 const Modal = ({ opened, Content, closeIcon, addClass }) => {
@@ -30,7 +30,7 @@ const Modal = ({ opened, Content, closeIcon, addClass }) => {
             {opened && (
                 <div className={`modal  ${navToggler}`}>
                     <div className="content sideAnime">
-                        {Content}
+                        <Suspense fallback={<></>}>{Content}</Suspense>
                         <button
                             type="button"
                             onClick={() => setIsOpened(false)}

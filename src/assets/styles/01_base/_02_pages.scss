@@ -6,7 +6,6 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    color: var(--text-black-900);
     position: relative;
     .container {
         flex: 0 0 87.47130206625124%;
@@ -38,7 +37,7 @@
                         content: "";
                         width: 1.5625em;
                         height: 0.08em;
-                        background-color: $color-primary;
+                        background-color: var(--skin-color);
                         position: absolute;
                         top: 100%;
                         left: 0;

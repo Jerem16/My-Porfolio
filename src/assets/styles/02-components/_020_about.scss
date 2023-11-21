@@ -162,26 +162,26 @@
                 flex-flow: column wrap;
                 width: 100%;
                 @include p;
-                cursor: pointer;
-                &:hover {
-                    .bd_Bottom {
-                        border-bottom: 1px solid var(--skin-color);
 
-                        .fa-Circle {
-                            background: var(--skin-color);
-                            i {
-                                fill: white;
+                &_add {
+                    cursor: pointer;
+                    &:hover {
+                        .bd_Bottom {
+                            border-bottom: 1px solid var(--skin-color);
+
+                            .fa-Circle {
+                                background: var(--skin-color);
+                                i {
+                                    fill: white;
+                                }
                             }
                         }
                     }
-                }
-                &_add {
                     .bd_Bottom {
                         @include after_Before;
                         width: 100%;
                         border-bottom: 1px solid var(--skin-color-light);
                         opacity: 0.64;
-                        // transition: all 0.65s ease-in-out;
 
                         .fa-Circle {
                             float: right;

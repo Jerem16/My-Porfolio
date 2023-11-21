@@ -10,9 +10,7 @@
 
 .modal {
     width: 100%;
-
     @include transition(all, 0.5s, ease);
-    // z-index: 1000000 !important;
     overflow-x: hidden !important;
 }
 
@@ -30,10 +28,8 @@
         bottom: 0;
     }
     .modal {
-        width: calc(100% - 16.875em);
-        @include transform(translateX(16.875em));
-        @include transition(all, 0.5s, ease);
-        top: inherit !important;
+        width: 100%;
+        @include transform(translateX(0));
     }
 }
 
@@ -46,12 +42,6 @@
     .bgDraw2 {
         height: calc(50vh - 19.237vw - 0vw);
         bottom: 6.14%;
-    }
-    .modal {
-        width: calc(100% - 16.875em);
-        @include transform(translateX(16.875em));
-        @include transition(all, 0.5s, ease);
-        top: inherit !important;
     }
 }
 

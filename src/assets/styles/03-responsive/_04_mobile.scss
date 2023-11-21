@@ -20,7 +20,7 @@
                     padding: 0.5em 0 0 0;
                     top: 220px;
                     span.name {
-                        margin: 0;
+                        margin: 0 auto;
                     }
                 }
                 .home-card {
@@ -320,6 +320,13 @@
         .home {
             .row {
                 min-height: 600px;
+                .home-info {
+                    .home-title {
+                        span.name {
+                            position: static;
+                        }
+                    }
+                }
             }
         }
         .modal .content {
