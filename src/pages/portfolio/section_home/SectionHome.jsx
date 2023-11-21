@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, lazy, Suspense } from "react";
-import Typed from "typed.js";
 
 import HomeInfo from "../../../components/01-Home/HomeInfo";
 import HomeImage from "../../../components/01-Home/HomeImage";
 import useLangData from "../../../utils/useLangData";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
-
 
 const LazyBackgroundX = lazy(() =>
     import("../../../components/99-Svg_Icon/BackgroundX")
@@ -39,7 +37,21 @@ function SectionHome() {
             loop: true,
         };
 
-        typedRef.current = new Typed(".typing", options);
+        const loadTyped = async () => {
+            try {
+                const TypedModule = await import("typed.js");
+
+                if (typedRef.current) {
+                    typedRef.current.destroy();
+                }
+
+                typedRef.current = new TypedModule.default(".typing", options);
+            } catch (error) {
+                console.error("Error loading Typed.js:", error);
+            }
+        };
+
+        loadTyped();
 
         return () => {
             if (typedRef.current) {

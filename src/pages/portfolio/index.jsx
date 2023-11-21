@@ -30,7 +30,6 @@ const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
 );
 
-
 function MainPortfolio() {
     const dispatch = useDispatch();
     const modalContact = useSelector((state) => state.classes.modalContact);
