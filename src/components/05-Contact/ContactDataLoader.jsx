@@ -1,6 +1,6 @@
 import React from "react";
 import useLangData from "../../utils/useLangData";
-import Loader from "../Loader/Loader";
+
 
 const ContactDataLoader = ({ children }) => {
     const contactData = useLangData("contact.json");
