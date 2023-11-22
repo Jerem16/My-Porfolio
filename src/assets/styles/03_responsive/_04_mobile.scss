@@ -1,8 +1,4 @@
 @media screen and (max-width: 620px) {
-    .modal {
-        position: fixed !important;
-        top: 0 !important;
-    }
     .home {
         .row {
             min-width: calc(100% - 0px);
@@ -56,11 +52,13 @@
             .blockImg {
                 height: 200px;
                 max-height: 200px;
-
                 margin: 1.5em 0 0 0;
                 position: absolute;
                 .home-img {
                     max-height: 200px;
+                    width: 232px;
+                    display: flex;
+                    min-width: inherit;
                     &::after {
                         top: 40px;
                         left: 40px;
@@ -79,9 +77,20 @@
                     .centerNB {
                         max-height: 200px;
                         height: 200px;
-                        background-size: contain;
-                        width: 140px !important;
-                        background-image: url(../../img/profileBG-1.webp);
+                        max-width: 140px;
+                        min-width: inherit;
+                    }
+                    .mobile {
+                        position: static;
+                        display: block;
+                        width: 140px;
+                        height: 200px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                    .leftNB,
+                    .rightNB {
+                        display: block;
                     }
                 }
             }
@@ -536,7 +545,6 @@
             }
             .blockImg {
                 .home-img {
-                    min-width: 220px;
                     max-width: 220px;
                     &::after {
                         left: 0px;
@@ -545,6 +553,11 @@
                     &::before {
                         right: 0px;
                         width: 220px;
+                    }
+                    .mobile {
+                        position: absolute;
+                        top: 0;
+                        left: 2.5px;
                     }
                 }
             }
@@ -603,21 +616,6 @@
         .row {
             max-width: calc(100% - 0px);
             padding: 0px 0.25em 1.5em;
-
-            .blockImg {
-                .home-img {
-                    min-width: 220px;
-                    max-width: 220px;
-                    &::after {
-                        left: 0px;
-                        width: 220px;
-                    }
-                    &::before {
-                        right: 0px;
-                        width: 220px;
-                    }
-                }
-            }
             .home-info {
                 .home-card_group {
                     display: none;

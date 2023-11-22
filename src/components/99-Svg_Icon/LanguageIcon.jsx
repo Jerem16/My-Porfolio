@@ -1,5 +1,5 @@
 import React from "react";
-import "./languageIcon.scss";
+
 
 const LanguageIcon = ({ addClass }) => {
     return (

@@ -36,6 +36,8 @@
                 flex: 2;
                 position: relative;
                 .home-img {
+                    display: block;
+                    min-width: 263px;
                     &::after {
                         top: 120px;
                         left: 20px;
@@ -50,15 +52,22 @@
                     .centerNB {
                         position: relative;
                         z-index: 10;
-                        background-image: url(../../img/profileBG.webp);
-
-                        background-repeat: no-repeat;
-                        background-position: bottom;
-                        background-size: 100%;
                         height: 400px;
-                        width: 247.5px;
+                        width: 248px;
                     }
-                    img {
+                    .desktop {
+                        display: none;
+                    }
+                    .mobile {
+                        position: absolute;
+                        top: 47px;
+                        left: 10px;
+                        display: block;
+                        width: 248px;
+                        height: 353px;
+                    }
+                    .leftNB,
+                    .rightNB {
                         display: none;
                     }
                 }
@@ -79,7 +88,7 @@
 @media screen and (max-width: 1320px) {
     .home {
         .row {
-            // min-width: 100%;
+        
             .home-info {
                 .home-card {
                     .home-card-content {

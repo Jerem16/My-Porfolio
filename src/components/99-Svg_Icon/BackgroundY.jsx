@@ -1,5 +1,4 @@
 import React from "react";
-import "./languageIcon.scss";
 import { useSelector } from "react-redux";
 
 const BackgroundY = () => {

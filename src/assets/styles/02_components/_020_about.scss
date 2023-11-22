@@ -316,20 +316,4 @@
         }
     }
 }
-@keyframes openClose {
-    0% {
-        transform-origin: top;
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    33% {
-        transform: scaleY(0.5);
-    }
-    50% {
-        opacity: 0.33;
-        transform: scaleY(1);
-    }
-    100% {
-        opacity: 1;
-    }
-}
+

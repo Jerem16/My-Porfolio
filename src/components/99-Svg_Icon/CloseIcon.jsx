@@ -1,5 +1,5 @@
 import React from "react";
-import "./closeIcon.scss";
+
 
 const CloseIcon = ({ addClass }) => {
     return (

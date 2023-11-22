@@ -1,8 +1,6 @@
 import React from "react";
 
 
-import "./button.scss";
-
 export const BUTTON_TYPES = {
     DEFAULT: 1,
     DOWNLOAD: 2,
