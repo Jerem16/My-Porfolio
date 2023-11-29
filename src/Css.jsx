@@ -1,8 +1,7 @@
-// CssComponent.js
-
 import React, { useEffect } from "react";
 
 const CssComponent = () => {
+    const publicUrl = process.env.PUBLIC_URL;
     useEffect(() => {
         const screenWidth = window.innerWidth;
 
@@ -28,7 +27,7 @@ const CssComponent = () => {
         } else if (screenWidth >= 300 && screenWidth <= 620) {
             const linkLow = document.createElement("link");
             linkLow.rel = "stylesheet";
-            linkLow.href = `${process.env.PUBLIC_URL}675p-320p-no-critical.css`;
+            linkLow.href = `${publicUrl}/675p-320p-no-critical.css`;
             linkLow.setAttribute("fetchpriority", "low");
             document.head.appendChild(linkLow);
         }
