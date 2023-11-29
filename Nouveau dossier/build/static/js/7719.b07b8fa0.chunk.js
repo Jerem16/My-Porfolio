@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[7719],{7719:o=>{o.exports=JSON.parse('{"theme1":{"primaryColor":"#FF5733","secondaryColor":"#3366FF"},"theme2":{"primaryColor":"#00FF00","secondaryColor":"#FFA500"}}')}}]);

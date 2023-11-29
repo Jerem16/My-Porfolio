@@ -1,21 +1,4 @@
-@media screen and (max-width: 1920px) {
-    .home {
-        .row {
-            .home-info {
-                .home-title {
-                }
-            }
-        }
-    }
-    ul {
-        list-style: none;
-        li i {
-            &.iLang {
-                // margin-left: 0.5em;
-            }
-        }
-    }
-}
+
 @media screen and (max-width: 1660px) {
     .home {
         .row {
@@ -24,9 +7,6 @@
                 align-items: flex-start;
                 .home-title {
                     margin: 1.5em 0 0 0;
-                    span.name {
-                        // margin: 0 0.625em 0 0;
-                    }
                 }
 
                 .home-card {
@@ -41,14 +21,6 @@
                         margin: 0;
                     }
                 }
-            }
-        }
-    }
-    ul {
-        list-style: none;
-        li i {
-            &.iLang {
-                // margin-left: 1.2em;
             }
         }
     }

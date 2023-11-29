@@ -9,7 +9,7 @@ import Loader from "../../components/Loader/Loader";
 
 import Modal from "../../components/Modal/Modal";
 
-const LazyHeader = lazy(() => import("../../components/00-Header/00-Header"));
+
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
 

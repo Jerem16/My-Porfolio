@@ -2,7 +2,7 @@ import React from "react";
 
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
-import "./assets/styles/main.scss";
+
 
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
