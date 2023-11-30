@@ -1,13 +1,11 @@
 import React from "react";
 import profileWebp1k from "../../assets/img/profile-1k.webp";
-// import profileWebp4k from "../../../public/profile-4k.webp";
+import profileWebp4k from "../../../public/profile-4k.webp";
 
-// import profile620 from "../../../public/profile-620.webp";
+import profile620 from "../../../public/profile-620.webp";
 import profile1440 from "../../assets/img/profile-1440.webp";
 
 function HomeImage() {
-    const profileWebp4k = process.env.PUBLIC_URL + "/profile-4k.webp";
-    const profile620 = process.env.PUBLIC_URL + "/profile-620.webp";
     return (
         <div className="blockImg">
             <div className="home-img">
