@@ -1,0 +1,119 @@
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+.closed {
+    width: 1.125em;
+    height: 1.125em;
+    fill: var(--skin-color);
+    transform-origin: center;
+    transition: all 0.15s ease;
+    @include transform(scale(1));
+    @include drop-shadow(0 0 0 var(--bg-black-900));
+    box-sizing: border-box;
+
+    &:hover {
+        @include transform(scale(1.12));
+        @include drop-shadow(0 0 3px var(--bg-black-900));
+    }
+}
+
+@keyframes slide {
+    0% {
+        width: calc(100% + 0em);
+        @include transform(translateX(0));
+    }
+    100% {
+        width: calc(100% + 16.875em);
+        @include transform(translateX(-16.875em));
+    }
+}
+
+@keyframes openClose {
+    0% {
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    33% {
+        transform: scaleY(0.5);
+    }
+    50% {
+        opacity: 0.33;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.lazy {
+    transition: all 0.6s;
+    animation: lazy 0.6s ease-in-out;
+    -webkit-animation: lazy 0.6s ease-in-out;
+    &::after {
+        opacity: 0;
+        transform: scale(0);
+    }
+    &::before {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes lazy {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lazyImg {
+    transition: all 0.6s;
+    animation: lazyImg 1.5s ease-in-out;
+
+    opacity: 1;
+}
+@keyframes lazyImg {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0.15;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.sideAnime {
+    opacity: 1;
+    animation: sideAnime 0.5s ease-in-out;
+    transition: all 0.5s;
+    transform: translateX(0);
+    overflow: hidden;
+}
+@keyframes sideAnime {
+    0% {
+        opacity: 0;
+        transform: translateX(120vw);
+    }
+    33% {
+        opacity: 0.25;
+        transform: translateX(100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
