@@ -25,9 +25,10 @@ const CssComponent = () => {
 
     const applyStyles = (module) => {
         const linkLow = document.createElement("link");
-        linkLow.type="text/html" 
-        linkLow.itemprop="url"
+        linkLow.type = "text/html";
+        linkLow.itemprop = "url";
         linkLow.href = module.default;
+        linkLow.setAttribute("fetchpriority", "low");
         document.head.appendChild(linkLow);
     };
 
