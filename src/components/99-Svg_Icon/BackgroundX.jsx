@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const BackgroundX = () => {
-    const darkedTheme = useSelector((state) => state.theme.darkedTheme); 
+    const darkedTheme = useSelector((state) => state.theme.darkedTheme);
     return (
         <div className="backgroundX">
             <svg
