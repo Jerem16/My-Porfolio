@@ -14,14 +14,7 @@ function NavItem({ handleClick, startLinks }) {
 
     if (activeStartElements.length === 0) {
         dispatch(setNavScroll("home"));
-    } else {
-        dispatch(setNavScroll(""));
-    }
-    useEffect(() => {
-        if (activeStartElements.length !== 0) {
-            dispatch(setNavScroll(""));
-        }
-    }, [activeStartElements, dispatch]);
+    } 
 
     return (
         <li className={`head-btn`}>
