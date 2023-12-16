@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,20 +6,29 @@ import { setNavScroll } from "../../redux/reducers/classesSlice";
 import data from "../../assets/data/header.json";
 
 function NavItem({ handleClick, startLinks }) {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const initClass = useSelector((state) => state.classes.navScroll);
+    const [renderDelayed, setRenderDelayed] = useState(false);
 
-    // useEffect(() => {
-    //     const activeStartElements = document.querySelectorAll(
-    //         ".aside .nav li a.active-link"
-    //     );
+    useEffect(() => {
+        const delayRender = async () => {
+            // Ajouter un délai de 2 secondes (2000 millisecondes)
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            setRenderDelayed(true);
+        };
 
-    //     if (activeStartElements.length === 0) {
-    //         dispatch(setNavScroll("home"));
-    //     } else {
-    //         dispatch(setNavScroll(""));
-    //     }
-    // }, [dispatch]);
+        delayRender();
+    }, []);
+
+    useEffect(() => {
+        if (renderDelayed) {
+            dispatch(setNavScroll("home"));
+        }
+    }, [dispatch, renderDelayed]);
+
+    if (!renderDelayed) {
+        return null; // Ne rien rendre pendant le délai
+    }
 
     return (
         <li className={`head-btn`}>
@@ -31,7 +40,7 @@ function NavItem({ handleClick, startLinks }) {
                 smooth={true}
                 offset={0}
                 duration={500}
-                to={initClass}
+                to="home"
                 onClick={handleClick}
             >
                 <span className="icon">
