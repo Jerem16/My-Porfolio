@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 // eslint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
-import { useDispatch, useSelector } from "react-redux";
-import { setNavScroll } from "../../redux/reducers/classesSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { setNavScroll } from "../../redux/reducers/classesSlice";
 import data from "../../assets/data/header.json";
 
 function NavItem({ handleClick, startLinks }) {
-    const dispatch = useDispatch();
-    const initClass = useSelector((state) => state.classes.navScroll);
-    const activeStartElements = document.querySelectorAll(
-        ".aside .nav li a.active-link"
-    );
+    // const dispatch = useDispatch();
+    // const initClass = useSelector((state) => state.classes.navScroll);
+    // const activeStartElements = document.querySelectorAll(
+    //     ".aside .nav li a.active-link"
+    // );
 
-    if (activeStartElements.length === 0) {
-        dispatch(setNavScroll("home"));
-    } 
+    // if (activeStartElements.length === 0) {
+    //     dispatch(setNavScroll("home"));
+    // }
 
     return (
         <li className={`head-btn`}>
@@ -26,7 +26,7 @@ function NavItem({ handleClick, startLinks }) {
                 smooth={true}
                 offset={0}
                 duration={500}
-                to={initClass}
+                to="home"
                 onClick={handleClick}
             >
                 <span className="icon">
