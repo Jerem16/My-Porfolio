@@ -7,7 +7,7 @@ const initialState = {
     // desktop1280: "1280",
     tab1080: "1080",
     menuSwitcher: "langClose",
-    navScroll: "top",
+    navScroll: "home",
 };
 
 const classesSlice = createSlice({
