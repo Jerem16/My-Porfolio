@@ -16,9 +16,7 @@ function NavItem({ handleClick, startLinks }) {
 
         if (activeStartElements.length === 0) {
             dispatch(setNavScroll("home"));
-        } else {
-            dispatch(setNavScroll(""));
-        }
+        } 
     }, [dispatch]);
 
     return (
