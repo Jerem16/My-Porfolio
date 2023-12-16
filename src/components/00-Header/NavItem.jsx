@@ -1,26 +1,15 @@
-import React, { useEffect } from "react";
-// eslint-disable-next-line
+import React from "react";
+
 import { Link, animateScroll as scroll } from "react-scroll";
-// import { useDispatch, useSelector } from "react-redux";
-// import { setNavScroll } from "../../redux/reducers/classesSlice";
+
 import data from "../../assets/data/header.json";
 
 function NavItem({ handleClick, startLinks }) {
-    // const dispatch = useDispatch();
-    // const initClass = useSelector((state) => state.classes.navScroll);
-    // const activeStartElements = document.querySelectorAll(
-    //     ".aside .nav li a.active-link"
-    // );
-
-    // if (activeStartElements.length === 0) {
-    //     dispatch(setNavScroll("home"));
-    // }
-
     return (
         <li className={`head-btn`}>
             <Link
                 rel="nofollow"
-                href={`#${initClass}`}
+                href="home"
                 activeClass="active-link"
                 spy={true}
                 smooth={true}
