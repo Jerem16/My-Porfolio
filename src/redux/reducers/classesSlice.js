@@ -3,8 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     modalContact: false,
     addClass: "",
-    // asideWidth: "270",
-    // desktop1280: "1280",
     tab1080: "1080",
     menuSwitcher: "langClose",
     navScroll: "home",
@@ -16,8 +14,6 @@ const classesSlice = createSlice({
     reducers: {
         setAsideWidth: (state, action) => {
             state.asideWidth = action.payload;
-            // state.desktop1280 = 1010 + parseInt(action.payload, 10);
-            // state.tab1080 = 740 + parseInt(action.payload, 10);
         },
 
         toggleClasses: (state, action) => {

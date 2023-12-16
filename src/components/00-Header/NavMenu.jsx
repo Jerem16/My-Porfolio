@@ -1,12 +1,27 @@
-import React from "react";
-// eslint-disable-next-line
+import React, { useEffect, useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import LanguageSelector from "./01-LanguageSelector";
 import data from "../../assets/data/header.json";
 import NavItem from "./NavItem";
 import { useSelector } from "react-redux";
+
 function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
     const langAddClass = useSelector((state) => state.classes.menuSwitcher);
+    const [renderDelayed, setRenderDelayed] = useState(false);
+
+    useEffect(() => {
+        const delayRender = async () => {
+            await new Promise((resolve) => setTimeout(resolve, 750));
+            setRenderDelayed(true);
+        };
+
+        delayRender();
+    }, []);
+
+    if (!renderDelayed) {
+        return null;
+    }
+
     return (
         <div>
             <ul className={`nav ${langAddClass}`} id={id}>
