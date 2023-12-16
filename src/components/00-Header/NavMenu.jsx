@@ -11,7 +11,7 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
 
     useEffect(() => {
         const delayRender = async () => {
-            await new Promise((resolve) => setTimeout(resolve, 750));
+            await new Promise((resolve) => setTimeout(resolve, 250));
             setRenderDelayed(true);
         };
 
