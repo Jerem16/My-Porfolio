@@ -8,16 +8,16 @@ import data from "../../assets/data/header.json";
 function NavItem({ handleClick, startLinks }) {
     const dispatch = useDispatch();
     const initClass = useSelector((state) => state.classes.navScroll);
+    const activeStartElements = document.querySelectorAll(
+        ".aside .nav li a.active-link"
+    );
 
-    useEffect(() => {
-        const activeStartElements = document.querySelectorAll(
-            ".aside .nav li a.active-link"
-        );
-
-        if (activeStartElements.length === 0) {
-            dispatch(setNavScroll("home"));
-        } 
-    }, [dispatch]);
+    if (activeStartElements.length === 0) {
+        dispatch(setNavScroll("home"));
+    } else {
+        dispatch(setNavScroll(""));
+    }
+    // useEffect(() => {}, [dispatch]);
 
     return (
         <li className={`head-btn`}>
