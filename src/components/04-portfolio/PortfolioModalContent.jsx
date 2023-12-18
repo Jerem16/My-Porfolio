@@ -6,6 +6,7 @@ import TechnologyIcons from "../02-About/Experience/TechnologyIcons";
 import GitHub from "../99-Svg_Icon/GitHub";
 import WebSite from "../99-Svg_Icon/WebSite";
 
+
 const PortfolioModalContent = React.memo(
     ({ selectedPortfolio, closeModal }) => (
         <ProfileDataLoader>
@@ -30,7 +31,6 @@ const PortfolioModalContent = React.memo(
                                             className="lazyImg"
                                             alt={selectedPortfolio.title}
                                             src={require(`../../assets/img/webSite/${selectedPortfolio.imagePath}`)}
-                                            loading="lazy"
                                         />
                                     </div>
                                     <div className="modalPortfolio-description">
