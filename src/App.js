@@ -1,8 +1,7 @@
 import React from "react";
-
+import ImgComponent from "./Img";
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
-
 
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
@@ -19,9 +18,12 @@ function App() {
     };
 
     return (
-        <div className={`${navToggler}`} id="top" style={themeClasses}>
-            <MainPortfolio />
-        </div>
+        <>
+            <ImgComponent />
+            <div className={`${navToggler}`} id="top" style={themeClasses}>
+                <MainPortfolio />
+            </div>
+        </>
     );
 }
 
