@@ -43,14 +43,15 @@ function Header() {
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 1024px)");
+        
         const updateIsMobile = (event) => {
             setIsMobile(event.matches);
         };
-
-        mediaQuery.addListener(updateIsMobile);
-
+    
+        mediaQuery.addEventListener("change", updateIsMobile);
+    
         return () => {
-            mediaQuery.removeListener(updateIsMobile);
+            mediaQuery.removeEventListener("change", updateIsMobile);
         };
     }, []);
 

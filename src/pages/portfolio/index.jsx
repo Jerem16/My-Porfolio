@@ -101,7 +101,7 @@ function MainPortfolio() {
                 opened={modalContact}
                 Content={<LazyModalForm closeModal={closeModalContact} />}
             />
-            <CssComponent />
+            {/* <CssComponent /> */}
         </>
     );
 }
