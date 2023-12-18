@@ -19,6 +19,24 @@ function HomeImage() {
         };
     }, []);
 
+    useEffect(() => {
+        // Fonction pour générer dynamiquement le chemin de l'image en fonction de la résolution de l'écran
+        const getImagePath = () => (isDesktop ? profileWebp4k : profile620);
+
+        // Créer une balise d'image avec fetchPriority="high"
+        const image = new Image();
+        image.src = getImagePath();
+        image.fetchPriority = "high";
+
+        // Ajouter la balise d'image à la tête du document
+        document.head.appendChild(image);
+
+        // Nettoyer la balise d'image lors du démontage du composant
+        return () => {
+            document.head.removeChild(image);
+        };
+    }, [isDesktop]);
+
     return (
         <div className="blockImg">
             <div className="home-img">
