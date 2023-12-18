@@ -4,7 +4,6 @@ import HomeTitle from "./HomeTitle";
 
 const HomeInfo = ({
     welcome,
-    name,
     presentation,
     titleDescription,
     description,

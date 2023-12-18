@@ -8,7 +8,6 @@ import { setModalContact } from "../../redux/reducers/classesSlice";
 import Loader from "../../components/Loader/Loader";
 
 import Modal from "../../components/Modal/Modal";
-import CssComponent from "./Css";
 
 const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
 
@@ -101,7 +100,6 @@ function MainPortfolio() {
                 opened={modalContact}
                 Content={<LazyModalForm closeModal={closeModalContact} />}
             />
-            {/* <CssComponent /> */}
         </>
     );
 }
