@@ -9,7 +9,7 @@ import LazySectionAbout from "./LazySectionAbout";
 import LazySectionServices from "./LazySectionServices";
 import LazySectionPortfolio from "./LazySectionPortfolio";
 import LazySectionContact from "./LazySectionContact";
-
+import LazyGhostComponent from "./LazyGhostComponent";
 import Modal from "../../components/Modal/Modal";
 
 const LazyPortfolioModalContent = lazy(() =>
@@ -49,10 +49,14 @@ function MainPortfolio() {
             <Header />
             <main className="main-content">
                 <SectionHome />
-                <LazySectionAbout />
-                <LazySectionServices openModalService={openModalService} />
-                <LazySectionPortfolio openModalPortfolio={openModalPortfolio} />
-                <LazySectionContact />
+                <LazyGhostComponent>
+                    <LazySectionAbout />
+                    <LazySectionServices openModalService={openModalService} />
+                    <LazySectionPortfolio
+                        openModalPortfolio={openModalPortfolio}
+                    />
+                    <LazySectionContact />
+                </LazyGhostComponent>
             </main>
             {selectedService && (
                 <Modal
