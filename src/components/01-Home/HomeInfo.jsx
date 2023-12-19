@@ -1,7 +1,7 @@
 import React from "react";
-import Button, { BUTTON_TYPES } from "../Button/Button";
 import HomeTitle from "./HomeTitle";
-
+// eslint-disable-next-line
+import { Link, animateScroll as scroll } from "react-scroll";
 const HomeInfo = ({
     welcome,
     presentation,
@@ -11,10 +11,6 @@ const HomeInfo = ({
     quote,
     hireButtonText,
 }) => {
-    const buttons = {
-        href: "/contact",
-        class: "hire-me",
-    };
     return (
         <div className="home-info">
             <HomeTitle welcome={welcome} />
@@ -48,15 +44,18 @@ const HomeInfo = ({
                     </div>
                 </div>
             </article>
-            <Button
+            <Link
+                rel="nofollow"
                 href="#contact"
-                type={BUTTON_TYPES.DOWNLOAD}
-                btnName={hireButtonText}
-                to={buttons.href}
-                className={buttons.class}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                to="contact"
+                className="btn_a hire-me"
             >
                 {hireButtonText}
-            </Button>
+            </Link>
         </div>
     );
 };

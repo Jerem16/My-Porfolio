@@ -6,16 +6,11 @@ import PersonalInfo from "./PersonalInfo";
 import CV from "../../assets/cv/CV-Lemaignent_Jérémy-2023.pdf";
 import ProfileDataLoader from "./ProfileDataLoader";
 import AboutIntro from "./AboutIntro";
-
+import BtnContact from "../Button/BtnContact";
 function Profile() {
     const button1 = {
         class: "btn_left",
     };
-    const button2 = {
-        to: "#contact",
-        class: "btn_right ",
-    };
-
     return (
         <ProfileDataLoader>
             {(profileData) => (
@@ -44,13 +39,7 @@ function Profile() {
                                     >
                                         {profileData.profile.buttons.btnName1}
                                     </Button>
-                                    <Button
-                                        href="#contact"
-                                        type={BUTTON_TYPES.DOWNLOAD}
-                                        className={button2.class}
-                                    >
-                                        {profileData.profile.buttons.btnName2}
-                                    </Button>
+                                    <BtnContact hireButtonText={profileData.profile.buttons.btnName2} />
                                 </div>
                             </div>
                             <div className="height_val"></div>
