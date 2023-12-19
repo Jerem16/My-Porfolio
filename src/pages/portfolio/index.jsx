@@ -51,40 +51,49 @@ function MainPortfolio() {
                 <SectionHome />
                 <LazyGhostComponent>
                     <LazySectionAbout />
+                </LazyGhostComponent>
+                <LazyGhostComponent>
                     <LazySectionServices openModalService={openModalService} />
+                </LazyGhostComponent>
+                <LazyGhostComponent>
                     <LazySectionPortfolio
                         openModalPortfolio={openModalPortfolio}
                     />
-                    <LazySectionContact />
                 </LazyGhostComponent>
             </main>
-            {selectedService && (
+            <LazyGhostComponent>
+                {selectedService && (
+                    <Modal
+                        opened={true}
+                        Content={
+                            <LazyModalService
+                                selectedService={selectedService}
+                                closeModal={closeModal}
+                            />
+                        }
+                    />
+                )}
+            </LazyGhostComponent>
+            <LazyGhostComponent>
+                {selectedPortfolio && (
+                    <Modal
+                        opened={true}
+                        Content={
+                            <LazyPortfolioModalContent
+                                selectedPortfolio={selectedPortfolio}
+                                closeModal={closeModal}
+                            />
+                        }
+                    />
+                )}
+            </LazyGhostComponent>
+            <LazyGhostComponent>
                 <Modal
-                    opened={true}
-                    Content={
-                        <LazyModalService
-                            selectedService={selectedService}
-                            closeModal={closeModal}
-                        />
-                    }
+                    addClass={"contactModal"}
+                    opened={modalContact}
+                    Content={<LazyModalForm closeModal={closeModalContact} />}
                 />
-            )}
-            {selectedPortfolio && (
-                <Modal
-                    opened={true}
-                    Content={
-                        <LazyPortfolioModalContent
-                            selectedPortfolio={selectedPortfolio}
-                            closeModal={closeModal}
-                        />
-                    }
-                />
-            )}
-            <Modal
-                addClass={"contactModal"}
-                opened={modalContact}
-                Content={<LazyModalForm closeModal={closeModalContact} />}
-            />
+            </LazyGhostComponent>
         </>
     );
 }

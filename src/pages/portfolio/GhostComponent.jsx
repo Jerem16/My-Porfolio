@@ -6,8 +6,7 @@ const GhostComponent = ({ children }) => {
     useEffect(() => {
         const timerId = setTimeout(() => {
             setIsReady(true);
-        }, 5); // Délai de 3000 ms (3 secondes) pour l'apparition
-
+        }, 5); 
         return () => clearTimeout(timerId);
     }, []);
 
