@@ -2,7 +2,7 @@ import React from "react";
 import ImgComponent from "./Img";
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
-
+import NavToggler from "./components/00-Header/NavToggler";
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
     const lightTheme = useSelector((state) => state.theme.lightTheme);
@@ -21,6 +21,7 @@ function App() {
         <>
             <ImgComponent />
             <div className={`${navToggler}`} id="top" style={themeClasses}>
+                <NavToggler />
                 <MainPortfolio />
             </div>
         </>

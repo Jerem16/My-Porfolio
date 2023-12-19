@@ -29,9 +29,6 @@ const LazyModalService = lazy(() =>
 const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
 );
-const LazyNavToggler = lazy(() =>
-    import("../../components/00-Header/NavToggler")
-);
 function MainPortfolio() {
     const dispatch = useDispatch();
     const modalContact = useSelector((state) => state.classes.modalContact);
@@ -57,16 +54,11 @@ function MainPortfolio() {
     return (
         <>
             <Header />
-            <Suspense fallback={<></>}>
-                <LazyNavToggler />
-            </Suspense>
             <main className="main-content">
                 <SectionHome />
                 <Suspense fallback={<Loader />}>
                     <LazySectionAbout />
-
                     <LazySectionServices openModalService={openModalService} />
-
                     <LazySectionPortfolio
                         openModalPortfolio={openModalPortfolio}
                     />
