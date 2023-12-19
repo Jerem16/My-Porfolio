@@ -1,25 +1,17 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy } from "react";
 
 import SectionHome from "./section_home/SectionHome";
 import Header from "../../components/00-Header/00-Header";
 import { useDispatch, useSelector } from "react-redux";
 import { setModalContact } from "../../redux/reducers/classesSlice";
 
-import Loader from "../../components/Loader/Loader";
+import LazySectionAbout from "./LazySectionAbout";
+import LazySectionServices from "./LazySectionServices";
+import LazySectionPortfolio from "./LazySectionPortfolio";
+import LazySectionContact from "./LazySectionContact";
 
 import Modal from "../../components/Modal/Modal";
 
-const LazySectionAbout = lazy(() => import("./section_about/SectionAbout"));
-
-const LazySectionServices = lazy(() =>
-    import("./section_services/SectionServices")
-);
-const LazySectionPortfolio = lazy(() =>
-    import("./section_portfolio/SectionPortfolio")
-);
-const LazySectionContact = lazy(() =>
-    import("./section_contact/SectionContact")
-);
 const LazyPortfolioModalContent = lazy(() =>
     import("../../components/04-portfolio/PortfolioModalContent")
 );
@@ -29,6 +21,7 @@ const LazyModalService = lazy(() =>
 const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
 );
+
 function MainPortfolio() {
     const dispatch = useDispatch();
     const modalContact = useSelector((state) => state.classes.modalContact);
@@ -56,14 +49,10 @@ function MainPortfolio() {
             <Header />
             <main className="main-content">
                 <SectionHome />
-                <Suspense fallback={<Loader />}>
-                    <LazySectionAbout />
-                    <LazySectionServices openModalService={openModalService} />
-                    <LazySectionPortfolio
-                        openModalPortfolio={openModalPortfolio}
-                    />
-                    <LazySectionContact />
-                </Suspense>
+                <LazySectionAbout />
+                <LazySectionServices openModalService={openModalService} />
+                <LazySectionPortfolio openModalPortfolio={openModalPortfolio} />
+                <LazySectionContact />
             </main>
             {selectedService && (
                 <Modal
