@@ -45,6 +45,7 @@ const HomeInfo = ({
                 </div>
             </article>
             <Link
+                tabIndex="0"
                 rel="nofollow"
                 href="#contact"
                 spy={true}

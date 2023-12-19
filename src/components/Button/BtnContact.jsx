@@ -5,6 +5,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const BtnContact = ({ hireButtonText }) => {
     return (
         <Link
+            tabIndex="0"
             rel="nofollow"
             href="#contact"
             spy={true}

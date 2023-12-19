@@ -60,6 +60,9 @@ function MainPortfolio() {
                         openModalPortfolio={openModalPortfolio}
                     />
                 </LazyGhostComponent>
+                <LazyGhostComponent>
+                    <LazySectionContact />
+                </LazyGhostComponent>
             </main>
             <LazyGhostComponent>
                 {selectedService && (

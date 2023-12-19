@@ -67,7 +67,7 @@ function Header() {
                             <NavMenu
                                 id="tablet"
                                 navLinks={headerData.navLinks}
-                                handleClick={handleClick}
+                                // handleClick={handleClick}
                                 language={headerData.language}
                                 startLinks={headerData.startLinks}
                             />
