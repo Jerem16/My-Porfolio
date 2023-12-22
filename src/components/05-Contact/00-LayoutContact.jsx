@@ -22,6 +22,7 @@ const LayoutContact = ({ setIsSuccessModalOpen, isSuccessModalOpen }) => {
                                         data.contact.contactInfo[index].title
                                     }
                                     content={item.content}
+                                    refTitle={item.refTitle}
                                     key={item.id}
                                 />
                             ))}
