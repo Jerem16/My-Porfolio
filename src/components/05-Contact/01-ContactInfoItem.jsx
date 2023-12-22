@@ -43,7 +43,7 @@ const ContactInfoItem = ({ viewBox, icon, title, content, refTitle }) => {
                 </svg>
             </span>
             <h4>{title}</h4>
-            <p>{link || content}</p>
+            <p className="btn">{link || content}</p>
         </div>
     );
 };
