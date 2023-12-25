@@ -1,12 +1,14 @@
-.aside {
+/* .aside {
     animation: asideIntro 0.5s linear;
 }
 
 @keyframes asideIntro {
     0% {
+        opacity: 0;
         transform: translateX(-100%);
     }
     100% {
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -28,18 +30,19 @@
 }
 
 .backgroundX {
-    animation: backgroundXIntro 1s linear; /* Ajusté en fonction de homeIntro */
+    animation: backgroundXIntro 0.75s linear;
+    -webkit-animation: backgroundXIntro 0.75s linear;
 }
 
 @keyframes backgroundXIntro {
     0% {
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateX(100%);
     }
-    45% {
+    25% {
         opacity: 0;
-        transform: translateY(200%);
-    }
+        transform: translateX(100%);
+}
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -65,4 +68,4 @@
 .bgDraw {
     animation: navtogglerIntro 2.75s linear !important;
     -webkit-animation: navtogglerIntro 3.5s linear !important;
-}
+} */
