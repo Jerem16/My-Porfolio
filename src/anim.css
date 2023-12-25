@@ -1,0 +1,68 @@
+.aside {
+    animation: asideIntro 0.5s linear;
+}
+
+@keyframes asideIntro {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.home .row_center {
+    animation: homeIntro 2.75s linear;
+}
+
+@keyframes homeIntro {
+    0% {
+        transform: translateX(120%);
+    }
+    75.5% {
+        transform: translateX(120%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.backgroundX {
+    animation: backgroundXIntro 1s linear; /* Ajusté en fonction de homeIntro */
+}
+
+@keyframes backgroundXIntro {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    45% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-toggler {
+    animation: navtogglerIntro 1.5s linear;
+}
+
+@keyframes navtogglerIntro {
+    0% {
+        opacity: 0;
+    }
+    77.5% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.bgDraw2,
+.bgDraw {
+    animation: navtogglerIntro 2.75s linear !important;
+    -webkit-animation: navtogglerIntro 3.5s linear !important;
+}
