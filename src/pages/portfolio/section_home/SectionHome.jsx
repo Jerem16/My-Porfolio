@@ -5,11 +5,8 @@ import HomeImage from "../../../components/01-Home/HomeImage";
 import useLangData from "../../../utils/useLangData";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
 
-const LazyBackgroundX = lazy(() =>
-    import("../../../components/99-Svg_Icon/BackgroundX")
-);
-const LazyBackgroundY = lazy(() =>
-    import("../../../components/99-Svg_Icon/BackgroundY")
+const LazyHomeBackground = lazy(() =>
+    import("../../../components/01-Home/HomeBackground")
 );
 const LazyCanvasBackground = lazy(() =>
     import("../../../components/CanvasBackground/CanvasBackground")
@@ -66,8 +63,7 @@ function SectionHome() {
                 <section className="home section" id="home">
                     <div className="cont">
                         <Suspense fallback={<></>}>
-                            <LazyBackgroundX />
-                            <LazyBackgroundY />
+                            <LazyHomeBackground />
                         </Suspense>
                     </div>
                     <div id="top"></div>
