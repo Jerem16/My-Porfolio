@@ -1,39 +1,22 @@
-import React, { useState, useEffect } from "react";
-import profileWebp1k from "../../assets/img/profile-1k.webp";
-import profileWebp4k from "../../assets/img/profile-4k.webp";
+import React from "react";
 import profile620 from "../../assets/img/profile-620.webp";
 import profile1440 from "../../assets/img/profile-1440.webp";
 
 function HomeImageMob() {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1440);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 1440);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
     return (
         <div className="home-img">
             <div className="leftNB"></div>
             <div className="centerNB">
-                    <img
-                        className="mobile"
-                        alt="profile_image"
-                        srcSet={`                        
+                <img
+                    className="mobile"
+                    alt="profile_image"
+                    srcSet={`                        
                                 ${profile1440}     1440w,
                                 ${profile620}      620w,`}
-                        sizes="(max-width: 1440px) 100vw, 620px"
-                        width={140}
-                        height={200}
-                    />
-               
+                    sizes="(max-width: 1440px) 100vw, 620px"
+                    width={140}
+                    height={200}
+                />
             </div>
             <div className="rightNB"></div>
         </div>
