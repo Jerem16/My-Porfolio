@@ -43,13 +43,13 @@ function Header() {
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 1024px)");
-        
+
         const updateIsMobile = (event) => {
             setIsMobile(event.matches);
         };
-    
+
         mediaQuery.addEventListener("change", updateIsMobile);
-    
+
         return () => {
             mediaQuery.removeEventListener("change", updateIsMobile);
         };
@@ -62,23 +62,24 @@ function Header() {
                     <div className={`aside`}>
                         <AsideBackground />
                         <Logo data={data} />
-
-                        {isMobile ? (
-                            <NavMenu
-                                id="tablet"
-                                navLinks={headerData.navLinks}
-                                handleClick={handleClick}
-                                language={headerData.language}
-                                startLinks={headerData.startLinks}
-                            />
-                        ) : (
-                            <NavMenu
-                                id="desktop"
-                                navLinks={headerData.navLinks}
-                                language={headerData.language}
-                                startLinks={headerData.startLinks}
-                            />
-                        )}
+                        {/* <Fade cascade damping={0.1}> */}
+                            {isMobile ? (
+                                <NavMenu
+                                    id="tablet"
+                                    navLinks={headerData.navLinks}
+                                    handleClick={handleClick}
+                                    language={headerData.language}
+                                    startLinks={headerData.startLinks}
+                                />
+                            ) : (
+                                <NavMenu
+                                    id="desktop"
+                                    navLinks={headerData.navLinks}
+                                    language={headerData.language}
+                                    startLinks={headerData.startLinks}
+                                />
+                            )}
+                        {/* </Fade> */}
                         <Suspense fallback={<></>}>
                             <LazyThemeSelector />
                         </Suspense>
