@@ -2,7 +2,6 @@ import React from "react";
 import HomeTitle from "./HomeTitle";
 // eslint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
-import "./anim.css";
 import { Fade } from "react-awesome-reveal";
 const HomeInfoDesk = ({
     welcome,
@@ -54,7 +53,7 @@ const HomeInfoDesk = ({
                         </div>
                     </Fade>
                 </div>
-            </article>{" "}
+            </article>
             <Fade cascade damping={0.5} triggerOnce="false">
                 <Link
                     tabIndex="0"

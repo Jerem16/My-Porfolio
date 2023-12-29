@@ -28,7 +28,13 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
             <ul className={`nav ${langAddClass}`} id={id}>
                 <NavItem startLinks={startLinks} handleClick={handleClick} />
                 {navLinks.map((link, index) => (
-                    <Fade cascade damping={0.1} key={data.navLinks[index].id}>
+                    <Fade
+                        cascade="false"
+                        triggerOnce="true"
+                        direction="left"
+                        delay={index * 200}
+                        key={data.navLinks[index].id}
+                    >
                         <li className="head-btn">
                             <Link
                                 rel="nofollow"
@@ -52,11 +58,13 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
                                     </svg>
                                 </span>
                                 {link.text}
-                            </Link>
+                            </Link>{" "}
                         </li>
                     </Fade>
                 ))}
-                <LanguageSelector text={language} />
+
+                    <LanguageSelector text={language} />
+                
             </ul>
         </div>
     );

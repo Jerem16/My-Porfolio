@@ -6,7 +6,7 @@ import { setClass } from "../../redux/reducers/classesSlice";
 
 import LanguageIcon from "../99-Svg_Icon/LanguageIcon";
 import LanguageOptions from "./02-LanguageOptions";
-
+import { Fade } from "react-awesome-reveal";
 const LanguageSelector = ({ text }) => {
     const dispatch = useDispatch();
     const selectedLanguage = useSelector((state) => state.language.language);
@@ -32,25 +32,31 @@ const LanguageSelector = ({ text }) => {
     };
 
     return (
-        <li
-            className={`flag nav-language ${isSelectorOpen ? "open" : "close"}`}
-            onClick={toggleSelector}
-            ref={flagRef}
-        >
-            <LanguageIcon addClass="lang-icon" />
+        <Fade cascade="false" triggerOnce="true" direction="left" delay={900}>
+            <li 
+                className={`flag nav-language ${
+                    isSelectorOpen ? "open" : "close"
+                }`}
+                onClick={toggleSelector}
+                ref={flagRef}
+            >
+                <LanguageIcon addClass="lang-icon" />
 
-            <p className="lang" id="lang">
-                {text}
-            </p>
+                <p className="lang" id="lang">
+                    {text}
+                </p>
 
-            <span className="language-menu">
-                <LanguageOptions
-                    isSelectorOpen={isSelectorOpen}
-                    changeLanguage={changeLanguage}
-                    activeLanguage={activeLanguage}
-                />
-            </span>
-        </li>
+                <span className="language-menu">
+
+                        <LanguageOptions
+                            isSelectorOpen={isSelectorOpen}
+                            changeLanguage={changeLanguage}
+                            activeLanguage={activeLanguage}
+                        />
+                    
+                </span>
+            </li>
+        </Fade>
     );
 };
 

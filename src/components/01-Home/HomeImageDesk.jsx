@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import profileWebp1k from "../../assets/img/profile-1k.webp";
 import profileWebp4k from "../../assets/img/profile-4k.webp";
-import profile620 from "../../assets/img/profile-620.webp";
 import profile1440 from "../../assets/img/profile-1440.webp";
-import { Fade } from "react-awesome-reveal";
 
 function HomeImageDesk() {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1440);
@@ -22,10 +20,9 @@ function HomeImageDesk() {
 
     return (
         <div className="home-img">
-            <Fade cascade damping={0.1} triggerOnce="true">
-                <div className="leftNB"></div>
-                <div className="centerNB">
-                    {isDesktop && (
+            <div className="leftNB"></div>
+            <div className="centerNB">
+                {isDesktop && (
                         <img
                             className="desktop"
                             alt="profile_image"
@@ -36,8 +33,8 @@ function HomeImageDesk() {
                             width={446}
                             height={465}
                         />
-                    )}
-                    {!isDesktop && (
+                )}
+                {!isDesktop && (
                         <img
                             className="mobile"
                             alt="profile_image"
@@ -45,10 +42,9 @@ function HomeImageDesk() {
                             width={248}
                             height={353}
                         />
-                    )}
-                </div>
-                <div className="rightNB"></div>
-            </Fade>
+                )}
+            </div>
+            <div className="rightNB"></div>
         </div>
     );
 }
