@@ -23,19 +23,6 @@ function HomeImageMob() {
         <div className="home-img">
             <div className="leftNB"></div>
             <div className="centerNB">
-                {isDesktop && (
-                    <img
-                        className="desktop"
-                        alt="profile_image"
-                        srcSet={`                        
-                                ${profileWebp1k}     1920w,
-                                ${profileWebp4k}      3840w,`}
-                        sizes="(max-width: 1920px) 100vw, 3840px"
-                        width={446}
-                        height={465}
-                    />
-                )}
-                {!isDesktop && (
                     <img
                         className="mobile"
                         alt="profile_image"
@@ -46,7 +33,7 @@ function HomeImageMob() {
                         width={140}
                         height={200}
                     />
-                )}
+               
             </div>
             <div className="rightNB"></div>
         </div>

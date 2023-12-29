@@ -41,12 +41,9 @@ function HomeImageDesk() {
                         <img
                             className="mobile"
                             alt="profile_image"
-                            srcSet={`                        
-                                ${profile1440}     1440w,
-                                ${profile620}      620w,`}
-                            sizes="(max-width: 1440px) 100vw, 620px"
-                            width={140}
-                            height={200}
+                            srcSet={profile1440}
+                            width={248}
+                            height={353}
                         />
                     )}
                 </div>
