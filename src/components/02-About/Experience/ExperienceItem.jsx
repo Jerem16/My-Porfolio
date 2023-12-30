@@ -1,6 +1,7 @@
 import React from "react";
 import ExperienceEntry from "./ExperienceEntry";
 import { Fade } from "react-awesome-reveal";
+
 function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
     return (
         <div key={experience.sectionId} className="timeline-item">
