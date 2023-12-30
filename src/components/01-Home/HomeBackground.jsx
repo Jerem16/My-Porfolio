@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import BackgroundX from "../99-Svg_Icon/BackgroundX";
-import BackgroundY from "../99-Svg_Icon/BackgroundY";
+import React, { useState, useEffect, Suspense } from "react";
 
 const HomeBackground = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [BackgroundComponent, setBackgroundComponent] = useState(null);
 
     useEffect(() => {
         const handleResize = () => {
@@ -17,7 +16,24 @@ const HomeBackground = () => {
         };
     }, []);
 
-    return <>{windowWidth < 416 ? <BackgroundY /> : <BackgroundX />}</>;
+    useEffect(() => {
+        const loadComponent = async () => {
+            const component =
+                windowWidth < 416
+                    ? (await import("../99-Svg_Icon/BackgroundY")).default
+                    : (await import("../99-Svg_Icon/BackgroundX")).default;
+
+            setBackgroundComponent(component);
+        };
+
+        loadComponent();
+    }, [windowWidth]);
+
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            {BackgroundComponent && <BackgroundComponent />}
+        </Suspense>
+    );
 };
 
 export default React.memo(HomeBackground);
