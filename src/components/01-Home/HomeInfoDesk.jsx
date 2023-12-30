@@ -14,7 +14,7 @@ const HomeInfoDesk = ({
 }) => {
     return (
         <div className="home-info">
-            <Fade direction="down">
+            <Fade direction="down" triggerOnce="true" >
                 <HomeTitle welcome={welcome} />
             </Fade>
             <article className="home-card">
@@ -42,7 +42,7 @@ const HomeInfoDesk = ({
                             </span>
                         </p>
                     </Fade>
-                    <Fade direction="up">
+                    <Fade direction="up" triggerOnce="true">
                         <div className="content-inner">
                             <p className="content-inner_description">
                                 {additionalDescription}

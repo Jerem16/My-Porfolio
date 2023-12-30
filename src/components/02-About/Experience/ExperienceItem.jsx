@@ -1,6 +1,6 @@
 import React from "react";
 import ExperienceEntry from "./ExperienceEntry";
-
+import { Fade } from "react-awesome-reveal";
 function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
     return (
         <div key={experience.sectionId} className="timeline-item">
@@ -10,12 +10,20 @@ function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
             </h3>
             <h4 className="timeline-title">{experience.title}</h4>
             {experience.entries.map((entry, index) => (
-                <ExperienceEntry
+                <Fade
+                    cascade="true"
+                    direction="up"
+                    triggerOnce="true"
+                    delay={index * 5}
                     key={`${entry.index}_exp_${index * 3}`}
-                    entry={entry}
-                    toggleArticle={toggleArticle}
-                    openArticleStates={openArticleStates}
-                />
+                >
+                    <ExperienceEntry
+                        entry={entry}
+                        toggleArticle={toggleArticle}
+                        openArticleStates={openArticleStates}
+                        key={`${entry.index}_exp_${index * 3}`}
+                    />
+                </Fade>
             ))}
         </div>
     );

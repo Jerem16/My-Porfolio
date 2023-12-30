@@ -1,7 +1,7 @@
 import React from "react";
 import ItemLi from "./ItemLi";
 import TechnologyIcons from "./TechnologyIcons";
-
+import { Fade } from "react-awesome-reveal";
 const ExperienceArticle = ({ entry }) => {
     return (
         <div
@@ -10,14 +10,17 @@ const ExperienceArticle = ({ entry }) => {
                 display: `${entry.display}`,
             }}
         >
-            <p className={`timeline-anime open`}>
-                {entry.description.paragraph}
-            </p>
-            {entry.description.itemLi && entry.description.itemLi.length > 0 ? (
-                <ItemLi entry={entry} description={entry.description} />
-            ) : null}
-            <TechnologyIcons entry={entry} />
-            <div className="bd_Last"></div>
+            <Fade direction="up" triggerOnce="true">
+                <p className={`timeline-anime open`}>
+                    {entry.description.paragraph}
+                </p>
+                {entry.description.itemLi &&
+                entry.description.itemLi.length > 0 ? (
+                    <ItemLi entry={entry} description={entry.description} />
+                ) : null}
+                <TechnologyIcons entry={entry} />
+                <div className="bd_Last"></div>
+            </Fade>
         </div>
     );
 };

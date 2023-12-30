@@ -33,7 +33,7 @@ const LanguageSelector = ({ text }) => {
 
     return (
         <Fade cascade="false" triggerOnce="true" direction="left" delay={900}>
-            <li 
+            <li
                 className={`flag nav-language ${
                     isSelectorOpen ? "open" : "close"
                 }`}
@@ -47,13 +47,11 @@ const LanguageSelector = ({ text }) => {
                 </p>
 
                 <span className="language-menu">
-
-                        <LanguageOptions
-                            isSelectorOpen={isSelectorOpen}
-                            changeLanguage={changeLanguage}
-                            activeLanguage={activeLanguage}
-                        />
-                    
+                    <LanguageOptions
+                        isSelectorOpen={isSelectorOpen}
+                        changeLanguage={changeLanguage}
+                        activeLanguage={activeLanguage}
+                    />
                 </span>
             </li>
         </Fade>

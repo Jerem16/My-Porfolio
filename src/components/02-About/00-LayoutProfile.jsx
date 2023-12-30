@@ -7,6 +7,9 @@ import CV from "../../assets/cv/CV-Lemaignent_Jérémy-2023.pdf";
 import ProfileDataLoader from "./ProfileDataLoader";
 import AboutIntro from "./AboutIntro";
 import BtnContact from "../Button/BtnContact";
+
+import { Fade } from "react-awesome-reveal";
+
 function Profile() {
     const button1 = {
         class: "btn_left",
@@ -15,11 +18,13 @@ function Profile() {
         <ProfileDataLoader>
             {(profileData) => (
                 <>
-                    <div className="row_top">
-                        <div className="section-title">
-                            <h2>{profileData.profile.section}</h2>
+                    <Fade direction="down" triggerOnce="true">
+                        <div className="row_top">
+                            <div className="section-title">
+                                <h2>{profileData.profile.section}</h2>
+                            </div>
                         </div>
-                    </div>
+                    </Fade>
                     <div className="row_center">
                         <div className="about-content ">
                             <AboutIntro profileData={profileData} />
@@ -29,7 +34,9 @@ function Profile() {
                                         info={profileData.profile.personalInfo}
                                     />
                                 </div>
+
                                 <Skills skills={profileData.profile.skills} />
+
                                 <div className="buttons">
                                     <Button
                                         href={CV}
@@ -39,7 +46,11 @@ function Profile() {
                                     >
                                         {profileData.profile.buttons.btnName1}
                                     </Button>
-                                    <BtnContact hireButtonText={profileData.profile.buttons.btnName2} />
+                                    <BtnContact
+                                        hireButtonText={
+                                            profileData.profile.buttons.btnName2
+                                        }
+                                    />
                                 </div>
                             </div>
                             <div className="height_val"></div>

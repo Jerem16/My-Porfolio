@@ -1,9 +1,9 @@
 import React from "react";
-
+import { Fade } from "react-awesome-reveal";
 function PersonalInfo({ info }) {
     return (
         <>
-            {Object.entries(info).map(([key, value]) => {
+            {Object.entries(info).map(([key, value, index]) => {
                 let content;
                 if (key === "Email") {
                     content = <a href={`mailto:${value}`}>{value}</a>;
@@ -25,9 +25,15 @@ function PersonalInfo({ info }) {
 
                 return (
                     <div className="info-item" key={`Person.Inf_${key}`}>
-                        <p>
-                            {key} : {content}
-                        </p>
+                        <Fade
+                            triggerOnce="true"
+                            direction="left"
+                            delay={index * 200}
+                        >
+                            <p>
+                                {key} : {content}
+                            </p>
+                        </Fade>
                     </div>
                 );
             })}

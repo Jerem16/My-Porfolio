@@ -1,6 +1,5 @@
-import React, { lazy, Suspense } from "react";
-import Loader from "../../Loader/Loader";
-const LazyExperienceArticle = lazy(() => import("./ExperienceArticle"));
+import React from "react";
+import ExperienceArticle from "./ExperienceArticle";
 
 function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
     const isOpen = openArticleStates[entry.id];
@@ -41,11 +40,7 @@ function ExperienceEntry({ entry, toggleArticle, openArticleStates }) {
                     </div>
                 </div>
             </h4>
-            {isOpen && (
-                <Suspense fallback={<Loader />}>
-                    <LazyExperienceArticle entry={entry} />
-                </Suspense>
-            )}
+            {isOpen && <ExperienceArticle entry={entry} />}
         </article>
     );
 }
