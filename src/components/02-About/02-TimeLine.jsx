@@ -11,9 +11,8 @@ function Timeline({ experiences, technologySymbols, technologyImages }) {
                 direction="up"
                 triggerOnce="true"
                 delay={500}
-                // damping={0.05}
             >
-                <h3 className={`title ${classTitle}`}>{myTitle}</h3>{" "}
+                <h3 className={`title ${classTitle}`}>{myTitle}</h3>
             </Fade>
             <div className="row ">
                 <div className="timeline-box">

@@ -14,7 +14,7 @@ const HomeInfoDesk = ({
 }) => {
     return (
         <div className="home-info">
-            <Fade direction="down" triggerOnce="true" >
+            <Fade direction="down" triggerOnce="true">
                 <HomeTitle welcome={welcome} />
             </Fade>
             <article className="home-card">
@@ -28,20 +28,17 @@ const HomeInfoDesk = ({
                 </span>
 
                 <div className="home-card-content">
-                    <Fade direction="left" triggerOnce="true">
-                        <p className="home-card-content_description">
-                            <strong>
-                                <span className="home-quote">
-                                    <span className="reverse">,,</span>
-                                    {titleDescription}
-                                </span>
-                            </strong>
-                            <br />
-                            <span className="quote-description">
-                                {description}
+                    <p className="home-card-content_description">
+                        <strong>
+                            <span className="home-quote">
+                                <span className="reverse">,,</span>
+                                {titleDescription}
                             </span>
-                        </p>
-                    </Fade>
+                        </strong>
+                        <br />
+                        <span className="quote-description">{description}</span>
+                    </p>
+
                     <Fade direction="up" triggerOnce="true">
                         <div className="content-inner">
                             <p className="content-inner_description">

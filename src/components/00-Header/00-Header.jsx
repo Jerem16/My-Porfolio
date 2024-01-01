@@ -1,31 +1,11 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+// Header.jsx
+import React, { useState, useEffect } from "react";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../redux/reducers/classesSlice";
-import NavMenu from "./NavMenu";
 import dataBase from "../../assets/data/header.json";
-import P from "../99-Svg_Icon/p";
-
-const LazyThemeSelector = lazy(() => import("./ThemeSelector/ThemeSelector"));
-
-const AsideBackground = () => (
-    <div className="aside_bg">
-        <div className="aside_bg_top"></div>
-        <div className="aside_bg_center"></div>
-        <div className="aside_bg_bottom"></div>
-    </div>
-);
-
-const Logo = ({ data }) => (
-    <div className="logo">
-        <a rel="nofollow" href="#home">
-            <div>
-                <P />
-                {data.logoSpanTitle}
-            </div>
-        </a>
-    </div>
-);
+import HeaderDesk from "./HeaderDesk";
+import HeaderMob from "./HeaderMob";
 
 function Header() {
     const data = dataBase;
@@ -57,35 +37,17 @@ function Header() {
 
     return (
         <HeaderDataLoader>
-            {(headerData) => (
-                <header>
-                    <div className={`aside`}>
-                        <AsideBackground />
-                        <Logo data={data} />
-                        {/* <Fade cascade damping={0.1}> */}
-                            {isMobile ? (
-                                <NavMenu
-                                    id="tablet"
-                                    navLinks={headerData.navLinks}
-                                    handleClick={handleClick}
-                                    language={headerData.language}
-                                    startLinks={headerData.startLinks}
-                                />
-                            ) : (
-                                <NavMenu
-                                    id="desktop"
-                                    navLinks={headerData.navLinks}
-                                    language={headerData.language}
-                                    startLinks={headerData.startLinks}
-                                />
-                            )}
-                        {/* </Fade> */}
-                        <Suspense fallback={<></>}>
-                            <LazyThemeSelector />
-                        </Suspense>
-                    </div>
-                </header>
-            )}
+            {(headerData) =>
+                isMobile ? (
+                    <HeaderMob
+                        data={data}
+                        headerData={headerData}
+                        handleClick={handleClick}
+                    />
+                ) : (
+                    <HeaderDesk data={data} headerData={headerData} />
+                )
+            }
         </HeaderDataLoader>
     );
 }

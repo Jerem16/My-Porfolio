@@ -17,11 +17,7 @@ const classesSlice = createSlice({
         },
 
         toggleClasses: (state, action) => {
-            if (state.addClass === action.payload) {
-                state.addClass = "";
-            } else {
-                state.addClass = action.payload;
-            }
+            state.addClass = action.payload;
         },
         setModalContact: (state, action) => {
             state.modalContact = action.payload;

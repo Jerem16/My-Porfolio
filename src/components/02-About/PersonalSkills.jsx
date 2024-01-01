@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Slide, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 
 function Skills({ skills }) {
@@ -46,7 +46,7 @@ function Skills({ skills }) {
                     <div className="skill-item">
                         <h4>{skill.name}</h4>
                         <div className="progress">
-                            <Slide
+                            <Fade
                                 cascade={true}
                                 triggerOnce="false"
                                 direction="left"
@@ -61,7 +61,7 @@ function Skills({ skills }) {
                                         width: `${currentPercent[index]}%`,
                                     }}
                                 ></div>
-                            </Slide>
+                            </Fade>
                             <div className="skill-percent">
                                 {currentPercent[index]}%
                             </div>

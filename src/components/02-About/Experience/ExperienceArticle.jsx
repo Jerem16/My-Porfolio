@@ -18,6 +18,7 @@ const ExperienceArticle = ({ entry }) => {
                 entry.description.itemLi.length > 0 ? (
                     <ItemLi entry={entry} description={entry.description} />
                 ) : null}
+
                 <TechnologyIcons entry={entry} />
                 <div className="bd_Last"></div>
             </Fade>

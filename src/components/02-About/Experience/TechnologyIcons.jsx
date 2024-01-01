@@ -1,6 +1,6 @@
 import React from "react";
 import tech from "../../../assets/data/technology.json";
-
+import { Fade } from "react-awesome-reveal";
 function TechnologyIcons({ entry }) {
     return (
         <div className="technologies">
@@ -16,13 +16,21 @@ function TechnologyIcons({ entry }) {
                             }
                         >
                             {technology && tech.technologyImages[technology] ? (
-                                <img
-                                    src={require(`../../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
-                                    alt={technology}
-                                    width={27}
-                                    height={20}
-                                    loading="lazy"
-                                />
+                                <Fade
+                                    cascade="true"
+                                    damping={0.1}
+                                    triggerOnce="true"
+                                    direction="left"
+                                    delay={index * 100}
+                                >
+                                    <img
+                                        src={require(`../../../assets/img/skillsIcons/${tech.technologyImages[technology]}`)}
+                                        alt={technology}
+                                        width={27}
+                                        height={20}
+                                        loading="lazy"
+                                    />
+                                </Fade>
                             ) : null}
                         </abbr>
                     </div>
