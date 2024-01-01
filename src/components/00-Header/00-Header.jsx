@@ -1,5 +1,5 @@
 // Header.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../redux/reducers/classesSlice";
@@ -7,16 +7,7 @@ import dataBase from "../../assets/data/header.json";
 import HeaderDesk from "./HeaderDesk";
 import HeaderMob from "./HeaderMob";
 
-function Header() {
-    const data = dataBase;
-    const dispatch = useDispatch();
-
-    const handleClick = () => {
-        setTimeout(() => {
-            dispatch(toggleClasses("open"));
-        }, 500);
-    };
-
+const useIsMobile = () => {
     const [isMobile, setIsMobile] = useState(
         window.matchMedia("(max-width: 1024px)").matches
     );
@@ -35,6 +26,24 @@ function Header() {
         };
     }, []);
 
+    return isMobile;
+};
+
+const useDelayedDispatch = () => {
+    const dispatch = useDispatch();
+
+    return useCallback(() => {
+        setTimeout(() => {
+            dispatch(toggleClasses("open"));
+        }, 500);
+    }, [dispatch]);
+};
+
+const Header = () => {
+    const data = dataBase;
+    const isMobile = useIsMobile();
+    const delayedDispatch = useDelayedDispatch();
+
     return (
         <HeaderDataLoader>
             {(headerData) =>
@@ -42,7 +51,7 @@ function Header() {
                     <HeaderMob
                         data={data}
                         headerData={headerData}
-                        handleClick={handleClick}
+                        handleClick={delayedDispatch}
                     />
                 ) : (
                     <HeaderDesk data={data} headerData={headerData} />
@@ -50,6 +59,6 @@ function Header() {
             }
         </HeaderDataLoader>
     );
-}
+};
 
 export default React.memo(Header);
