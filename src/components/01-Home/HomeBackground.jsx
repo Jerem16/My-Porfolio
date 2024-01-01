@@ -1,20 +1,8 @@
 import React, { useState, useEffect, Suspense } from "react";
-
+import { useWindowWidth } from "../../utils/hooks";
 const HomeBackground = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const windowWidth = useWindowWidth();
     const [BackgroundComponent, setBackgroundComponent] = useState(null);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     useEffect(() => {
         const loadComponent = async () => {

@@ -1,47 +1,25 @@
-import React, { useState, useEffect } from "react";
-import profileWebp1k from "../../assets/img/profile-1k.webp";
-import profileWebp4k from "../../assets/img/profile-4k.webp";
+import React from "react";
+import DesktopImage from "./DesktopImage";
 import profile1440 from "../../assets/img/profile-1440.webp";
+import { useWindowWidth } from "../../utils/hooks"; // Assurez-vous de spécifier le bon chemin
 
 function HomeImageDesk() {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1440);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 1440);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    const windowWidth = useWindowWidth();
+    const isDesktop = windowWidth > 1440;
 
     return (
         <div className="home-img">
             <div className="leftNB"></div>
             <div className="centerNB">
-                {isDesktop && (
-                        <img
-                            className="desktop"
-                            alt="profile_image"
-                            srcSet={`                        
-                                ${profileWebp1k}     1920w,
-                                ${profileWebp4k}      3840w,`}
-                            sizes="(max-width: 1920px) 100vw, 3840px"
-                            width={446}
-                            height={465}
-                        />
-                )}
+                {isDesktop && <DesktopImage />}
                 {!isDesktop && (
-                        <img
-                            className="mobile"
-                            alt="profile_image"
-                            src={profile1440}
-                            width={248}
-                            height={353}
-                        />
+                    <img
+                        className="mobile"
+                        alt="profile_image"
+                        src={profile1440}
+                        width={248}
+                        height={353}
+                    />
                 )}
             </div>
             <div className="rightNB"></div>
