@@ -2,7 +2,7 @@
 import React from "react";
 import MobileImage from "./MobileImage";
 import HomeImageDesk from "./HomeImageDesk";
-import { useWindowWidth } from "../../utils/hooks"; // Créer un fichier hooks.js avec le hook useWindowWidth
+import { useWindowWidth } from "../../utils/hooks"; 
 
 const HomeImage = () => {
     const windowWidth = useWindowWidth();

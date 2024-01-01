@@ -15,7 +15,9 @@ const LazyCanvasBackground2 = lazy(() =>
 );
 
 const SuspenseLoader = ({ children }) => (
-    <Suspense fallback={<></>}>{children}</Suspense>
+    <Suspense fallback={<></>}>
+        {children}
+    </Suspense>
 );
 const TypedText = ({ data, typedRef }) => {
     useEffect(() => {
