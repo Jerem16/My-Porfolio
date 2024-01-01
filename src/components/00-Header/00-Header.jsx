@@ -1,5 +1,5 @@
 // Header.jsx
-import React, { useEffect, useCallback } from "react";
+import React, { useCallback } from "react";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../redux/reducers/classesSlice";

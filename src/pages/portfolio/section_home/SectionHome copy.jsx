@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, lazy, Suspense } from "react";
-import useLangData from "../../../utils/useLangData";
 import HomeInfo from "../../../components/01-Home/HomeInfo";
 import HomeImage from "../../../components/01-Home/HomeImage";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
@@ -14,11 +13,6 @@ const LazyCanvasBackground2 = lazy(() =>
     import("../../../components/CanvasBackground/CanvasBackground2")
 );
 
-const SuspenseLoader = ({ children }) => (
-    <Suspense fallback={<></>}>
-        {children}
-    </Suspense>
-);
 const TypedText = ({ data, typedRef }) => {
     useEffect(() => {
         const loadTyped = async () => {
@@ -57,24 +51,24 @@ const TypedText = ({ data, typedRef }) => {
     return null;
 };
 const SectionHome = () => {
-    const data = useLangData("home.json");
+    // const data = useLangData("home.json");
     const typedRef = useRef(null);
     return (
         <HomeDataLoader>
             {(homeData) => (
                 <section className="home section" id="home">
                     <div className="cont">
-                        <SuspenseLoader>
+                        <Suspense>
                             <LazyHomeBackground />
-                        </SuspenseLoader>
+                        </Suspense>
                     </div>
                     <div id="top"></div>
                     <div className="container">
                         <div className="row_top"></div>
                         <div className="bgDraw">
-                            <SuspenseLoader>
+                            <Suspense>
                                 <LazyCanvasBackground />
-                            </SuspenseLoader>
+                            </Suspense>
                         </div>
 
                         <div className="row_center">
@@ -91,9 +85,9 @@ const SectionHome = () => {
                             </div>
                         </div>
                         <div className="bgDraw2">
-                            <SuspenseLoader>
+                            <Suspense>
                                 <LazyCanvasBackground2 />
-                            </SuspenseLoader>
+                            </Suspense>
                         </div>
                         <div className="col_end"></div>
                     </div>

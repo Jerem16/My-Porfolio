@@ -2,10 +2,8 @@ import React from "react";
 import HomeInfoMob from "./HomeInfoMob";
 import HomeInfoDesk from "./HomeInfoDesk";
 import { useWindowWidth } from "../../utils/hooks";
-
 const HomeInfo = (props) => {
     const windowWidth = useWindowWidth();
-
     const commonProps = {
         welcome: props.welcome,
         presentation: props.presentation,
