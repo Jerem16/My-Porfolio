@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 
 const TypedText = ({ data, typedRef }) => {
@@ -48,4 +49,4 @@ const TypedText = ({ data, typedRef }) => {
     return null;
 };
 
-export default TypedText;
+export default React.memo(TypedText);

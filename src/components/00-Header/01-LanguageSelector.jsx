@@ -1,4 +1,3 @@
-// LanguageSelector.js
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../redux/reducers/languageSlice";

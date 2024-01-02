@@ -1,4 +1,3 @@
-// Header.jsx
 import React, { useCallback } from "react";
 import HeaderDataLoader from "./HeaderDataLoader";
 import { useDispatch } from "react-redux";

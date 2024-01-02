@@ -58,7 +58,7 @@ function NavMenu({ navLinks, handleClick, language, id, startLinks }) {
                                     </svg>
                                 </span>
                                 {link.text}
-                            </Link>{" "}
+                            </Link>
                         </li>
                     </Fade>
                 ))}

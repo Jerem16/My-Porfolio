@@ -1,4 +1,3 @@
-// HeaderDesk.jsx
 import React, { Suspense } from "react";
 import NavMenu from "./NavMenu";
 import Logo from "./Logo";
@@ -9,9 +8,12 @@ const LazyThemeSelector = React.lazy(() =>
 );
 
 const HeaderDesk = ({ data, headerData }) => (
-    <header>
-        <Fade direction="left" triggerOnce={true} className={`aside`}>
-            <div className={`aside`}>
+    <header style={{ position: "fixed" }}>
+        <Fade direction="left" triggerOnce={true} className="aside">
+            <div
+                className={`aside`}
+                // style={{ position: "fixed", zIndex: 10000 }}
+            >
                 <AsideBackground />
                 <Logo data={data} />
                 <NavMenu
@@ -23,7 +25,7 @@ const HeaderDesk = ({ data, headerData }) => (
                 <Suspense fallback={<></>}>
                     <LazyThemeSelector />
                 </Suspense>
-            </div>{" "}
+            </div>
         </Fade>
     </header>
 );

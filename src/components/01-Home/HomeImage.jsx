@@ -1,8 +1,7 @@
-// HomeImage.jsx
 import React from "react";
 import MobileImage from "./MobileImage";
 import HomeImageDesk from "./HomeImageDesk";
-import { useWindowWidth } from "../../utils/hooks"; 
+import { useWindowWidth } from "../../utils/hooks";
 
 const HomeImage = () => {
     const windowWidth = useWindowWidth();
