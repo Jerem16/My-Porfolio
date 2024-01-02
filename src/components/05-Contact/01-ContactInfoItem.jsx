@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Fade } from "react-awesome-reveal";
 const ContactInfoItem = ({ viewBox, icon, title, content, refTitle }) => {
     let link;
     if (refTitle === "Phone") {
@@ -33,17 +33,32 @@ const ContactInfoItem = ({ viewBox, icon, title, content, refTitle }) => {
     return (
         <div className="contact-info-item">
             <span className="icon">
-                <svg
-                    viewBox={viewBox}
-                    height="1em"
-                    xmlSpace="preserve"
-                    className="icon-fsa"
-                >
-                    <path d={icon} />
-                </svg>
+                <Fade direction="down" triggerOnce="true" delay={200}>
+                    <svg
+                        viewBox={viewBox}
+                        height="1em"
+                        xmlSpace="preserve"
+                        className="icon-fsa"
+                    >
+                        <path d={icon} />
+                    </svg>
+                </Fade>
             </span>
-            <h4>{title}</h4>
-            <p>{link || content}</p>
+            <h4>
+                {
+                    <Fade
+                        cascade
+                        delay={400}
+                        triggerOnce="true"
+                        damping={0.05}
+                    >
+                        {title}
+                    </Fade>
+                }
+            </h4>
+            <Fade direction="up" triggerOnce="true" delay={600}>
+                <p>{link || content}</p>
+            </Fade>
         </div>
     );
 };

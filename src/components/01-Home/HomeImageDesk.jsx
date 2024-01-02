@@ -5,7 +5,7 @@ import { useWindowWidth } from "../../utils/hooks"; // Assurez-vous de spécifie
 
 function HomeImageDesk() {
     const windowWidth = useWindowWidth();
-    const isDesktop = windowWidth > 1440;
+    const isDesktop = windowWidth > 1444;
 
     return (
         <div className="home-img">

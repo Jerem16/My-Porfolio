@@ -1,14 +1,36 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const SubContact = ({ data }) => {
     return (
         <div className="contact-content">
-            <h3 className="contact-title">
-                {data.contact["send-email-title"]}
-            </h3>
-            <h4 className="contact-sub-title">
+            <p className="contact-sub-title">
                 {data.contact["send-email-sub-title"]}
-            </h4>
+            </p>
+            <h3 className="contact-title">
+                {
+                    <Fade
+                        cascade
+                        delay={1040}
+                        triggerOnce="true"
+                        damping={0.015}
+                    >
+                        {data.contact["send-email-title"]}
+                    </Fade>
+                }
+            </h3>
+            <div className="contact-sub-title">
+                {
+                    <Fade
+                        cascade
+                        delay={1540}
+                        triggerOnce="true"
+                        damping={0.05}
+                    >
+                        (-----)
+                    </Fade>
+                }
+            </div>
         </div>
     );
 };

@@ -21,7 +21,17 @@ function Profile() {
                     <Fade direction="down" triggerOnce="true">
                         <div className="row_top">
                             <div className="section-title">
-                                <h2>{profileData.profile.section}</h2>
+                                <h2>
+                                    {
+                                        <Fade
+                                            cascade
+                                            triggerOnce="true"
+                                            damping={0.05}
+                                        >
+                                            {profileData.profile.section}
+                                        </Fade>
+                                    }
+                                </h2>
                             </div>
                         </div>
                     </Fade>

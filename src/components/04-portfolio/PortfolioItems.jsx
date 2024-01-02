@@ -1,10 +1,12 @@
 import React from "react";
 import portfolio_img from "../../assets/data/portfolio_img.json";
 
+import { Fade } from "react-awesome-reveal";
+
 const PortfolioItems = React.memo(({ openModal }) => {
     return (
         <>
-            {portfolio_img.map((item) => {
+            {portfolio_img.map((item, index) => {
                 const imagePath1 = require(`../../assets/img/webSite/${item.imagePath1}`);
                 const imagePath2 = require(`../../assets/img/webSite/${item.imagePath2}`);
                 const imagePath3 = require(`../../assets/img/webSite/${item.imagePath3}`);
@@ -12,12 +14,19 @@ const PortfolioItems = React.memo(({ openModal }) => {
                 const srcSet = `${imagePath1} 1920w, ${imagePath2} 2560w, ${imagePath3} 3840w`;
 
                 return (
-                    <div
-                        className="service-item"
+                    <Fade
+                        cascade="false"
+                        triggerOnce="true"
+                        direction="up"
+                        delay={index * 150}
                         key={item.id}
-                        onClick={() => openModal(item)}
+                        className="service-item"
                     >
-                        <div className="portfolio-item-inner shadow-dark">
+                        <div
+                            className="portfolio-item-inner shadow-dark"
+                            onClick={() => openModal(item)}
+                            key={item.id}
+                        >
                             <img
                                 alt={item.title}
                                 srcSet={srcSet}
@@ -27,7 +36,7 @@ const PortfolioItems = React.memo(({ openModal }) => {
                                 loading="lazy"
                             />
                         </div>
-                    </div>
+                    </Fade>
                 );
             })}
         </>

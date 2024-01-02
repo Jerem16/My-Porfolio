@@ -2,7 +2,7 @@ import React from "react";
 
 const ServiceItem = ({ iconClass, title, description, viewBox }) => {
     return (
-        <div className="service-item-inner">
+        <>
             <div className="icon">
                 <svg
                     viewBox={viewBox}
@@ -15,7 +15,7 @@ const ServiceItem = ({ iconClass, title, description, viewBox }) => {
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
-        </div>
+        </>
     );
 };
 

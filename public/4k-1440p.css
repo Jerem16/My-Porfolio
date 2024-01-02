@@ -1008,8 +1008,8 @@ header {
     right: 0;
     top: -0.625em;
     width: 8.7em;
-    animation: imgAfter 1500ms ease-in-out 500ms;
-    -webkit-animation: imgAfter 1500ms ease-in-out 500ms;
+    animation: imgAfter 1000ms ease-in 500ms;
+    -webkit-animation: imgAfter 1000ms ease-in 500ms;
 }
 .home .row .blockImg .home-img:before {
     border-bottom: 0.625em solid var(--skin-color);
@@ -1020,8 +1020,8 @@ header {
     position: absolute;
     right: -0.625em;
     width: 5.38375em;
-    animation: imgBefore 1500ms ease-in-out 500ms;
-    -webkit-animation: imgBefore 1500ms ease-in-out 500ms;
+    animation: imgBefore 750ms ease-in-out 750ms;
+    -webkit-animation: imgBefore 750ms ease-in-out 750ms;
 }
 .home .row .blockImg .home-img .leftNB,
 .home .row .blockImg .home-img .rightNB {
@@ -1174,6 +1174,13 @@ header {
     }
     .home .row .home-info .hire-me {
         position: absolute;
+        bottom: -42.5px;
+    }
+    .home .row .home-info {
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: -10px;
+        position: relative;
     }
     .home
         .row
@@ -1269,8 +1276,8 @@ header {
     border: 1px solid var(--bg-black-50);
 }
 .btn_a {
-    animation: btn_aIntro 2.3s ease-out;
-    -webkit-animation: btn_aIntro 2.3s ease-out;
+    animation: btn_aIntro 2.15s ease-out;
+    -webkit-animation: btn_aIntro 2.15s ease-out;
 }
 .blockImg {
     animation: blockImgIntro 1.75s linear;
