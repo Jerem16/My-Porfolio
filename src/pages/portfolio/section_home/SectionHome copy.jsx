@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, lazy, Suspense } from "react";
+import useLangData from "../../../utils/useLangData";
 import HomeInfo from "../../../components/01-Home/HomeInfo";
 import HomeImage from "../../../components/01-Home/HomeImage";
 import HomeDataLoader from "../../../components/01-Home/HomeDataLoader";
@@ -13,15 +14,14 @@ const LazyCanvasBackground2 = lazy(() =>
     import("../../../components/CanvasBackground/CanvasBackground2")
 );
 
+const SuspenseLoader = ({ children }) => (
+    <Suspense fallback={<></>}>{children}</Suspense>
+);
 const TypedText = ({ data, typedRef }) => {
     useEffect(() => {
         const loadTyped = async () => {
             try {
                 const { default: Typed } = await import("typed.js");
-
-                if (typedRef.current) {
-                    typedRef.current.destroy();
-                }
 
                 const { typedStrings } = data.home;
                 const options = {
@@ -31,17 +31,36 @@ const TypedText = ({ data, typedRef }) => {
                     loop: true,
                 };
 
+                // Détruire l'instance existante de Typed.js
+                if (typedRef.current) {
+                    typedRef.current.destroy();
+                }
+
+                // Créer une nouvelle instance de Typed.js
                 typedRef.current = new Typed(".typing", options);
             } catch (error) {
                 console.error("Error loading Typed.js:", error);
             }
         };
 
+        const handleResize = () => {
+            // Recharger Typed.js lors du redimensionnement de la fenêtre
+            loadTyped();
+        };
+
+        // Ajouter un écouteur d'événements pour l'événement de redimensionnement
+        window.addEventListener("resize", handleResize);
+
+        // Appeler loadTyped au montage initial
         if (data) {
             loadTyped();
         }
 
+        // Nettoyer l'écouteur d'événements lors du démontage du composant
         return () => {
+            window.removeEventListener("resize", handleResize);
+
+            // Détruire l'instance de Typed.js lors du démontage du composant
             if (typedRef.current) {
                 typedRef.current.destroy();
             }
@@ -50,25 +69,26 @@ const TypedText = ({ data, typedRef }) => {
 
     return null;
 };
+
 const SectionHome = () => {
-    // const data = useLangData("home.json");
+    const data = useLangData("home.json");
     const typedRef = useRef(null);
     return (
         <HomeDataLoader>
             {(homeData) => (
                 <section className="home section" id="home">
                     <div className="cont">
-                        <Suspense>
+                        <SuspenseLoader>
                             <LazyHomeBackground />
-                        </Suspense>
+                        </SuspenseLoader>
                     </div>
                     <div id="top"></div>
                     <div className="container">
                         <div className="row_top"></div>
                         <div className="bgDraw">
-                            <Suspense>
+                            <SuspenseLoader>
                                 <LazyCanvasBackground />
-                            </Suspense>
+                            </SuspenseLoader>
                         </div>
 
                         <div className="row_center">
@@ -85,9 +105,9 @@ const SectionHome = () => {
                             </div>
                         </div>
                         <div className="bgDraw2">
-                            <Suspense>
+                            <SuspenseLoader>
                                 <LazyCanvasBackground2 />
-                            </Suspense>
+                            </SuspenseLoader>
                         </div>
                         <div className="col_end"></div>
                     </div>
