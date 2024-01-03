@@ -5,6 +5,8 @@ import CloseIcon from "../../99-Svg_Icon/CloseIcon";
 import serviceIcon from "../../../assets/data/serviceIcon.json";
 import Check from "../../99-Svg_Icon/check";
 
+import { Fade } from "react-awesome-reveal";
+
 const ModalService = ({ selectedService, closeModal }) => {
     return (
         <ServiceDataLoader>
@@ -21,7 +23,11 @@ const ModalService = ({ selectedService, closeModal }) => {
                             <div className="modal-background">
                                 <div className="service-item" id="modalService">
                                     <div className="service-item-inner">
-                                        <div className="icon">
+                                        <Fade
+                                            direction="left"
+                                            triggerOnce="true"
+                                            className="icon"
+                                        >
                                             <svg
                                                 viewBox={
                                                     serviceIconData.viewBox
@@ -34,32 +40,50 @@ const ModalService = ({ selectedService, closeModal }) => {
                                                     d={serviceIconData.icon}
                                                 />
                                             </svg>
-                                        </div>
-                                        <h4>{serviceItem.title}</h4>
+                                        </Fade>
+                                        <Fade
+                                            direction="right"
+                                            triggerOnce="true"
+                                        >
+                                            <h4>{serviceItem.title}</h4>
+                                        </Fade>
                                         <p>{serviceItem.modalDescription}</p>
+
                                         <ul>
                                             {serviceItem.details.map(
                                                 (detail, index) => (
-                                                    <li
+                                                    <Fade
+                                                        cascade
+                                                        damping={0.2}
+                                                        delay={index * 200}
                                                         key={`ServLi_${
                                                             index * 70
                                                         }`}
                                                     >
-                                                        <Check />
-                                                        {detail}
-                                                    </li>
+                                                        <li
+                                                            key={`ServLi_${
+                                                                index * 70
+                                                            }`}
+                                                        >
+                                                            <Check />
+                                                            {detail}
+                                                        </li>
+                                                    </Fade>
                                                 )
                                             )}
                                         </ul>
-                                        <a
-                                            className="btn"
-                                            href={serviceItem.link.url}
-                                            onClick={closeModal}
-                                        >
-                                            {serviceItem.link.title}
-                                        </a>
+                                        <Fade direction="up" triggerOnce="true">
+                                            <a
+                                                className="btn"
+                                                href={serviceItem.link.url}
+                                                onClick={closeModal}
+                                            >
+                                                {serviceItem.link.title}
+                                            </a>
+                                        </Fade>
                                     </div>
                                 </div>
+
                                 <button type="button" onClick={closeModal}>
                                     <CloseIcon name="close" />
                                 </button>

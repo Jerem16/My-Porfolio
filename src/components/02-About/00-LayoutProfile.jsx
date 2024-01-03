@@ -18,7 +18,7 @@ function Profile() {
         <ProfileDataLoader>
             {(profileData) => (
                 <>
-                    <Fade direction="down" triggerOnce="true">
+                    <Fade direction="left" triggerOnce="true">
                         <div className="row_top">
                             <div className="section-title">
                                 <h2>

@@ -7,7 +7,7 @@ function PortfolioComp({ openModalPortfolio }) {
         <PortfolioDataLoader>
             {(portfolioData) => (
                 <>
-                    <Fade direction="right" triggerOnce="true">
+                    <Fade direction="left" triggerOnce="true">
                         <div className="row_top">
                             <div className="section-title">
                                 <h2>

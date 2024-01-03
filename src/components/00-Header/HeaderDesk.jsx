@@ -8,11 +8,14 @@ const LazyThemeSelector = React.lazy(() =>
 );
 
 const HeaderDesk = ({ data, headerData }) => (
-    <header style={{ zIndex: 10000  }}>
-        <Fade direction="left" triggerOnce={true} className="aside">
-            <div
-                className={`aside`}
-            >
+    <header>
+        <Fade
+            direction="left"
+            triggerOnce={true}
+            className="aside"
+            style={{ background: "transparent", border: "none" }}
+        >
+            <div className={`aside`}>
                 <AsideBackground />
                 <Logo data={data} />
                 <NavMenu
