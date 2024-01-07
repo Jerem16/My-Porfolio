@@ -17,40 +17,42 @@ const HomeInfoDesk = ({
             <Fade direction="down" triggerOnce="true">
                 <HomeTitle welcome={welcome} />
             </Fade>
-            <article className="home-card">
-                <span className="home-card_group">
-                    <h3 className="presentation_title">
-                        <span>{presentation}</span>
-                    </h3>
-                    <h3 className="presentation_typing">
-                        <span className="typing"></span>
-                    </h3>
-                </span>
-
-                <div className="home-card-content">
-                    <p className="home-card-content_description">
-                        <strong>
-                            <span className="home-quote">
-                                <span className="reverse">,,</span>
-                                {titleDescription}
+            <Fade cascade damping={0.2} direction="right" triggerOnce="true">
+                <article className="home-card">
+                    <span className="home-card_group">
+                        <h3 className="presentation_title">
+                            <span>{presentation}</span>
+                        </h3>
+                        <h3 className="presentation_typing">
+                            <span className="typing"></span>
+                        </h3>
+                    </span>
+                    <div className="home-card-content">
+                        <p className="home-card-content_description">
+                            <strong>
+                                <span className="home-quote">
+                                    <span className="reverse">,,</span>
+                                    {titleDescription}
+                                </span>
+                            </strong>
+                            <br />
+                            <span className="quote-description">
+                                {description}
                             </span>
-                        </strong>
-                        <br />
-                        <span className="quote-description">{description}</span>
-                    </p>
-
-                    <Fade direction="up" triggerOnce="true">
-                        <div className="content-inner">
-                            <p className="content-inner_description">
-                                {additionalDescription}
-                            </p>
-                            <blockquote className="content-inner_quote">
-                                <q>{quote}</q>
-                            </blockquote>
-                        </div>
-                    </Fade>
-                </div>
-            </article>
+                        </p>
+                        <Fade direction="up" triggerOnce="true">
+                            <div className="content-inner">
+                                <p className="content-inner_description">
+                                    {additionalDescription}
+                                </p>
+                                <blockquote className="content-inner_quote">
+                                    <q>{quote}</q>
+                                </blockquote>
+                            </div>
+                        </Fade>
+                    </div>
+                </article>
+            </Fade>
             <Fade cascade damping={0.5} triggerOnce="false">
                 <Link
                     tabIndex="0"

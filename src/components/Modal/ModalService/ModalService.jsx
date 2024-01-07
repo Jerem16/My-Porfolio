@@ -4,6 +4,7 @@ import ServiceDataLoader from "../../03-Services/ServiceDataLoader";
 import CloseIcon from "../../99-Svg_Icon/CloseIcon";
 import serviceIcon from "../../../assets/data/serviceIcon.json";
 import Check from "../../99-Svg_Icon/check";
+import BtnContact from "../../Button/BtnContact";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -73,13 +74,12 @@ const ModalService = ({ selectedService, closeModal }) => {
                                             )}
                                         </ul>
                                         <Fade direction="up" triggerOnce="true">
-                                            <a
-                                                className="btn"
-                                                href={serviceItem.link.url}
+                                            <BtnContact
                                                 onClick={closeModal}
-                                            >
-                                                {serviceItem.link.title}
-                                            </a>
+                                                hireButtonText={
+                                                    serviceItem.link.title
+                                                }
+                                            />
                                         </Fade>
                                     </div>
                                 </div>

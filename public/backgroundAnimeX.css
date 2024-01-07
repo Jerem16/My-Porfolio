@@ -1,1 +1,51 @@
-.backgroundAnimeX {fill: var(--bg-black-900);overflow: hidden;-webkit-filter: drop-shadow(2px 0px rgba(0, 0, 0, 0.25));}.bckgAnimeX { fill: var(--bg-black-50); animation: gdg 40s 0.5s ease-in-out 1 forwards; transform: scale(1); transform-origin: center center;}body.light .bckgAnimeX {animation: none;fill: var(--skin-color-light);opacity: 0.5;}body.light #home .backgroundX .backgroundAnimeX {-webkit-filter: drop-shadow(-1px 0px rgba(48, 46, 77, 0.35)) !important;}@keyframes gdg {0% {opacity: 1;}2.5% {fill: var(--bg-black-50);transform: scale(1);}2.5% {fill: var(--bg-black-50);}52.5% {fill: var(--skin-color);opacity: 0.5;}100% {fill: var(--skin-color-dark);opacity: 1;}}
+.backgroundAnimeX {
+    animation: bgDrawIntro 1.25s linear !important;
+    fill: var(--bg-black-900);
+    overflow: hidden;
+    -webkit-filter: drop-shadow(2px 0px rgba(0, 0, 0, 0.25));
+    -webkit-animation: bgDrawIntro 1.25s linear !important;
+}
+
+.bckgAnimeX {
+    fill: var(--bg-black-50);
+    animation: gdg 2.4s 0.5s ease-in-out 1 forwards;
+    transform: scale(0);
+    transform-origin: center center;
+    -webkit-animation: gdg 2.4s 0.5s ease-in-out 1 forwards;
+}
+
+body.light .bckgAnimeX {
+    animation: none;
+    fill: var(--skin-color-light);
+    opacity: 0.65;
+    transform: scale(1);
+}
+
+body.light #home .backgroundX .backgroundAnimeX {
+    -webkit-filter: drop-shadow(-1px 0px rgba(48, 46, 77, 0.35)) !important;
+}
+
+@keyframes gdg {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    2.5% {
+        fill: var(--bg-black-50);
+        /* transform: scale(0.25); */
+    }
+    50% {
+        fill: var(--skin-color);
+        opacity: 0.325;
+    }
+    75% {
+        /* opacity: 1; */
+        transform: scale(1);
+        /* fill: var(--skin-color-dark); */
+    }
+    100% {
+        fill: var(--skin-color-darked);
+        transform: scale(1);
+        opacity: 1;
+    }
+}

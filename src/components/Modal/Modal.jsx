@@ -10,17 +10,19 @@ const Modal = ({ opened, Content, closeIcon, addClass }) => {
     return (
         <>
             {opened && (
-                <div className={`modal  ${navToggler}`}>
-                    <div className="content sideAnime">
-                        <Suspense fallback={<Loader />}>{Content}</Suspense>
-                        <button
-                            type="button"
-                            onClick={() => setIsOpened(false)}
-                        >
-                            {closeIcon}
-                        </button>
+                <Suspense fallback={<Loader />}>
+                    <div className={`modal  ${navToggler}`}>
+                        <div className="content sideAnime">
+                            {Content}
+                            <button
+                                type="button"
+                                onClick={() => setIsOpened(false)}
+                            >
+                                {closeIcon}
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </Suspense>
             )}
         </>
     );

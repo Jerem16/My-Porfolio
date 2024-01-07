@@ -2,7 +2,7 @@ import React from "react";
 // eslint-disable-next-line
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const BtnContact = ({ hireButtonText }) => {
+const BtnContact = ({ hireButtonText, onClick }) => {
     return (
         <Link
             tabIndex="0"
@@ -14,6 +14,7 @@ const BtnContact = ({ hireButtonText }) => {
             duration={500}
             to="contact"
             className="btn_a hire-me"
+            onClick={onClick}
         >
             {hireButtonText}
         </Link>

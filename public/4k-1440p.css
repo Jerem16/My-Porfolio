@@ -1267,9 +1267,6 @@ header {
         font-size: 16px !important;
     }
 }
-.home .row_center {
-    animation: homeIntro 0.75s linear;
-}
 .backgroundX {
     animation: backgroundXIntro 2.25s linear;
     -webkit-animation: backgroundXIntro 2.25s linear;
@@ -1298,8 +1295,8 @@ header {
 }
 .bgDraw2,
 .bgDraw {
-    animation: bgDrawIntro 2.5s linear !important;
-    -webkit-animation: bgDrawIntro 2.5s linear !important;
+    animation: bgDrawIntro 5s linear !important;
+    -webkit-animation: bgDrawIntro 5s linear !important;
 }
 @keyframes imgBefore {
     0% {
@@ -1414,7 +1411,7 @@ header {
     0% {
         opacity: 0;
     }
-    57.5% {
+    65.75% {
         opacity: 0;
     }
     100% {

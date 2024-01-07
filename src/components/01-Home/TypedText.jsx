@@ -16,9 +16,9 @@ const TypedText = ({ data, typedRef }) => {
                 const { typedStrings } = data.home;
                 const options = {
                     strings: typedStrings,
-                    typeSpeed: 120,
-                    backSpeed: 60,
-                    loop: true,
+                    typeSpeed: 80,
+                    backSpeed: 15,
+                    loop: false,
                 };
 
                 typedRef.current = new Typed(".typing", options);

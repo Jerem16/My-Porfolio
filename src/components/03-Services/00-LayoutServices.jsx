@@ -40,7 +40,6 @@ const ServicesComponent = ({ openModalService }) => {
                                         triggerOnce="true"
                                         direction="up"
                                         delay={index * 200}
-                                        key={service.id}
                                         className="service-item-inner"
                                     >
                                         <ServiceItem

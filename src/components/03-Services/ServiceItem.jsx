@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 const ServiceItem = ({ iconClass, title, description, viewBox }) => {
     return (
-        <Fade cascade damping={0.2}>
+        <Fade cascade damping={0.1} triggerOnce="true" >
             <div className="icon">
                 <svg
                     viewBox={viewBox}
