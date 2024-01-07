@@ -10,7 +10,6 @@ const CircleLoader = ({ addClass }) => {
         <span className={`${addClass}`}>
             <svg
                 viewBox="0 0 289 289"
-                // enableBackground="new 0 0 128 128"
                 xmlSpace="preserve"
                 className="loaderCircle"
             >

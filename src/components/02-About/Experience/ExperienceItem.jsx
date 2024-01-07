@@ -1,13 +1,15 @@
 import React from "react";
 import ExperienceEntry from "./ExperienceEntry";
+import Calendar from "../../99-Svg_Icon/Calendar";
 import { Fade } from "react-awesome-reveal";
+
 
 function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
     return (
         <div key={experience.sectionId} className="timeline-item">
             <div className="circle-dot"></div>
             <h3 className="timeline-date">
-                <i className="fa fa-calendar"></i> {experience.year}
+                <Calendar className="fa fa-calendar"/>{experience.year}
             </h3>
             <h4 className="timeline-title">{experience.title}</h4>
             {experience.entries.map((entry, index) => (

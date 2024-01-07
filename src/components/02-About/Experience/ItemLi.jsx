@@ -1,5 +1,5 @@
 import React from "react";
-import Check from "../../99-Svg_Icon/check";
+import Check from "../../99-Svg_Icon/Check";
 import { Fade } from "react-awesome-reveal";
 
 const ItemLi = ({ entry }) => {
