@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-const Check = () => {
+
+const CheckIcon = () => {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
     return (
         <span>
@@ -14,4 +15,4 @@ const Check = () => {
     );
 };
 
-export default React.memo(Check);
+export default React.memo(CheckIcon);

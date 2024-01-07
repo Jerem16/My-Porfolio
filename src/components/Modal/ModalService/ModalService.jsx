@@ -3,7 +3,8 @@ import React from "react";
 import ServiceDataLoader from "../../03-Services/ServiceDataLoader";
 import CloseIcon from "../../99-Svg_Icon/CloseIcon";
 import serviceIcon from "../../../assets/data/serviceIcon.json";
-import Check from "../../99-Svg_Icon/Check";
+import CheckIcon from "../../99-Svg_Icon/CheckIcon";
+
 import BtnContact from "../../Button/BtnContact";
 
 import { Fade } from "react-awesome-reveal";
@@ -66,7 +67,7 @@ const ModalService = ({ selectedService, closeModal }) => {
                                                                 index * 70
                                                             }`}
                                                         >
-                                                            <Check />
+                                                            <CheckIcon />
                                                             {detail}
                                                         </li>
                                                     </Fade>
