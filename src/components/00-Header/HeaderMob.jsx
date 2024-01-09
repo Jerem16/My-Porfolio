@@ -11,7 +11,7 @@ const HeaderMob = ({ data, headerData, handleClick }) => (
     <header>
         <div className={`aside`}>
             <AsideBackground />
-            <Logo data={data} />
+            <Logo data={data} handleClick={handleClick} />
             <NavMenu
                 id="tablet"
                 navLinks={headerData.navLinks}

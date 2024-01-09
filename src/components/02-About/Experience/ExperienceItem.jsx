@@ -3,14 +3,31 @@ import ExperienceEntry from "./ExperienceEntry";
 import Calendar from "../../99-Svg_Icon/Calendar";
 import { Fade } from "react-awesome-reveal";
 
-
-function ExperienceItem({ experience, toggleArticle, openArticleStates }) {
+function ExperienceItem({
+    experience,
+    toggleArticle,
+    openArticleStates,
+    index,
+}) {
     return (
         <div key={experience.sectionId} className="timeline-item">
-            <div className="circle-dot"></div>
+            <Fade
+                cascade="true"
+                direction="up"
+                // triggerOnce="true"
+                delay={index * 50}
+                // damping={0.4}
+                key={index * 19}
+                className="circle-dot"
+            >
+                <span></span>
+            </Fade>
+
             <h3 className="timeline-date">
-                <Calendar className="fa fa-calendar"/>{experience.year}
+                <Calendar className="fa fa-calendar" />
+                {experience.year}
             </h3>
+
             <h4 className="timeline-title">{experience.title}</h4>
             {experience.entries.map((entry, index) => (
                 <Fade

@@ -3,24 +3,24 @@
         {
             "sectionTitle": "Éducation",
             "classTitle": "",
-            "sectionId": "Ed1",
-            "year": "1993 - 1995",
-            "title": "Géomètre-Topographe",
+            "sectionId": "Ed3",
+            "year": "2023 - 2023",
+            "title": "Développeur Intégrateur Web",
             "entries": [
                 {
-                    "index": "index-aléatoire-1",
+                    "index": "index-aléatoire-3",
                     "display": "none",
                     "description": {
-                        "describe": "B.E.P. Construction & Topographie.",
-                        "place": ["Lycée Auguste Perret, Le Havre"]
+                        "describe": "Intégrateur Web",
+                        "place": ["E-learning: OpenClassrooms"]
                     }
                 }
             ]
         },
         {
             "sectionId": "Ed2",
-            "year": "2021 - 2022",
-            "title": "Autodidacte",
+            "year": "2021 - 2023",
+            "title": "Développeur Autodidacte",
             "entries": [
                 {
                     "index": "index-aléatoire-2",
@@ -35,16 +35,31 @@
             ]
         },
         {
-            "sectionId": "Ed3",
-            "year": "2022 - 2023",
-            "title": "<Web Developer/Web Integrator>",
+            "sectionId": "Ed4",
+            "year": "2011 - 2012",
+            "title": "Chargé Relation Client à Distance",
             "entries": [
                 {
                     "index": "index-aléatoire-3",
                     "display": "none",
                     "description": {
-                        "describe": "Intégrateur Web",
-                        "place": ["E-learning: OpenClassrooms"]
+                        "describe": "Chargé Relation Client à Distance",
+                        "place": ["A.F.P.A le Havre"]
+                    }
+                }
+            ]
+        },
+        {
+            "sectionId": "Ed5",
+            "year": "1996 - 1998",
+            "title": "D.N.A.P.",
+            "entries": [
+                {
+                    "index": "index-aléatoire-3",
+                    "display": "none",
+                    "description": {
+                        "describe": "étudiant en Art plastique",
+                        "place": ["École National Supérieure d'Arts du Havre"]
                     }
                 }
             ]
@@ -55,7 +70,7 @@
             "sectionTitle": "Expérience",
             "classTitle": "experience",
             "sectionId": "Exp1",
-            "year": "2021 - 2022",
+            "year": "2020 - 2022",
             "title": "Développeur Web",
             "techTitle": "Technologies  ",
             "entries": [
@@ -95,11 +110,11 @@
         },
         {
             "sectionId": "Exp2",
-            "year": "2022 - 2023",
+            "year": "2022 - 2024",
             "title": "Développeur Web / Intégrateur Web",
             "techTitle": "Technologies ",
-            "siteLink" : "Vers le site web",
-            "githubLink" : "Vers le repositorie",
+            "siteLink": "Vers le site web",
+            "githubLink": "Vers le repositorie",
             "entries": [
                 {
                     "size": 25,
@@ -122,8 +137,8 @@
                     "index": "random-index-7",
                     "jobTitle": "Booki",
                     "addClass": "timeline-text_add ",
-                    "siteLink" : "https://jerem16.github.io/Booki/index.html",
-                    "githubLink" : "https://github.com/Jerem16/Jeremy_L_Projet_03",
+                    "siteLink": "https://jerem16.github.io/Booki/index.html",
+                    "githubLink": "https://github.com/Jerem16/Jeremy_L_Projet_03",
                     "technologies": {
                         "HTML": true,
                         "CSS": true
@@ -143,8 +158,8 @@
                     "index": "random-index-8",
                     "jobTitle": "OhMyFood",
                     "addClass": "timeline-text_add ",
-                    "siteLink" : "https://jerem16.github.io/ohmyfood/loader.html",
-                    "githubLink" : "https://github.com/Jerem16/Jeremy_L_Projet_04",
+                    "siteLink": "https://jerem16.github.io/ohmyfood/loader.html",
+                    "githubLink": "https://github.com/Jerem16/Jeremy_L_Projet_04",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -166,8 +181,8 @@
                     "index": "random-index-9",
                     "jobTitle": "Print-It",
                     "addClass": "timeline-text_add ",
-                    "siteLink" : "https://jerem16.github.io/print_it/index.html",
-                    "githubLink" : "https://github.com/Jerem16/Projet_05v2",
+                    "siteLink": "https://jerem16.github.io/print_it/index.html",
+                    "githubLink": "https://github.com/Jerem16/Projet_05v2",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -231,8 +246,8 @@
                     "index": "random-index-12",
                     "jobTitle": "Kasa",
                     "addClass": "timeline-text_add ",
-                    "siteLink" : "https://jerem16.github.io/react_kasa_page/",
-                    "githubLink" : "https://github.com/Jerem16/React_kasa",
+                    "siteLink": "https://jerem16.github.io/react_kasa_page/",
+                    "githubLink": "https://github.com/Jerem16/React_kasa",
                     "technologies": {
                         "HTML": true,
                         "CSS": true,
@@ -259,8 +274,8 @@
                     "index": "random-index-13",
                     "jobTitle": "Nina Carducci",
                     "addClass": "timeline-text_add ",
-                    "siteLink" : "https://jerem16.github.io/nina_carducci/index.html",
-                    "githubLink" : "https://github.com/Jerem16/Nina_Carducci",
+                    "siteLink": "https://jerem16.github.io/nina_carducci/index.html",
+                    "githubLink": "https://github.com/Jerem16/Nina_Carducci",
                     "technologies": {
                         "SEO": true,
                         "HTML": true,
@@ -308,8 +323,8 @@
                     "index": "random-index-15",
                     "jobTitle": "ArgentBank",
                     "addClass": "timeline-text_add ",
-                    "siteLink" : "https://jerem16.github.io/argent_bank/",
-                    "githubLink" : "https://github.com/Jerem16/Front_ArgentBank-website",
+                    "siteLink": "https://jerem16.github.io/argent_bank/",
+                    "githubLink": "https://github.com/Jerem16/Front_ArgentBank-website",
                     "technologies": {
                         "React": true,
                         "Redux": true,
@@ -334,7 +349,7 @@
         "section": "À propos",
         "presentation": "Je m'appelle Jérémy, je suis ",
         "jobTitle": "Web Développeur",
-        "description": "Développeur-intégrateur web, passionné par le web design et la conception de sites web, mon expertise s'étend de la conception graphique à la programmation coté front-end. Je crée des sites Web interactifs, optimisés pour la performance et le référencement SEO. Toujours à l'affût des dernières tendances technologiques, mon objectif est de fournir des solutions web de qualité supérieure.",
+        "description": "Passionné par le web design et la conception de sites, mon expertise s'étend de la conception graphique à la programmation coté front-end. Je crée des sites Web interactifs, ils sont optimisés pour la performance et le référencement SEO. Toujours à l'affût des dernières tendances technologiques, mon objectif est de fournir des solutions WEB de qualité supérieure.",
         "personalInfo": {
             "Birthday": "27 Juin 1977",
             "Age": 46,
@@ -359,12 +374,16 @@
                 "percent": 92
             },
             {
+                "name": "SASS",
+                "percent": 92
+            },
+            {
                 "name": "JS",
                 "percent": 84
             },
             {
                 "name": "React",
-                "percent": 76
+                "percent": 81
             }
         ]
     }

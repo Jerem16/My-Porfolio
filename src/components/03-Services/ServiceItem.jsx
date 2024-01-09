@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 const ServiceItem = ({ iconClass, title, description, viewBox }) => {
     return (
-        <Fade cascade damping={0.1} triggerOnce="true" >
+        <>
             <div className="icon">
                 <svg
                     viewBox={viewBox}
@@ -15,7 +15,7 @@ const ServiceItem = ({ iconClass, title, description, viewBox }) => {
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
-        </Fade>
+        </>
     );
 };
 

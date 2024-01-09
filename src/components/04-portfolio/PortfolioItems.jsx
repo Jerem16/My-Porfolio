@@ -18,7 +18,7 @@ const PortfolioItems = React.memo(({ openModal }) => {
                         cascade="false"
                         triggerOnce="true"
                         direction="up"
-                        delay={index * 150}
+                        delay={index * 50}
                         key={item.id}
                         className="service-item"
                     >

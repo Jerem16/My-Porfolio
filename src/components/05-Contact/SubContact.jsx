@@ -5,7 +5,6 @@ const SubContact = ({ data }) => {
     return (
         <div className="contact-content">
             <p className="contact-sub-title">
-                {data.contact["send-email-sub-title"]}
             </p>
             <h3 className="contact-title">
                 {
@@ -27,7 +26,7 @@ const SubContact = ({ data }) => {
                         triggerOnce="true"
                         damping={0.05}
                     >
-                        (-----)
+                        {data.contact["send-email-sub-title"]}
                     </Fade>
                 }
             </div>

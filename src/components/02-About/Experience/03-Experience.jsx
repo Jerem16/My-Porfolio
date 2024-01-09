@@ -13,12 +13,13 @@ function Experience({ experiences }) {
 
     return (
         <>
-            {experiences.map((experience) => (
+            {experiences.map((experience, item) => (
                 <ExperienceItem
                     key={experience.sectionId}
                     experience={experience}
                     toggleArticle={toggleArticle}
                     openArticleStates={openArticleStates}
+                    item={item}
                 />
             ))}
         </>
