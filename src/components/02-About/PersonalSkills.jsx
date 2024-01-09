@@ -9,25 +9,24 @@ function Skills({ skills }) {
 
     const [ref, inView] = useInView({
         triggerOnce: true,
-        rootMargin: "0px 0px -200px 0px", // Adjust this margin based on when you want the animation to start
+        rootMargin: "0px 0px -250px 0px",
     });
 
+    const x = skills.id;
     useEffect(() => {
         if (inView) {
-            const intervals = skills.map(
-                (skill, index) =>
-                    setInterval(() => {
-                        setCurrentPercent((prevPercent) =>
-                            prevPercent.map((percent, i) =>
-                                i === index
-                                    ? Math.min(percent + 1, skill.percent)
-                                    : percent
-                            )
-                        );
-                    }, 10) // Interval update setting (in milliseconds)
+            const intervals = skills.map((skill, index, id) =>
+                setInterval(() => {
+                    setCurrentPercent((prevPercent) =>
+                        prevPercent.map((percent, i) =>
+                            i === index
+                                ? Math.min(percent + 1, skill.percent)
+                                : percent
+                        )
+                    );
+                }, 10)
             );
 
-            // Clear intervals when each skill reaches its final value
             return () =>
                 intervals.forEach((interval) => clearInterval(interval));
         }
@@ -40,14 +39,14 @@ function Skills({ skills }) {
                     cascade={true}
                     direction="right"
                     triggerOnce="false"
-                    delay={index * 200}
+                    delay={index * 50}
                     key={skill.name}
                 >
                     <div className="skill-item">
                         <h4>{skill.name}</h4>
                         <div className="progress">
                             <Fade
-                                cascade={true}
+                                cascade
                                 triggerOnce="false"
                                 direction="left"
                                 className="progress-in"

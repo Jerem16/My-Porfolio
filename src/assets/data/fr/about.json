@@ -367,21 +367,26 @@
         "skills": [
             {
                 "name": "HTML",
+                "id": 0,
                 "percent": 94
             },
             {
+                "id": 1,
                 "name": "CSS",
                 "percent": 92
             },
             {
+                "id": 2,
                 "name": "SASS",
                 "percent": 92
             },
             {
+                "id": 3,
                 "name": "JS",
                 "percent": 84
             },
             {
+                "id": 4,
                 "name": "React",
                 "percent": 81
             }

@@ -8,7 +8,7 @@ import HeaderMob from "./HeaderMob";
 import { useWindowWidth } from "../../utils/hooks";
 
 const useIsMobile = (windowWidth) => {
-    return windowWidth < 1025;
+    return windowWidth <= 1024;
 };
 
 const useDelayedDispatch = () => {
