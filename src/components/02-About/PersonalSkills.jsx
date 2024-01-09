@@ -24,7 +24,7 @@ function Skills({ skills }) {
                                 : percent
                         )
                     );
-                }, 10)
+                }, 1.5)
             );
 
             return () =>
