@@ -3,7 +3,7 @@ import Button, { BUTTON_TYPES } from "../Button/Button";
 import Timeline from "./02-TimeLine";
 import Skills from "./PersonalSkills";
 import PersonalInfo from "./PersonalInfo";
-import CV from "../../assets/cv/CV-Lemaignent_Jérémy-2023.pdf";
+import CV from "../../assets/cv/CV-Lemaignent_Jérémy-2024.pdf";
 import ProfileDataLoader from "./ProfileDataLoader";
 import AboutIntro from "./AboutIntro";
 import BtnContact from "../Button/BtnContact";
