@@ -1,29 +1,27 @@
 import React, { useEffect } from "react";
-import { useWindowWidth } from "./utils/hooks";
 
 const ImgComponent = () => {
-    const windowWidth = useWindowWidth();
-
     useEffect(() => {
-        const loadWebpImage = async (imagePath) => {
-            try {
-                const module = await import(`.${imagePath}`);
-                applyStyles(module.default);
-            } catch (error) {
-                console.error("Error loading image:", error);
-            }
-        };
+        const screenWidth = window.innerWidth;
 
-        if (windowWidth >= 300 && windowWidth <= 620) {
-            loadWebpImage("/assets/img/profile-620.webp");
-        } else if (windowWidth > 620 && windowWidth <= 1440) {
-            loadWebpImage("/assets/img/profile-1440.webp");
-        } else if (windowWidth > 1440 && windowWidth <= 1920) {
-            loadWebpImage("/assets/img/profile-1k.webp");
-        } else if (windowWidth > 1920) {
-            loadWebpImage("/assets/img/profile-4k.webp");
+        if (screenWidth >= 300 && screenWidth <= 620) {
+            import("./assets/img/profile-620.webp").then((module) => {
+                applyStyles(module.default);
+            });
+        } else if (screenWidth > 620 && screenWidth <= 1440) {
+            import("./assets/img/profile-1440.webp").then((module) => {
+                applyStyles(module.default);
+            });
+        } else if (screenWidth > 1440 && screenWidth <= 1920) {
+            import("./assets/img/profile-1k.webp").then((module) => {
+                applyStyles(module.default);
+            });
+        } else if (screenWidth > 1920) {
+            import("./assets/img/profile-4k.webp").then((module) => {
+                applyStyles(module.default);
+            });
         }
-    }, [windowWidth]);
+    }, []);
 
     const applyStyles = (imageUrl) => {
         const link = document.createElement("link");

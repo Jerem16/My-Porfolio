@@ -1,0 +1,239 @@
+/****** [General] ******/
+
+:root {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-75: #292929;
+    --bg-black-50: #393939;
+    --text-black-900: #fff;
+    --text-black-700: #e9e9e9e9;
+    --text-black-500: #d4d4d4;
+}
+body {
+    line-height: 1.5;
+    font-size: 0.75vw;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden !important;
+    background: var(--bg-black-900);
+}
+
+#tablet {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    li,
+    .ul-anime {
+        transition: transform 0.2s ease-in-out;
+        font-size: 1em;
+        line-height: 1.5625em;
+        color: var(--text-black-500);
+        width: 100%;
+        i {
+            margin-right: 0.5em;
+        }
+    }
+}
+.check {
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.125em;
+}
+.section {
+    display: flex;
+    min-height: 6.25em;
+    background: var(--bg-black-900);
+    opacity: 1;
+    position: relative;
+    top: 0;
+    .container {
+        margin: auto;
+        padding-top: 2.8125em;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.row,
+.row_top,
+.row_center {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+.col_End {
+    width: 6.25em;
+    height: 0.0625em;
+}
+.modal {
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        margin-right: 1%;
+        min-width: 300px;
+        min-height: 100px;
+        max-height: 80vw;
+
+        width: 62.5%;
+    }
+}
+
+.nav-toggler,
+#nav-toggler {
+    position: fixed;
+    top: 1.40625em;
+    right: 1.40625em;
+    float: right;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8125em;
+    height: 2.5em;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 0.3125em;
+    background: var(--bg-black-100);
+    z-index: 1000;
+    span {
+        position: relative;
+        display: inline-block;
+        width: 1.125em;
+        height: 0.125em;
+        background: var(--skin-color);
+
+        &::before {
+            position: absolute;
+            top: -0.375em;
+            left: 0;
+            content: "";
+            width: 1.125em;
+            height: 0.125em;
+            background: var(--skin-color);
+        }
+
+        &::after {
+            position: absolute;
+            top: 0.375em;
+            left: 0;
+            content: "";
+            width: 1.125em;
+            height: 0.125em;
+            background: var(--skin-color);
+        }
+    }
+}
+.loader-wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 11111111;
+}
+
+.loading {
+    transform-origin: center;
+    transition: all 2s linear;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: calc(50vh - 12.5vw);
+    width: 25vw;
+    height: 25vw;
+    animation: rotate 2s infinite linear;
+
+    box-sizing: border-box;
+}
+.loaderCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+
+    border-radius: 50%;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.btn,
+a.btn_a {
+    border: none;
+    display: inline-flex;
+    white-space: nowrap;
+    text-decoration: none;
+    @include p;
+    line-height: 1.5em;
+    color: white;
+
+    padding: 0.75em 2.1875em 0.75em 2.1875em;
+    border-radius: 2.5em;
+
+    transition: all 0.3s ease;
+
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 0.25em 0.9375em rgba(48, 46, 77, 0.1);
+    transform: scale(1);
+
+    -webkit-font-smoothing: antialiased;
+
+    margin: 1.875em 0 3.625em 0.4375em;
+    background: linear-gradient(
+        -193.33deg,
+        var(--skin-color-light) 0%,
+        var(--skin-color) 50%,
+        var(--skin-color-dark) 100%
+    );
+
+    &:hover {
+        transform: scale(1.05);
+        transform-origin: center;
+        box-shadow: 0 0.25em 0.9375em rgba(48, 46, 77, 0.35);
+    }
+
+    &::before {
+        @include after_Before;
+        z-index: -1;
+        opacity: 0;
+    }
+}
+.btn_left {
+    margin: 3em 0.937em 0 0;
+}
