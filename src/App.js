@@ -1,7 +1,10 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import ImgComponent from "./Img";
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
+import Contact from "./pages/contact";
 import NavToggler from "./components/00-Header/NavToggler";
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
@@ -18,13 +21,18 @@ function App() {
     };
 
     return (
-        <>
+        <BrowserRouter>
             <ImgComponent />
             <div className={`${navToggler}`} id="top" style={themeClasses}>
                 <NavToggler />
-                <MainPortfolio />
+                {/* <MainPortfolio /> */}
+                <Routes>
+                    <Route path="/" element={<MainPortfolio />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/blog" element={<Contact />} />
+                </Routes>
             </div>
-        </>
+        </BrowserRouter>
     );
 }
 

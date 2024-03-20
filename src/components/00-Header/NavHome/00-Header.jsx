@@ -1,11 +1,12 @@
 import React, { useCallback } from "react";
-import HeaderDataLoader from "./HeaderDataLoader";
+import HeaderDataLoader from "../HeaderDataLoader";
 import { useDispatch } from "react-redux";
-import { toggleClasses } from "../../redux/reducers/classesSlice";
-import dataBase from "../../assets/data/header.json";
-import HeaderDesk from "./HeaderDesk";
-import HeaderMob from "./HeaderMob";
-import { useWindowWidth } from "../../utils/hooks";
+import { toggleClasses } from "../../../redux/reducers/classesSlice";
+import dataBase from "../../../assets/data/header.json";
+import HeaderDeskHome from "./HeaderDeskHome";
+import HeaderMobHome from "./HeaderMobHome";
+import { useWindowWidth } from "../../../utils/hooks";
+
 
 const useIsMobile = (windowWidth) => {
     return windowWidth <= 1024;
@@ -31,13 +32,13 @@ const Header = () => {
         <HeaderDataLoader>
             {(headerData) =>
                 isMobile ? (
-                    <HeaderMob
+                    <HeaderMobHome
                         data={data}
                         headerData={headerData}
                         handleClick={delayedDispatch}
                     />
                 ) : (
-                    <HeaderDesk data={data} headerData={headerData} />
+                    <HeaderDeskHome data={data} headerData={headerData} />
                 )
             }
         </HeaderDataLoader>

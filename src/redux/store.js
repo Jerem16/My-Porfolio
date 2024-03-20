@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducers";
-import thunk from "redux-thunk";
+// import thunk from "redux-thunk";
 
 let devToolsValue = true;
 if (/Firefox/.test(navigator.userAgent)) {
@@ -10,7 +10,7 @@ if (/Firefox/.test(navigator.userAgent)) {
 const store = configureStore({
     reducer: rootReducer,
     devTools: devToolsValue,
-    middleware: [thunk],
+    // middleware: [thunk],
 });
 
 export default store;

@@ -16,7 +16,7 @@ function Timeline({ experiences, technologySymbols, technologyImages }) {
             </Fade>
             <div className="row ">
                 <div className="timeline-box">
-                    <div className="timeline">
+                    <div className="timeline box-bd-color ">
                         <Experience
                             experiences={experiences}
                             technologySymbols={technologySymbols}

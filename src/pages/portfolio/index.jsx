@@ -1,14 +1,11 @@
 import React, { useState, lazy } from "react";
 
 import SectionHome from "./section_home/SectionHome";
-import Header from "../../components/00-Header/00-Header";
-import { useDispatch, useSelector } from "react-redux";
-import { setModalContact } from "../../redux/reducers/classesSlice";
+import Header from "../../components/00-Header/NavHome/00-Header";
 
 import LazySectionAbout from "./LazySectionAbout";
 import LazySectionServices from "./LazySectionServices";
 import LazySectionPortfolio from "./LazySectionPortfolio";
-import LazySectionContact from "./LazySectionContact";
 import LazyGhostComponent from "./LazyGhostComponent";
 import Modal from "../../components/Modal/Modal";
 
@@ -18,13 +15,11 @@ const LazyPortfolioModalContent = lazy(() =>
 const LazyModalService = lazy(() =>
     import("../../components/Modal/ModalService/ModalService")
 );
-const LazyModalForm = lazy(() =>
-    import("../../components/Modal/ModalForm/ModalForm")
+const LazyFooter = lazy(() =>
+    import("../../components/Footer/Footer")
 );
 
 function MainPortfolio() {
-    const dispatch = useDispatch();
-    const modalContact = useSelector((state) => state.classes.modalContact);
 
     const [selectedPortfolio, setSelectedPortfolio] = useState(null);
     const [selectedService, setSelectedService] = useState(null);
@@ -34,10 +29,6 @@ function MainPortfolio() {
     };
     const openModalService = (data) => {
         setSelectedService(data);
-    };
-
-    const closeModalContact = () => {
-        dispatch(setModalContact(false));
     };
     const closeModal = () => {
         setSelectedPortfolio(null);
@@ -60,10 +51,10 @@ function MainPortfolio() {
                         openModalPortfolio={openModalPortfolio}
                     />
                 </LazyGhostComponent>
-                <LazyGhostComponent>
-                    <LazySectionContact />
-                </LazyGhostComponent>
             </main>
+            <LazyGhostComponent>
+                <LazyFooter />
+            </LazyGhostComponent>
             <LazyGhostComponent>
                 {selectedService && (
                     <Modal
@@ -89,13 +80,6 @@ function MainPortfolio() {
                         }
                     />
                 )}
-            </LazyGhostComponent>
-            <LazyGhostComponent>
-                <Modal
-                    addClass={"contactModal"}
-                    opened={modalContact}
-                    Content={<LazyModalForm closeModal={closeModalContact} />}
-                />
             </LazyGhostComponent>
         </>
     );

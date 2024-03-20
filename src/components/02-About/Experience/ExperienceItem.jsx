@@ -14,9 +14,7 @@ function ExperienceItem({
             <Fade
                 cascade="true"
                 direction="up"
-                // triggerOnce="true"
                 delay={index * 50}
-                // damping={0.4}
                 key={index * 19}
                 className="circle-dot"
             >

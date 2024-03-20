@@ -1,13 +1,13 @@
 import React, { Suspense } from "react";
-import NavMenu from "./NavMenu";
-import Logo from "./Logo";
-import AsideBackground from "./AsideBackground";
+import NavMenuHome from "./NavMenuHome";
+import Logo from "../Logo"
+import AsideBackground from "../AsideBackground";
 import { Fade } from "react-awesome-reveal";
 const LazyThemeSelector = React.lazy(() =>
-    import("./ThemeSelector/ThemeSelector")
+    import("../ThemeSelector/ThemeSelector")
 );
 
-const HeaderDesk = ({ data, headerData }) => (
+const HeaderDeskHome = ({ data, headerData }) => (
     <header>
         <Fade
             direction="left"
@@ -18,11 +18,12 @@ const HeaderDesk = ({ data, headerData }) => (
             <div className={`aside`}>
                 <AsideBackground />
                 <Logo data={data} />
-                <NavMenu
+                <NavMenuHome
                     id="desktop"
-                    navLinks={headerData.navLinks}
+                    scrollLinks={headerData.scrollLinks}
                     language={headerData.language}
                     startLinks={headerData.startLinks}
+                    routerLinks={headerData.routerLinks}
                 />
                 <Suspense fallback={<></>}>
                     <LazyThemeSelector />
@@ -32,4 +33,4 @@ const HeaderDesk = ({ data, headerData }) => (
     </header>
 );
 
-export default React.memo(HeaderDesk);
+export default React.memo(HeaderDeskHome);

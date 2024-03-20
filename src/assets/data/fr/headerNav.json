@@ -1,6 +1,9 @@
 {
     "language": "Langue",
-    "navLinks": [
+    "scrollLinks": [
+        {
+            "text": "Accueil"
+        },
         {
             "text": "À propos"
         },
@@ -9,14 +12,17 @@
         },
         {
             "text": "Portfolio"
+        }
+    ],
+    "routerLinks": [
+        {
+            "text": "Accueil"
+        },
+        {
+            "text": "Blog"
         },
         {
             "text": "Contact"
-        }
-    ],
-    "startLinks": [
-        {
-            "text": "Accueil"
         }
     ]
 }

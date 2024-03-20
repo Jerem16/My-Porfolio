@@ -1,23 +1,24 @@
 import React, { Suspense } from "react";
-import NavMenu from "./NavMenu";
-import Logo from "./Logo";
-import AsideBackground from "./AsideBackground";
+import NavMenuContact from "./NavMenuContact";
+import Logo from "../Logo";
+import AsideBackground from "../AsideBackground";
 
 const LazyThemeSelector = React.lazy(() =>
-    import("./ThemeSelector/ThemeSelector")
+    import("../ThemeSelector/ThemeSelector")
 );
 
-const HeaderMob = ({ data, headerData, handleClick }) => (
+const HeaderMobContact = ({ data, headerData, handleClick }) => (
     <header>
         <div className={`aside`}>
             <AsideBackground />
             <Logo data={data} handleClick={handleClick} />
-            <NavMenu
+            <NavMenuContact
                 id="tablet"
-                navLinks={headerData.navLinks}
+                scrollLinks={headerData.scrollLinks}
                 handleClick={handleClick}
                 language={headerData.language}
                 startLinks={headerData.startLinks}
+                routerLinks={headerData.routerLinks}
             />
             <Suspense fallback={<></>}>
                 <LazyThemeSelector />
@@ -26,4 +27,4 @@ const HeaderMob = ({ data, headerData, handleClick }) => (
     </header>
 );
 
-export default React.memo(HeaderMob);
+export default React.memo(HeaderMobContact);

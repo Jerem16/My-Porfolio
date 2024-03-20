@@ -1,6 +1,6 @@
 {
-    "navLinks": {
-        "navLinksDesk": [
+    "scrollLinks": {
+        "scrollLinksDesk": [
             {
                 "to": "/"
             },
@@ -17,7 +17,7 @@
                 "to": "/contact"
             }
         ],
-        "navLinksTablet": [
+        "scrollLinksTablet": [
             {
                 "tab": "/"
             },
