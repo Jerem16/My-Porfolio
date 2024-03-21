@@ -39,7 +39,9 @@ function FooterNAvIcons({ handleClick, startLinks }) {
                                 <path d={data.socialLinks[index].icon2} />
                             </svg>
                         </div>
-                        {link.text}
+                        <span className="visually-hidden">
+                            {data.socialLinks[index].text}
+                        </span>
                     </a>
                 </Fade>
             ))}
