@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <!-- Page d'accueil -->
+   <url>
+      <loc>https://jeremy.lemaignent.com/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <!-- Page de contact -->
+   <url>
+      <loc>https://jeremy.lemaignent.com/contact</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- Page de blog -->
+   <url>
+      <loc>https://jeremy.lemaignent.com/blog</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+</urlset>
