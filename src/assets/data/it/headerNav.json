@@ -2,21 +2,27 @@
     "language": "Lingua",
     "scrollLinks": [
         {
+            "text": "Home"
+        },
+        {
             "text": "Chi siamo"
         },
         {
             "text": "Servizi"
         },
         {
-            "text": "Portafoglio"
-        },
-        {
-            "text": "Contatto"
+            "text": "Portfolio"
         }
     ],
-    "startLinks": [
+    "routerLinks": [
         {
-            "text": "Homepage"
+            "text": "Home"
+        },
+        {
+            "text": "Blog"
+        },
+        {
+            "text": "Contatti"
         }
     ]
 }

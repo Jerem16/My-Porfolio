@@ -1,0 +1,45 @@
+{
+    "services": {
+        "title": "Services",
+        "items": ["Web design", "Développement", "Hébergement"]
+    },
+    "siteMap": {
+        "title": "Plan du site",
+        "links": [
+            {
+                "text": "Accueil",
+                "to": ""
+            },
+            {
+                "text": "Blog",
+                "to": "blog"
+            },
+            {
+                "text": "Contact",
+                "to": "contact"
+            }
+        ]
+    },
+    "about": {
+        "title": "À propos",
+        "items": ["Entreprise", "Équipe", "Mention légales"]
+    },
+    "followUs": "Suivez-nous :",
+    "credits": [
+        "<strong>Un grand merci ! </strong>",
+        "<strong>Aux <em>Créateurs & Contributeurs.</em></strong>",
+        "<strong>Des <em>Bibliothèques & Frameworks</em> que nous utilisons !</strong>",
+        "<em>Framework :</em> <strong>\"React\"</strong>",
+        "<em>Gestion de l'état :</em> <strong>\"Redux\"</strong>",
+        "<em>Animations :</em> <strong>\"React-awesome-reveal\"</strong>",
+        "",
+        "",
+        "<em>Animation de particules :</em> <strong>\"Tsparticles\"</strong>",
+        "",
+        "<em>Animation de texte :</em> <strong>\"Typed.js\"</strong>",
+        "<em>Défilement fluide :</em> <strong>\"React-scroll\"</strong>",
+        "<em>Icônes :</em> <strong>\"FontAwesome\"</strong>",
+        "<em>Police de caractères :</em> <strong>\"Google Font\"</strong>"
+    ],
+    "copyright": "wii-design.com © {{year}}. Tous droits réservés."
+}

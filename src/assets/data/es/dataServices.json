@@ -22,7 +22,6 @@
             "title": "Integrador Web",
             "description": "Sitios web dinámicos, interactivos y amigables.",
             "modalDescription": "Creación de sitios web dinámicos, interactivos y amigables.",
-
             "details": [
                 "Diseña interfaces de usuario elegantes e intuitivas para una experiencia óptima del usuario.",
                 "Integra datos en tiempo real utilizando API de vanguardia.",
@@ -39,7 +38,6 @@
             "title": "Diseño Web/UX",
             "description": "Haz realidad tus sueños. ¡Transforma tus ideas en realidad!",
             "modalDescription": "¿Tienes sueños? ¡Hazlos realidad!",
-
             "details": [
                 "Convierte tus creaciones gráficas en sitios web interactivos.",
                 "Nuestro servicio de integración de maquetas Figma y PSD en HTML/CSS está a tu disposición.",
@@ -70,18 +68,18 @@
         {
             "id": "S5",
             "title": "SEO",
-            "description": "Una gama de servicios que maximiza la visibilidad de tu sitio web.",
-            "modalDescription": "Una gama de servicios que maximiza la visibilidad de tu sitio web.",
-
+            "description": "El conjunto de servicios que maximiza la visibilidad de su sitio web.",
+            "modalDescription": "El conjunto de servicios que maximiza la visibilidad de su sitio web.",
             "details": [
-                "Porque entendemos la importancia del SEO para el crecimiento de tu negocio en línea.",
-                "Ofrecemos una gama completa de servicios para garantizar el rendimiento técnico de tu sitio, mejorando su clasificación en los motores de búsqueda.",
-                "Vigilancia competitiva: Para mantenerse en la cima, seguimos de cerca los últimos cambios en los algoritmos de búsqueda para mantener constantemente actualizado tu sitio.",
-                "Análisis de Palabras Clave: Nuestro equipo realiza una investigación exhaustiva de palabras clave para apuntar a los términos más relevantes para tu sector.",
-                "Contenido de Calidad: Creamos contenido rico en palabras clave y de alta calidad para atraer y retener a tu público objetivo."
+                "Porque entendemos la importancia del SEO para el crecimiento de su empresa en línea.",
+                "Ofrecemos una gama completa de servicios para garantizar el rendimiento y la relevancia de su sitio.",
+                "Optimización SEO: Mejorar el rendimiento técnico del sitio mejora su clasificación en los motores de búsqueda.",
+                "Monitoreo competitivo: Para mantenerse en la cima, monitoreamos de cerca los últimos cambios en los algoritmos de búsqueda para mantener su sitio constantemente actualizado.",
+                "Análisis de palabras clave: Nuestro equipo realiza una investigación exhaustiva de palabras clave para apuntar a los términos más relevantes para su sector.",
+                "Contenido de calidad: Creamos contenido rico en palabras clave y de alta calidad para atraer y retener a su público objetivo."
             ],
             "link": {
-                "title": "Mejorar tu presencia en línea",
+                "title": "Mejorar su presencia en línea",
                 "url": "#contact"
             }
         },

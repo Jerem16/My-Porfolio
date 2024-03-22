@@ -1,0 +1,45 @@
+{
+    "services": {
+        "title": "Services",
+        "items": ["Web design", "Development", "Hosting"]
+    },
+    "siteMap": {
+        "title": "Site Map",
+        "links": [
+            {
+                "text": "Home",
+                "to": ""
+            },
+            {
+                "text": "Blog",
+                "to": "blog"
+            },
+            {
+                "text": "Contact",
+                "to": "contact"
+            }
+        ]
+    },
+    "about": {
+        "title": "About",
+        "items": ["Company", "Team", "Legacy"]
+    },
+    "followUs": "Follow us:",
+    "credits": [
+        "<strong>A big thank you! </strong>",
+        "<strong>To the <em>Creators & Contributors.</em></strong>",
+        "<strong>From the <em>Libraries & Frameworks</em> we use!</strong>",
+        "<em>Framework:</em> <strong>\"React\"</strong>",
+        "<em>State management:</em> <strong>\"Redux\"</strong>",
+        "<em>Animations:</em> <strong>\"React-awesome-reveal\"</strong>",
+        "",
+        "",
+        "<em>Particle animation:</em> <strong>\"Tsparticles\"</strong>",
+        "",
+        "<em>Text animation:</em> <strong>\"Typed.js\"</strong>",
+        "<em>Smooth scrolling:</em> <strong>\"React-scroll\"</strong>",
+        "<em>Icons:</em> <strong>\"FontAwesome\"</strong>",
+        "<em>Font:</em> <strong>\"Google Font\"</strong>"
+    ],
+    "copyright": "wii-design.com © {{year}}. All rights reserved."
+}

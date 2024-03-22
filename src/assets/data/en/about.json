@@ -3,30 +3,30 @@
         {
             "sectionTitle": "Education",
             "classTitle": "",
-            "sectionId": "Ed1",
-            "year": "1993 - 1995",
-            "title": "Surveyor-Topographer",
+            "sectionId": "Ed3",
+            "year": "2023 - 2023",
+            "title": "Web Integrator Developer",
             "entries": [
                 {
-                    "index": "random-index-1",
+                    "index": "random-index-3",
                     "display": "none",
                     "description": {
-                        "describe": "Vocational Baccalaureate in Construction & Surveying.",
-                        "place": ["Auguste Perret High School, Le Havre"]
+                        "describe": "Web Integrator",
+                        "place": ["E-learning: OpenClassrooms"]
                     }
                 }
             ]
         },
         {
             "sectionId": "Ed2",
-            "year": "2021 - 2022",
-            "title": "Self-taught",
+            "year": "2021 - 2023",
+            "title": "Self-taught Developer",
             "entries": [
                 {
                     "index": "random-index-2",
                     "display": "none",
                     "description": {
-                        "describe": "Adobe Photoshop, Illustrator, Dreamweaver...",
+                        "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
                         "place": [
                             "HTML & CSS (On Mozilla Developer Network - MDN)"
                         ]
@@ -35,16 +35,31 @@
             ]
         },
         {
-            "sectionId": "Ed3",
-            "year": "2022 - 2023",
-            "title": "Web Developer/Web Integrator",
+            "sectionId": "Ed4",
+            "year": "2011 - 2012",
+            "title": "Remote Customer Relationship Manager",
             "entries": [
                 {
                     "index": "random-index-3",
                     "display": "none",
                     "description": {
-                        "describe": "Web Integrator",
-                        "place": ["E-learning: OpenClassrooms"]
+                        "describe": "Remote Customer Relationship Manager",
+                        "place": ["A.F.P.A Le Havre"]
+                    }
+                }
+            ]
+        },
+        {
+            "sectionId": "Ed5",
+            "year": "1996 - 1998",
+            "title": "D.N.A.P.",
+            "entries": [
+                {
+                    "index": "random-index-3",
+                    "display": "none",
+                    "description": {
+                        "describe": "Student in Plastic Arts",
+                        "place": ["National School of Arts of Le Havre"]
                     }
                 }
             ]
@@ -332,14 +347,14 @@
     ],
     "profile": {
         "section": "About",
-        "presentation": "My name is Jérémy, I am a ",
+        "presentation": "My name is Jérémy, I am ",
         "jobTitle": "Web Developer",
-        "description": "Web developer and integrator, passionate about web design and website development, my expertise extends from graphic design to front-end programming. I create interactive websites, optimized for performance and SEO. Always keeping up with the latest technological trends, my goal is to provide superior quality web solutions.",
+        "description": "Passionate about web design and site development, my expertise ranges from graphic design to front-end programming. I create interactive websites optimized for performance and SEO. Always on the lookout for the latest technological trends, my goal is to provide superior quality WEB solutions.",
         "personalInfo": {
             "Birthday": "June 27, 1977",
             "Age": 46,
-            "Website": "www.domain.com",
-            "Email": "jeremy.lemaignent.com",
+            "Website": "jeremy.lemaignent.com",
+            "Email": "web.my.dev@gmail.com",
             "degree": "Web Integrator",
             "Phone": "+33 6 35 02 06 41",
             "City": "Le Havre",
@@ -352,20 +367,29 @@
         "skills": [
             {
                 "name": "HTML",
+                "id": 0,
                 "percent": 94
             },
             {
+                "id": 1,
                 "name": "CSS",
                 "percent": 92
             },
             {
+                "id": 2,
+                "name": "SASS",
+                "percent": 92
+            },
+            {
+                "id": 3,
                 "name": "JS",
                 "percent": 84
             },
             {
+                "id": 4,
                 "name": "React",
-                "percent": 76
+                "percent": 81
             }
         ]
-    }
+    }    
 }

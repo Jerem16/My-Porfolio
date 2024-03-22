@@ -1,50 +1,65 @@
 {
     "education": [
         {
-            "sectionTitle": "Ausbildung",
+            "sectionTitle": "Educazione",
             "classTitle": "",
-            "sectionId": "Ed1",
-            "year": "1993 - 1995",
-            "title": "Vermessungsingenieur",
+            "sectionId": "Ed3",
+            "year": "2023 - 2023",
+            "title": "Sviluppatore Integratore Web",
             "entries": [
                 {
-                    "index": "index-aléatoire-1",
+                    "index": "indice-casuale-3",
                     "display": "none",
                     "description": {
-                        "describe": "B.E.P. Bauwesen & Vermessung.",
-                        "place": ["Lycée Auguste Perret, Le Havre"]
+                        "describe": "Integratore Web",
+                        "place": ["E-Learning: OpenClassrooms"]
                     }
                 }
             ]
         },
         {
             "sectionId": "Ed2",
-            "year": "2021 - 2022",
-            "title": "Autodidakt",
+            "year": "2021 - 2023",
+            "title": "Sviluppatore Autodidatta",
             "entries": [
                 {
-                    "index": "index-aléatoire-2",
+                    "index": "indice-casuale-2",
                     "display": "none",
                     "description": {
-                        "describe": "Adobe Photoshop, Illustrator, Dreamweaver...",
+                        "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
                         "place": [
-                            "HTML & CSS (Auf Mozilla Developer Network - MDN)"
+                            "HTML & CSS (Su Mozilla Developer Network - MDN)"
                         ]
                     }
                 }
             ]
         },
         {
-            "sectionId": "Ed3",
-            "year": "2022 - 2023",
-            "title": "<Webentwickler/Webintegrator>",
+            "sectionId": "Ed4",
+            "year": "2011 - 2012",
+            "title": "Responsabile del Servizio Clienti a Distanza",
             "entries": [
                 {
-                    "index": "index-aléatoire-3",
+                    "index": "indice-casuale-3",
                     "display": "none",
                     "description": {
-                        "describe": "Webintegrator",
-                        "place": ["E-Learning: OpenClassrooms"]
+                        "describe": "Responsabile del Servizio Clienti a Distanza",
+                        "place": ["A.F.P.A Le Havre"]
+                    }
+                }
+            ]
+        },
+        {
+            "sectionId": "Ed5",
+            "year": "1996 - 1998",
+            "title": "D.N.A.P.",
+            "entries": [
+                {
+                    "index": "indice-casuale-3",
+                    "display": "none",
+                    "description": {
+                        "describe": "Studente di Arti Plastiche",
+                        "place": ["Scuola Nazionale di Arti di Le Havre"]
                     }
                 }
             ]
@@ -55,14 +70,14 @@
             "sectionTitle": "Esperienza",
             "classTitle": "esperienza",
             "sectionId": "Exp1",
-            "year": "2021 - 2022",
+            "year": "2020 - 2022",
             "title": "Sviluppatore Web",
-            "techTitle": "Tecnologie",
+            "techTitle": "Tecnologie  ",
             "entries": [
                 {
                     "id": "aEd3",
                     "size": 25,
-                    "index": "random-index-4",
+                    "index": "indice-casuale-4",
                     "jobTitle": "Micro-Service.online",
                     "addClass": "timeline-text_add ",
                     "technologies": {
@@ -72,13 +87,13 @@
                         "JS": true
                     },
                     "description": {
-                        "paragraph": "Creazione di un sito web personale che offre servizi di progettazione e manutenzione di hardware informatico.",
+                        "paragraph": "Creazione di un sito web personale, che offre servizi di progettazione e manutenzione, di hardware informatico.",
                         "itemLi": []
                     }
                 },
                 {
                     "id": "aEd4",
-                    "index": "random-index-5",
+                    "index": "indice-casuale-5",
                     "jobTitle": "Curriculum Vitae",
                     "addClass": "timeline-text_add ",
                     "technologies": {
@@ -95,16 +110,16 @@
         },
         {
             "sectionId": "Exp2",
-            "year": "2022 - 2023",
+            "year": "2022 - 2024",
             "title": "Sviluppatore Web / Integratore Web",
-            "techTitle": "Tecnologie",
-            "siteLink": "Verso il sito web",
-            "githubLink": "Verso il repository",
+            "techTitle": "Tecnologie ",
+            "siteLink": "Al sito web",
+            "githubLink": "Al repository",
             "entries": [
                 {
                     "size": 25,
                     "id": "aEd5",
-                    "index": "random-index-6",
+                    "index": "indice-casuale-6",
                     "jobTitle": "Riding Cities",
                     "addClass": "timeline-text_add ",
                     "technologies": {
@@ -112,14 +127,14 @@
                         "CSS": true
                     },
                     "description": {
-                        "paragraph": "Completamento della landing page del sito Riding Cities (agenzia Webonzaï).",
+                        "paragraph": "Completamento della landing page del sito Riding Cities  (agenzia Webonzaï).",
                         "itemLi": []
                     }
                 },
                 {
                     "size": 25,
                     "id": "aEd6",
-                    "index": "random-index-7",
+                    "index": "indice-casuale-7",
                     "jobTitle": "Booki",
                     "addClass": "timeline-text_add ",
                     "siteLink": "https://jerem16.github.io/Booki/index.html",
@@ -131,8 +146,8 @@
                     "description": {
                         "paragraph": "Integrazione dell'interfaccia Web per Booki.",
                         "itemLi": [
-                            "Trasformazione delle bozze in codice HTML/CSS.",
-                            "Creazione di un'interfaccia web responsive.",
+                            "Trasformazione dei mockup in codice HTML/CSS.",
+                            "Creazione di un'interfaccia web responsive",
                             "Ottimizzazione delle prestazioni e compatibilità con i browser moderni."
                         ]
                     }
@@ -140,7 +155,7 @@
                 {
                     "size": 25,
                     "id": "aEd7",
-                    "index": "random-index-8",
+                    "index": "indice-casuale-8",
                     "jobTitle": "OhMyFood",
                     "addClass": "timeline-text_add ",
                     "siteLink": "https://jerem16.github.io/ohmyfood/loader.html",
@@ -151,19 +166,19 @@
                         "Sass": true
                     },
                     "description": {
-                        "paragraph": "Sviluppatore Junior presso OhMyFood - Creazione di un sito Mobile-First",
+                        "paragraph": "Sviluppatore Junior presso OhMyFood - Creazione di un sito in Mobile-First",
                         "itemLi": [
-                            "Integrazione delle bozze in versione mobile e PC desktop.",
+                            "Integrazione dei mockup in versione mobile e desktop PC.",
                             "Sviluppo di un sito web responsive con animazioni.",
                             "Collaborazione stretta con l'UX designer e rispetto del brief creativo.",
-                            "Creazione di una piattaforma che elenca i menu dei ristoranti gastronomici con un sistema di prenotazione e composizione di menu personalizzato."
+                            "Creazione di una piattaforma che elenca i menu dei ristoranti gastronomici con un sistema di prenotazione e composizione del menu personalizzato."
                         ]
                     }
                 },
                 {
                     "size": 25,
                     "id": "aEd8",
-                    "index": "random-index-9",
+                    "index": "indice-casuale-9",
                     "jobTitle": "Print-It",
                     "addClass": "timeline-text_add ",
                     "siteLink": "https://jerem16.github.io/print_it/index.html",
@@ -332,39 +347,48 @@
     ],
     "profile": {
         "section": "Informazioni",
-        "presentation": "Mi chiamo Jérémy, sono un ",
+        "presentation": "Mi chiamo Jérémy, sono ",
         "jobTitle": "Sviluppatore Web",
-        "description": "Sviluppatore-integratore web appassionato di web design e progettazione di siti web, la mia esperienza si estende dalla progettazione grafica alla programmazione front-end. Creo siti web interattivi, ottimizzati per le prestazioni e l'ottimizzazione SEO. Sempre attento alle ultime tendenze tecnologiche, il mio obiettivo è fornire soluzioni web di alta qualità.",
+        "description": "Appassionato di web design e sviluppo di siti, la mia esperienza spazia dal design grafico alla programmazione front-end. Creo siti web interattivi, ottimizzati per le prestazioni e l'SEO. Sempre aggiornato sulle ultime tendenze tecnologiche, il mio obiettivo è fornire soluzioni WEB di alta qualità.",
         "personalInfo": {
-            "Data di nascita": "27 giugno 1977",
+            "Data di Nascita": "27 giugno 1977",
             "Età": 46,
             "Website": "jeremy.lemaignent.com",
             "Email": "web.my.dev@gmail.com",
-            "Titolo di studio": "Integratore Web",
+            "Titolo di Studio": "Integratore Web",
             "Phone": "+33 6 35 02 06 41",
             "Città": "Le Havre",
             "Freelance": "Disponibile"
         },
         "buttons": {
             "btnName1": "Scarica il mio CV",
-            "btnName2": "Contatto"
+            "btnName2": "Contattami"
         },
         "skills": [
             {
                 "name": "HTML",
+                "id": 0,
                 "percent": 94
             },
             {
+                "id": 1,
                 "name": "CSS",
                 "percent": 92
             },
             {
+                "id": 2,
+                "name": "SASS",
+                "percent": 92
+            },
+            {
+                "id": 3,
                 "name": "JS",
                 "percent": 84
             },
             {
+                "id": 4,
                 "name": "React",
-                "percent": 76
+                "percent": 81
             }
         ]
     }

@@ -1,19 +1,28 @@
 {
     "home": {
-        "welcome": "Ciao, il mio nome è ",
+        "welcome": "Buongiorno, mi chiamo ",
         "name": "‘‘Jérémy Lemaignent’’",
-        "presentation": "Sono un ",
-        "titleDescription": "Appassionato sviluppatore da oltre 2 anni’’.",
-        "description": "Mi specializzo nello sviluppo e design di siti web.",
-        "additionalDescription": "Combinando prestazioni e design grafico.",
-        "quote": "Le mie competenze spaziano dal design di siti web alla programmazione Front-End.",
-        "imageSrc": "profile2.png",
-        "hireButtonText": "Assumimi",
+        "presentation": "Sono ",
+        "titleDescription": "Sviluppatore appassionato da 2 anni’’",
+        "description": "Sono specializzato nello sviluppo e nella progettazione di siti web.",
+        "additionalDescription": "Coniugando prestazioni e design grafico.",
+        "quote": "Le mie competenze vanno dalla progettazione di siti alla programmazione orientata al Front-End.",
+        "question": "",
+        "answer": "Unisciti a me.",
+        "imageSrc": "test.png",
+        "hireButtonText": "Contattami",
         "typedStrings": [
             "",
-            "Integratore Web",
-            "Designer Web",
-            "Sviluppatore Web"
+            "Sviluppatore web.",
+            "",
+            "",
+            "Integratore web.",
+            "",
+            "Designer grafico.",
+            "",
+            "Web designer.",
+            "",
+            ""
         ]
     }
 }

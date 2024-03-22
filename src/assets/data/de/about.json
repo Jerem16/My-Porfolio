@@ -3,48 +3,63 @@
         {
             "sectionTitle": "Bildung",
             "classTitle": "",
-            "sectionId": "Ed1",
-            "year": "1993 - 1995",
-            "title": "Vermessungstechniker",
+            "sectionId": "Ed3",
+            "year": "2023 - 2023",
+            "title": "Webentwicklungsintegrator",
             "entries": [
                 {
-                    "index": "index-aléatoire-1",
+                    "index": "zufälliger Index-3",
                     "display": "none",
                     "description": {
-                        "describe": "B.E.P. Bauwesen & Vermessungstechnik.",
-                        "place": ["Auguste Perret Gymnasium, Le Havre"]
+                        "describe": "Webintegrator",
+                        "place": ["E-Learning: OpenClassrooms"]
                     }
                 }
             ]
         },
         {
             "sectionId": "Ed2",
-            "year": "2021 - 2022",
-            "title": "Autodidakt",
+            "year": "2021 - 2023",
+            "title": "Selbststudierender Entwickler",
             "entries": [
                 {
-                    "index": "index-aléatoire-2",
+                    "index": "zufälliger Index-2",
                     "display": "none",
                     "description": {
                         "describe": "Adobe Photoshop, Illustrator, Dreamweaver ...",
                         "place": [
-                            "HTML & CSS (Auf Mozilla Developer Network - MDN)"
+                            "HTML & CSS (Auf der Mozilla Developer Network - MDN)"
                         ]
                     }
                 }
             ]
         },
         {
-            "sectionId": "Ed3",
-            "year": "2022 - 2023",
-            "title": "<Webentwickler/Webintegrator>",
+            "sectionId": "Ed4",
+            "year": "2011 - 2012",
+            "title": "Fernkundenbetreuer",
             "entries": [
                 {
-                    "index": "index-aléatoire-3",
+                    "index": "zufälliger Index-3",
                     "display": "none",
                     "description": {
-                        "describe": "Webintegrator",
-                        "place": ["E-Learning: OpenClassrooms"]
+                        "describe": "Fernkundenbetreuer",
+                        "place": ["A.F.P.A Le Havre"]
+                    }
+                }
+            ]
+        },
+        {
+            "sectionId": "Ed5",
+            "year": "1996 - 1998",
+            "title": "D.N.A.P.",
+            "entries": [
+                {
+                    "index": "zufälliger Index-3",
+                    "display": "none",
+                    "description": {
+                        "describe": "Student der Bildenden Kunst",
+                        "place": ["Nationales Kunsthochschule von Le Havre"]
                     }
                 }
             ]
@@ -331,40 +346,49 @@
         }
     ],
     "profile": {
-        "section": "Über mich",
-        "presentation": "Ich bin Jérémy, ein ",
+        "section": "Über",
+        "presentation": "Mein Name ist Jérémy, ich bin ",
         "jobTitle": "Webentwickler",
-        "description": "Als Webentwickler-Integrator mit Leidenschaft für Webdesign und Website-Design reicht mein Fachwissen vom Grafikdesign bis zur Front-End-Programmierung. Ich erstelle interaktive Websites, optimiert für Performance und SEO. Mein Ziel ist es, stets auf der Suche nach den neuesten technologischen Trends zu sein und erstklassige Weblösungen anzubieten.",
+        "description": "Leidenschaftlich für Webdesign und Webseitenentwicklung erstreckt sich meine Expertise von der grafischen Gestaltung bis zur Front-End-Programmierung. Ich erstelle interaktive Websites, die für Leistung und SEO-Optimierung optimiert sind. Immer auf dem neuesten Stand der technologischen Trends, ist mein Ziel, hochwertige WEB-Lösungen anzubieten.",
         "personalInfo": {
             "Geburtstag": "27. Juni 1977",
             "Alter": 46,
-            "Website": "www.domain.com",
-            "Email": "jeremy.lemaignent.com",
-            "Ausbildung": "Web-integrator",
+            "Website": "jeremy.lemaignent.com",
+            "Email": "web.my.dev@gmail.com",
+            "Abschluss": "Webintegrator",
             "Phone": "+33 6 35 02 06 41",
             "Stadt": "Le Havre",
             "Freiberuflich": "Verfügbar"
         },
         "buttons": {
-            "btnName1": "Meinen Lebenslauf herunterladen",
+            "btnName1": "Mein Lebenslauf",
             "btnName2": "Kontaktieren Sie mich"
         },
         "skills": [
             {
                 "name": "HTML",
+                "id": 0,
                 "percent": 94
             },
             {
+                "id": 1,
                 "name": "CSS",
                 "percent": 92
             },
             {
+                "id": 2,
+                "name": "SASS",
+                "percent": 92
+            },
+            {
+                "id": 3,
                 "name": "JS",
                 "percent": 84
             },
             {
+                "id": 4,
                 "name": "React",
-                "percent": 76
+                "percent": 81
             }
         ]
     }

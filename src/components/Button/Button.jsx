@@ -37,7 +37,7 @@ const Button = ({
             );
         default:
             return (
-                <a href={href} target={target} className={`${className}`}>
+                <a href={href} target={target} className={`btn_a ${className}`}>
                     {children}
                 </a>
             );

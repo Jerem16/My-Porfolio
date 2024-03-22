@@ -1,0 +1,45 @@
+{
+    "services": {
+        "title": "Servicios",
+        "items": ["Diseño web", "Desarrollo", "Hosting"]
+    },
+    "siteMap": {
+        "title": "Mapa del sitio",
+        "links": [
+            {
+                "text": "Inicio",
+                "to": ""
+            },
+            {
+                "text": "Blog",
+                "to": "blog"
+            },
+            {
+                "text": "Contacto",
+                "to": "contact"
+            }
+        ]
+    },
+    "about": {
+        "title": "Acerca de",
+        "items": ["Empresa", "Equipo", "Aviso legal"]
+    },
+    "followUs": "Síganos:",
+    "credits": [
+        "<strong>¡Muchas gracias! </strong>",
+        "<strong>A los <em>Creadores y Colaboradores.</em></strong>",
+        "<strong>De las <em>Bibliotecas y Frameworks</em> que utilizamos.</strong>",
+        "<em>Framework:</em> <strong>\"React\"</strong>",
+        "<em>Gestión de estado:</em> <strong>\"Redux\"</strong>",
+        "<em>Animaciones:</em> <strong>\"React-awesome-reveal\"</strong>",
+        "",
+        "",
+        "<em>Animación de partículas:</em> <strong>\"Tsparticles\"</strong>",
+        "",
+        "<em>Animación de texto:</em> <strong>\"Typed.js\"</strong>",
+        "<em>Desplazamiento suave:</em> <strong>\"React-scroll\"</strong>",
+        "<em>Iconos:</em> <strong>\"FontAwesome\"</strong>",
+        "<em>Fuente de letras:</em> <strong>\"Google Font\"</strong>"
+    ],
+    "copyright": "wii-design.com © {{year}}. Todos los derechos reservados."
+}
