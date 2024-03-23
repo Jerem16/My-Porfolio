@@ -1,4 +1,4 @@
 # Permet à tous les robots d'accéder au site et au sitemap
 User-agent: *
 Disallow:
-Sitemap: /sitemap.xml
+Allow: /sitemap.xml
