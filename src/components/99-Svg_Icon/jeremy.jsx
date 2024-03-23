@@ -4,7 +4,12 @@ const Jeremy = () => {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
     return (
         <span>
-            <svg viewBox="0 0 329.4 51.6" height="1em" className="jeremy">
+            <svg
+                viewBox="0 0 329.4 51.6"
+                height="1em"
+                className="jeremy"
+                alt="Jérémy Lemaignent"
+            >
                 <path
                     fill={currentTheme}
                     d="M0 .8l4.1 10.9 2.4-.4L4.1.2zM325.2 0l-2.4 11 2.5.4L329.4.6zM5.3.4l2.4 11.3h2.5L9.5.4zM319.9.1l-.7 11.3h2.4L324.1.1zM47 13.9l-2-3-6.7 5.5 1.6 1.9zm27.7 0l-2.1-3-6.6 5.5 1.5 1.9z"
