@@ -1,3 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
+# Permet à tous les robots d'accéder au sitemap
 User-agent: *
-Disallow:
+Allow: /sitemap.xml
+
+# Restreint l'accès à d'autres parties du site si nécessaire
+User-agent: *
+Disallow: /
