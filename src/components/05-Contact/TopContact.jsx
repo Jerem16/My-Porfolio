@@ -6,7 +6,12 @@ const TopContact = ({ data }) => {
             <div className="section-title">
                 <h2>
                     {
-                        <Fade cascade triggerOnce="true" damping={0.05}>
+                        <Fade
+                            cascade
+                            triggerOnce="true"
+                            damping={0.05}
+                            delay={650}
+                        >
                             {data.contact["section-title"]}
                         </Fade>
                     }
