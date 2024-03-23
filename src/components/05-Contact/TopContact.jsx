@@ -10,7 +10,7 @@ const TopContact = ({ data }) => {
                             cascade
                             triggerOnce="true"
                             damping={0.05}
-                            delay={650}
+                            delay={350}
                         >
                             {data.contact["section-title"]}
                         </Fade>

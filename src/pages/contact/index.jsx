@@ -28,7 +28,7 @@ function MainPortfolio() {
     return (
         <>
             <ContactHeader />
-            <main className="main-content">
+            <main className="main-content" id="home">
                 <SectionContact />
             </main>
             <LazyGhostComponent>
