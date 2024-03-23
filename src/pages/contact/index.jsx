@@ -1,4 +1,4 @@
-import React, { lazy, useEffect } from "react";
+import React, { lazy } from "react";
 
 import ContactHeader from "../../components/00-Header/NavContact/ContactHeader";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +6,8 @@ import { setModalContact } from "../../redux/reducers/classesSlice";
 
 import { usePageTitle } from "../../utils/usePageTitle";
 
-import LazySectionContact from "./LazySectionContact";
+import SectionContact from "./section_contact/SectionContact";
+
 import LazyGhostComponent from "../portfolio/LazyGhostComponent";
 import Modal from "../../components/Modal/Modal";
 
@@ -28,9 +29,7 @@ function MainPortfolio() {
         <>
             <ContactHeader />
             <main className="main-content">
-                <LazyGhostComponent>
-                    <LazySectionContact />
-                </LazyGhostComponent>
+                <SectionContact />
             </main>
             <LazyGhostComponent>
                 <LazyFooter />

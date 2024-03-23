@@ -6,11 +6,11 @@ export const usePageTitle = () => {
 
     useEffect(() => {
         const updatePageTitle = () => {
-            let pageTitle = "Accueil - Jérémy Lemaignent"; // Titre par défaut
+            let pageTitle = "Accueil - Jérémy Lemaignent"; 
             if (location.pathname === "/contact") {
                 pageTitle = "Contact - Jérémy Lemaignent";
             } else if (location.pathname === "/") {
-                pageTitle = "Accueil - Jérémy Lemaignent";
+                pageTitle = "Home - Jérémy Lemaignent";
             } else if (location.pathname === "/blog") {
                 pageTitle = "Blog - Jérémy Lemaignent";
             }
