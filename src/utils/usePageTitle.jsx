@@ -6,13 +6,23 @@ export const usePageTitle = () => {
 
     useEffect(() => {
         const updatePageTitle = () => {
-            let pageTitle = "Accueil - Jérémy Lemaignent"; 
+            let pageTitle = "Accueil - Jérémy Lemaignent"; // Titre par défaut
+            let canonicalLink = document.querySelector('link[rel="canonical"]');
+
             if (location.pathname === "/contact") {
                 pageTitle = "Contact - Jérémy Lemaignent";
+                if (canonicalLink) {
+                    canonicalLink.href =
+                        "https://jeremy.lemaignent.com/contact";
+                }
             } else if (location.pathname === "/") {
-                pageTitle = "Home - Jérémy Lemaignent";
+                pageTitle = "Accueil - Jérémy Lemaignent";
+                canonicalLink.href = "https://jeremy.lemaignent.com/";
             } else if (location.pathname === "/blog") {
                 pageTitle = "Blog - Jérémy Lemaignent";
+                if (canonicalLink) {
+                    canonicalLink.href = "https://jeremy.lemaignent.com/blog";
+                }
             }
 
             document.title = pageTitle;
