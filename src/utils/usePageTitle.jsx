@@ -9,7 +9,7 @@ export const usePageTitle = () => {
             let pageTitle = "Accueil - Jérémy Lemaignent"; // Titre par défaut
             if (location.pathname === "/contact") {
                 pageTitle = "Contact - Jérémy Lemaignent";
-            } else if (location.pathname === "/home") {
+            } else if (location.pathname === "/") {
                 pageTitle = "Accueil - Jérémy Lemaignent";
             } else if (location.pathname === "/blog") {
                 pageTitle = "Blog - Jérémy Lemaignent";
