@@ -11,18 +11,13 @@ export const usePageTitle = () => {
 
             if (location.pathname === "/contact") {
                 pageTitle = "Contact - Jérémy Lemaignent";
-                if (canonicalLink) {
-                    canonicalLink.href =
-                        "https://jeremy.lemaignent.com/contact";
-                }
+                canonicalLink.href = "https://jeremy.lemaignent.com/contact";
             } else if (location.pathname === "/") {
                 pageTitle = "Accueil - Jérémy Lemaignent";
                 canonicalLink.href = "https://jeremy.lemaignent.com/";
             } else if (location.pathname === "/blog") {
                 pageTitle = "Blog - Jérémy Lemaignent";
-                if (canonicalLink) {
-                    canonicalLink.href = "https://jeremy.lemaignent.com/blog";
-                }
+                canonicalLink.href = "https://jeremy.lemaignent.com/blog";
             }
 
             document.title = pageTitle;
