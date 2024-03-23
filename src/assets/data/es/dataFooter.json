@@ -8,7 +8,7 @@
         "links": [
             {
                 "text": "Inicio",
-                "to": ""
+                "to": "home"
             },
             {
                 "text": "Blog",

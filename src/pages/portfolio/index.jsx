@@ -3,6 +3,8 @@ import React, { useState, lazy } from "react";
 import SectionHome from "./section_home/SectionHome";
 import Header from "../../components/00-Header/NavHome/00-Header";
 
+import { usePageTitle } from "../../utils/usePageTitle";
+
 import LazySectionAbout from "./LazySectionAbout";
 import LazySectionServices from "./LazySectionServices";
 import LazySectionPortfolio from "./LazySectionPortfolio";
@@ -15,12 +17,10 @@ const LazyPortfolioModalContent = lazy(() =>
 const LazyModalService = lazy(() =>
     import("../../components/Modal/ModalService/ModalService")
 );
-const LazyFooter = lazy(() =>
-    import("../../components/Footer/Footer")
-);
+const LazyFooter = lazy(() => import("../../components/Footer/Footer"));
 
 function MainPortfolio() {
-
+    usePageTitle();
     const [selectedPortfolio, setSelectedPortfolio] = useState(null);
     const [selectedService, setSelectedService] = useState(null);
 

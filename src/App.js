@@ -24,7 +24,7 @@ function App() {
             <div className={`${navToggler}`} id="top" style={themeClasses}>
                 <NavToggler />
                 <Routes>
-                    <Route path="/" element={<MainPortfolio />} />
+                    <Route path="/home" element={<MainPortfolio />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/blog" element={<Contact />} />
                 </Routes>
