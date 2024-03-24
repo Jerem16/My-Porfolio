@@ -5,9 +5,10 @@ import Header from "../../components/00-Header/NavHome/00-Header";
 
 import { usePageTitle } from "../../utils/usePageTitle";
 
-import LazySectionAbout from "./LazySectionAbout";
-import LazySectionServices from "./LazySectionServices";
-import LazySectionPortfolio from "./LazySectionPortfolio";
+import SectionAbout from "./section_about/SectionAbout";
+import SectionServices from "./section_services/SectionServices";
+import SectionPortfolio from "./section_portfolio/SectionPortfolio";
+import LazyFooter from "./LazyFooter";
 import LazyGhostComponent from "./LazyGhostComponent";
 import Modal from "../../components/Modal/Modal";
 
@@ -17,7 +18,7 @@ const LazyPortfolioModalContent = lazy(() =>
 const LazyModalService = lazy(() =>
     import("../../components/Modal/ModalService/ModalService")
 );
-const LazyFooter = lazy(() => import("../../components/Footer/Footer"));
+// const LazyFooter = lazy(() => import("../../components/Footer/Footer"));
 
 function MainPortfolio() {
     usePageTitle();
@@ -40,21 +41,23 @@ function MainPortfolio() {
             <Header />
             <main className="main-content">
                 <SectionHome />
-                <LazyGhostComponent>
-                    <LazySectionAbout />
+                <LazyGhostComponent className={"about section"} id={"about"}>
+                    <SectionAbout />
                 </LazyGhostComponent>
-                <LazyGhostComponent>
-                    <LazySectionServices openModalService={openModalService} />
+                <LazyGhostComponent
+                    className={"service section"}
+                    id={"services"}
+                >
+                    <SectionServices openModalService={openModalService} />
                 </LazyGhostComponent>
-                <LazyGhostComponent>
-                    <LazySectionPortfolio
-                        openModalPortfolio={openModalPortfolio}
-                    />
+                <LazyGhostComponent
+                    className={"portfolio section"}
+                    id={"portfolio"}
+                >
+                    <SectionPortfolio openModalPortfolio={openModalPortfolio} />
                 </LazyGhostComponent>
             </main>
-            <LazyGhostComponent>
-                <LazyFooter />
-            </LazyGhostComponent>
+            <LazyFooter />
             <LazyGhostComponent>
                 {selectedService && (
                     <Modal

@@ -9,12 +9,12 @@ import { usePageTitle } from "../../utils/usePageTitle";
 import SectionContact from "./section_contact/SectionContact";
 
 import LazyGhostComponent from "../portfolio/LazyGhostComponent";
+import LazyFooter from "../portfolio/LazyFooter";
 import Modal from "../../components/Modal/Modal";
 
 const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
 );
-const LazyFooter = lazy(() => import("../../components/Footer/Footer"));
 
 function MainPortfolio() {
     usePageTitle();
@@ -31,9 +31,7 @@ function MainPortfolio() {
             <main className="main-content" id="home">
                 <SectionContact />
             </main>
-            <LazyGhostComponent>
-                <LazyFooter />
-            </LazyGhostComponent>
+            <LazyFooter />
             <LazyGhostComponent>
                 <Modal
                     addClass={"contactModal"}

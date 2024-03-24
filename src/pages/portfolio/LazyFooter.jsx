@@ -1,13 +1,13 @@
-import React, { lazy, Suspense } from "react";
-import Loader from "../../components/Loader/Loader";
+import React, { lazy } from "react";
+import LazyGhostComponent from "./LazyGhostComponent";
+import SectionFooter from "../../components/Footer/Footer";
 
-const SectionFooter = lazy(() => import("../../components/Footer/Footer"));
 
 const LazyFooter = () => {
     return (
-        <Suspense fallback={<Loader />}>
+        <LazyGhostComponent>
             <SectionFooter />
-        </Suspense>
+        </LazyGhostComponent>
     );
 };
 
