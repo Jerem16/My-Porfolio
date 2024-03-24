@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[5624],{5624:t=>{t.exports=JSON.parse('{"language":"Sprache","scrollLinks":[{"text":"Startseite"},{"text":"\xdcber"},{"text":"Dienstleistungen"},{"text":"Portfolio"}],"routerLinks":[{"text":"Startseite"},{"text":"Blog"},{"text":"Kontakt"}]}')}}]);

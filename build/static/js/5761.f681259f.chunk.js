@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[5761],{5761:o=>{o.exports=JSON.parse('{"portfolioTitle":"Portfolio","lastProjectsTitle":"I miei ultimi progetti:"}')}}]);

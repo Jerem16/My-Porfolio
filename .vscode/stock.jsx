@@ -1,90 +1,74 @@
-import React, { useEffect } from "react";
-import FooterNAvIcons from "./FooterNAvIcons";
-import { Link } from "react-router-dom";
-import useLangData from "../../utils/useLangData";
-import FooterDataLoader from "./FooterDataLoader";
-import FooterFollowUs from "./FooterFollowUs";
-import FooterTypedText from "./FooterTypedText";
+import { useEffect, useRef } from "react";
+import { useWindowWidth } from "./utils/hooks";
 
-const Footer = ({ handleClick, value }) => {
-    const footerData = useLangData("dataFooter.json");
+const CssLowComponent = () => {
+    const windowWidth = useWindowWidth();
+    const cssLink = useRef(null);
+    const mediaLink = useRef(null);
 
-    return (
-        <FooterDataLoader>
-            {(dataFooter) => (
-                <footer className="main-content section" id="footer">
-                    <div className="container">
-                        <div className="row-center">
-                            <div className="service_container center-footer">
-                                <div className="service-item ">
-                                    <h3 className="h3-item">
-                                        {dataFooter.services.title}
-                                    </h3>
-                                    <ul>
-                                        {dataFooter.services.items.map(
-                                            (item, index) => (
-                                                <li key={index}>
-                                                    <a href="#">{item}</a>
-                                                </li>
-                                            )
-                                        )}
-                                    </ul>
-                                </div>
-                                <div className="service-item">
-                                    <h3 className="h3-item">
-                                        {dataFooter.siteMap.title}
-                                    </h3>
-                                    <ul>
-                                        {dataFooter.siteMap.links.map(
-                                            (link, index) => (
-                                                <li key={index}>
-                                                    <Link
-                                                        to={`/${link.to}`}
-                                                        onClick={handleClick}
-                                                    >
-                                                        {link.text}
-                                                    </Link>
-                                                </li>
-                                            )
-                                        )}
-                                    </ul>
-                                </div>
-                                <div className="service-item">
-                                    <h3 className="h3-item">
-                                        {dataFooter.about.title}
-                                    </h3>
-                                    <ul>
-                                        {dataFooter.about.items.map(
-                                            (item, index) => (
-                                                <li key={index}>
-                                                    <a href="#">{item}</a>
-                                                </li>
-                                            )
-                                        )}
-                                    </ul>
-                                </div>
-                            </div>
-                            <FooterFollowUs followUs={dataFooter.followUs} />
-                            <div className="credit-blk">
-                                <h3 className="f-h3-In">Crédits :</h3>
-                                <FooterTypedText
-                                    strings={
-                                        footerData ? footerData.credits : []
-                                    }
-                                />
-                            </div>
-                        </div>
-                        <p className="copyright center-footer footer-text">
-                            {dataFooter.copyright.replace(
-                                "{{year}}",
-                                new Date().getFullYear()
-                            )}
-                        </p>
-                    </div>
-                </footer>
-            )}
-        </FooterDataLoader>
-    );
+    useEffect(() => {
+        const screenWidth = window.innerWidth;
+        let newCssLink = "";
+        let newMediaLink = "";
+
+        switch (true) {
+            case screenWidth >= 300 && screenWidth <= 620:
+                import("./assets/css/675p-320p-no-Critical.css").then(
+                    (module) => {
+                        applyStyles(module.default);
+                    }
+                );
+                newMediaLink = "(min-width:300px) and (max-width:620px)";
+                newCssLink = "./assets/css/675p-320p-no-Critical.css";
+                break;
+            case screenWidth >= 621 && screenWidth <= 1080:
+                import("./assets/css/1080p-675p-no-Critical.css").then(
+                    (module) => {
+                        applyStyles(module.default);
+                    }
+                );
+                newMediaLink = "(min-width:621px) and (max-width:1080px)";
+
+                newCssLink = "./assets/css/1080p-675p-no-Critical.css";
+                break;
+            case screenWidth >= 1081 && screenWidth <= 1440:
+                import("./assets/css/1440p-1080p-no-Critical.css").then(
+                    (module) => {
+                        applyStyles(module.default);
+                    }
+                );
+                newMediaLink = "(min-width:1081px) and (max-width:1440px)";
+                newCssLink = "./assets/css/1440p-1080p-no-Critical.css";
+                break;
+            default:
+                import("./assets/css/4k-1440p-no-critical.css").then(
+                    (module) => {
+                        applyStyles(module.default);
+                    }
+                );
+                newMediaLink = "(min-width:1440px)";
+                newCssLink = "./assets/css/4k-1440p-no-Critical.css";
+        }
+        mediaLink.current = newMediaLink;
+        cssLink.current = newCssLink;
+    }, [windowWidth]);
+
+    const applyStyles = (cssLink) => {
+        const existingLink = document.getElementById(`cssLink${cssLink}`);
+
+        if (!existingLink) {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.media = mediaLink;
+            link.type = "text/css";
+            link.href = cssLink;
+            link.id = `cssLink${cssLink}`;
+            link.setAttribute("fetchpriority", "low");
+            document.head.appendChild(link);
+        }
+    };
+
+    return <></>;
 };
 
-export default Footer;
+export default CssLowComponent;
