@@ -61,7 +61,7 @@ const CssLowComponent = () => {
             link.rel = "stylesheet";
             link.media = mediaLink;
             link.type = "text/css";
-            link.href = cssLink;
+            link.href = module;
             link.id = `cssLink${cssLink}`;
             link.setAttribute("fetchpriority", "low");
             document.head.appendChild(link);
