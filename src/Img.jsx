@@ -37,9 +37,10 @@ const ImgComponent = () => {
 
         if (!existingImg) {
             const link = document.createElement("link");
+            link.rel = "preload";
+            link.media = mediaLink;
             link.type = "image/webp";
             link.as = "image";
-            link.media = mediaLink;
             link.href = imageUrl;
             link.id = `cssLink${imageUrl}`;
             link.setAttribute("fetchpriority", "high");
