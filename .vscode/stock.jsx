@@ -19,7 +19,7 @@ const CssLowComponent = () => {
                     }
                 );
                 newMediaLink = "(min-width:300px) and (max-width:620px)";
-                newCssLink = "./assets/css/675p-320p-no-Critical.css";
+                // newCssLink = "./assets/css/675p-320p-no-Critical.css";
                 break;
             case screenWidth >= 621 && screenWidth <= 1080:
                 import("./assets/css/1080p-675p-no-Critical.css").then(
@@ -29,7 +29,7 @@ const CssLowComponent = () => {
                 );
                 newMediaLink = "(min-width:621px) and (max-width:1080px)";
 
-                newCssLink = "./assets/css/1080p-675p-no-Critical.css";
+                // newCssLink = "./assets/css/1080p-675p-no-Critical.css";
                 break;
             case screenWidth >= 1081 && screenWidth <= 1440:
                 import("./assets/css/1440p-1080p-no-Critical.css").then(
@@ -38,7 +38,7 @@ const CssLowComponent = () => {
                     }
                 );
                 newMediaLink = "(min-width:1081px) and (max-width:1440px)";
-                newCssLink = "./assets/css/1440p-1080p-no-Critical.css";
+                // newCssLink = "./assets/css/1440p-1080p-no-Critical.css";
                 break;
             default:
                 import("./assets/css/4k-1440p-no-critical.css").then(
@@ -47,13 +47,13 @@ const CssLowComponent = () => {
                     }
                 );
                 newMediaLink = "(min-width:1440px)";
-                newCssLink = "./assets/css/4k-1440p-no-Critical.css";
+            // newCssLink = "./assets/css/4k-1440p-no-Critical.css";
         }
         mediaLink.current = newMediaLink;
-        cssLink.current = newCssLink;
+        // cssLink.current = newCssLink;
     }, [windowWidth]);
 
-    const applyStyles = (cssLink) => {
+    const applyStyles = (module) => {
         const existingLink = document.getElementById(`cssLink${cssLink}`);
 
         if (!existingLink) {
@@ -62,7 +62,7 @@ const CssLowComponent = () => {
             link.media = mediaLink;
             link.type = "text/css";
             link.href = module;
-            link.id = `cssLink${cssLink}`;
+            link.id = `cssLink${module}`;
             link.setAttribute("fetchpriority", "low");
             document.head.appendChild(link);
         }
