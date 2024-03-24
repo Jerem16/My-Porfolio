@@ -12,7 +12,7 @@ function Skills({ skills }) {
         rootMargin: "0px 0px -250px 0px",
     });
 
-
+    const x = skills.id;
     useEffect(() => {
         if (inView) {
             const intervals = skills.map((skill, index, id) =>

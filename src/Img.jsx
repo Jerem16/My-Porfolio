@@ -4,35 +4,42 @@ import { useWindowWidth } from "./utils/hooks";
 const ImgComponent = () => {
     const windowWidth = useWindowWidth();
     const imageUrl = useRef(null);
+    const mediaLink = useRef(null);
 
     useEffect(() => {
         const screenWidth = window.innerWidth;
         let newImageUrl = "";
+        let newMediaLink = "";
         switch (true) {
             case screenWidth >= 300 && screenWidth <= 620:
                 newImageUrl = "./assets/img/profile-620.webp";
+                newMediaLink = "(min-width:300px) and (max-width:620px)";
                 break;
-            case screenWidth > 620 && screenWidth <= 1440:
+            case screenWidth >= 621 && screenWidth <= 1444:
                 newImageUrl = "./assets/img/profile-1440.webp";
+                newMediaLink = "(min-width:621px) and (max-width:1444px)";
                 break;
-            case screenWidth > 1440 && screenWidth <= 1920:
+            case screenWidth >= 1445 && screenWidth <= 1920:
                 newImageUrl = "./assets/img/profile-1k.webp";
+                newMediaLink = "(min-width:1445px) and (max-width:1920px)";
                 break;
             default:
                 newImageUrl = "./assets/img/profile-4k.webp";
+                newMediaLink = "(min-width:1920px)";
         }
-
+        mediaLink.current = newMediaLink;
         imageUrl.current = newImageUrl;
-        applyStyles(imageUrl.current);
+        applyStyles(imageUrl.current, mediaLink.current);
     }, [windowWidth]);
 
-    const applyStyles = (imageUrl) => {
+    const applyStyles = (imageUrl, mediaLink) => {
         const existingImg = document.getElementById(`cssLink${imageUrl}`);
 
         if (!existingImg) {
             const link = document.createElement("link");
             link.type = "image/webp";
             link.as = "image";
+            link.media = mediaLink;
             link.href = imageUrl;
             link.id = `cssLink${imageUrl}`;
             link.setAttribute("fetchpriority", "high");
