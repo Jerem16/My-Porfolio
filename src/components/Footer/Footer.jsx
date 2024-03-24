@@ -1,12 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useLangData from "../../utils/useLangData";
 import FooterDataLoader from "./FooterDataLoader";
 import FooterServiceItem from "./FooterServiceItem";
 import FooterServiceLink from "./FooterServiceLink";
 import FooterTypedText from "./FooterTypedText";
 import FooterFollowUs from "./FooterFollowUs";
-
 const Footer = ({ handleClick }) => {
     const footerData = useLangData("dataFooter.json");
 

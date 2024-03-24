@@ -10,32 +10,20 @@ const ImgComponent = () => {
         let newImageUrl = "";
         switch (true) {
             case screenWidth >= 300 && screenWidth <= 620:
-                import("./assets/img/profile-620.webp").then((module) => {
-                    applyStyles(module.default);
-                });
                 newImageUrl = "./assets/img/profile-620.webp";
                 break;
             case screenWidth > 620 && screenWidth <= 1440:
-                import("./assets/img/profile-1k.webp").then((module) => {
-                    applyStyles(module.default);
-                });
                 newImageUrl = "./assets/img/profile-1440.webp";
                 break;
             case screenWidth > 1440 && screenWidth <= 1920:
-                import("./assets/img/profile-1k.webp").then((module) => {
-                    applyStyles(module.default);
-                });
                 newImageUrl = "./assets/img/profile-1k.webp";
                 break;
             default:
-                import("./assets/img/profile-4k.webp").then((module) => {
-                    applyStyles(module.default);
-                });
                 newImageUrl = "./assets/img/profile-4k.webp";
         }
 
-        // imageUrl.current = newImageUrl;
-        // applyStyles(imageUrl.current);
+        imageUrl.current = newImageUrl;
+        applyStyles(imageUrl.current);
     }, [windowWidth]);
 
     const applyStyles = (imageUrl) => {
@@ -43,7 +31,6 @@ const ImgComponent = () => {
 
         if (!existingImg) {
             const link = document.createElement("link");
-            link.rel = "preload";
             link.type = "image/webp";
             link.as = "image";
             link.href = imageUrl;
