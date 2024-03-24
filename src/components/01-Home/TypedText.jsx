@@ -1,49 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useTypedEffect from "../../utils/useTypedEffect";
 
-const TypedText = ({ data, typedRef }) => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const TypedText = ({ data }) => {
+    const { typedStrings } = data.home;
 
-    useEffect(() => {
-        const loadTyped = async () => {
-            try {
-                const { default: Typed } = await import("../../utils/typed");
-
-                if (typedRef.current) {
-                    typedRef.current.destroy();
-                }
-
-                const { typedStrings } = data.home;
-                const options = {
-                    strings: typedStrings,
-                    typeSpeed: 80,
-                    backSpeed: 15,
-                    loop: true,
-                };
-
-                typedRef.current = new Typed(".typing", options);
-            } catch (error) {
-                console.error("Error loading Typed.js:", error);
-            }
-        };
-
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        if (data) {
-            loadTyped();
-        }
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-
-            if (typedRef.current) {
-                typedRef.current.destroy();
-            }
-        };
-    }, [data, typedRef, windowWidth]);
+    useTypedEffect(".typing", typedStrings, {
+        typeSpeed: 80,
+        backSpeed: 15,
+        loop: true,
+    });
 
     return null;
 };
