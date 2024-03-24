@@ -6,7 +6,7 @@ const GhostComponent = ({className, id, children }) => {
     useEffect(() => {
         const timerId = setTimeout(() => {
             setIsReady(true);
-        }, 5); 
+        }, 15); 
         return () => clearTimeout(timerId);
     }, []);
 
