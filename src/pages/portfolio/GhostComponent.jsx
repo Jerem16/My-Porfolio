@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 
-const GhostComponent = ({className, id, children }) => {
+const GhostComponent = ({ className, id, children }) => {
     const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
         const timerId = setTimeout(() => {
             setIsReady(true);
-        }, 150); 
+        }, 500);
         return () => clearTimeout(timerId);
     }, []);
 
     return (
-        <section className={className} id={id}
+        <section
+            className={className}
+            id={id}
             style={{
                 display: isReady ? "inherit" : "none",
                 transition: "opacity 1s",
