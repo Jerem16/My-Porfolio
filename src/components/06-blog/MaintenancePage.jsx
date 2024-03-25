@@ -9,7 +9,7 @@ const MaintenancePage = () => {
         const defaultRatio = 1.77;
         const ratio = width / height;
 
-        if (true) {
+        if (ratio < defaultRatio * 1.05 && ratio > defaultRatio * 0.95) {
             document.getElementById("iframe_container").innerHTML =
                 '<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/B0TjyJIIWLA?autoplay=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=0&color=white&mute=1&playlist=8Z1eMy2FoX4"></iframe>';
         }
@@ -17,7 +17,9 @@ const MaintenancePage = () => {
         Swal.fire({
             title: "Maintenance",
             confirmButtonText: "J'ai compris",
-            text: "Le site est actuellement en maintenance, dès que le site sera de nouveau disponible, cette page s'actualisera automatiquement.",
+            text: `Cette section est actuellement en cours de construction.
+            Nous travaillons activement pour la rendre disponible dès que possible.
+            Merci de votre patience`,
             width: 600,
             padding: "3em",
             backdrop: "rgb(14 14 14 / 50%)",

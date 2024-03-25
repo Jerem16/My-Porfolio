@@ -1,5 +1,6 @@
 import React from "react";
 import HomeTitle from "./HomeTitle";
+import BtnContact from "../Button/BtnContact";
 // eslint-disable-next-line
 import { Link } from "react-router-dom";
 const HomeInfoMob = ({
@@ -44,13 +45,7 @@ const HomeInfoMob = ({
                     </div>
                 </div>
             </article>
-            <Link
-                tabIndex="0"
-                to="contact"
-                className="btn_a hire-me"
-            >
-                {hireButtonText}
-            </Link>
+            <BtnContact />
         </div>
     );
 };
