@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
+import Blog from "./pages/blog";
 import NavToggler from "./components/00-Header/NavToggler";
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
@@ -26,7 +27,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MainPortfolio />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/blog" element={<Contact />} />
+                    <Route path="/blog" element={<Blog />} />
                 </Routes>
             </div>
         </BrowserRouter>
