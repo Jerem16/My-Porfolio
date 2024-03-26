@@ -64,10 +64,10 @@ a {
     color: #fff;
     margin: 0 auto 0 8em;
     width: 100%;
-    min-width: calc(100vw - 16.89em);
+    min-width: calc(87.4713020662512vw - 16.89em);
 }
 .open #blog .row {
-    min-width: calc(100vw);
+    min-width: calc(87.4713020662512vw);
 }
 span {
     text-shadow: 1px 1px 4px #000000b8;
@@ -91,7 +91,7 @@ span {
     border-radius: 0.25em;
     background: initial;
     background: #00000091;
-    color: var(--skin-color);
+    color: #5cfeff;
 }
 img.logo {
     width: 350px;

@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import data from "../../assets/data/header.json";
 import { Fade } from "react-awesome-reveal";
 
 function NavRouter({ handleClick, routerLinks, value, initValue }) {
+    const location = useLocation();
+
     return (
         <Fade
-            cascade="false"
-            triggerOnce="true"
+            cascade={false}
+            triggerOnce={true}
             direction="left"
             delay={initValue + value * 100}
         >
@@ -15,6 +17,11 @@ function NavRouter({ handleClick, routerLinks, value, initValue }) {
                 <Link
                     to={`/${data.routerLinks[value].to}`}
                     onClick={handleClick}
+                    className={
+                        location.pathname === `/${data.routerLinks[value].to}`
+                            ? "active-link"
+                            : ""
+                    }
                 >
                     <span className="icon">
                         <svg
