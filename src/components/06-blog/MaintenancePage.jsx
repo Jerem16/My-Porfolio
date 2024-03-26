@@ -1,42 +1,46 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Swal from "sweetalert2";
 import "../../assets/styles/css/blog.css";
+import content from "../../assets/data/fr/maintenance.json";
 
 const MaintenancePage = () => {
+    const audioRef = useRef(null);
+    const numRef = useRef(null);
     useEffect(() => {
-        const width = window.screen.width;
-        const height = window.screen.height;
-        const defaultRatio = 1.77;
-        const ratio = width / height;
-
-        if (ratio < defaultRatio * 1.05 && ratio > defaultRatio * 0.95) {
+        if (true) {
             document.getElementById("iframe_container").innerHTML =
                 '<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/B0TjyJIIWLA?autoplay=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=0&color=white&mute=1&playlist=8Z1eMy2FoX4"></iframe>';
         }
 
         Swal.fire({
-            title: "Maintenance",
-            confirmButtonText: "J'ai compris",
-            text: `Cette section est actuellement en cours de construction.
-            Nous travaillons activement pour la rendre disponible dès que possible.
-            Merci de votre patience`,
+            title: content.fr.maintenance_title,
+            confirmButtonText: content.fr.confirm_button_text,
+            text: content.fr.maintenance_text,
             width: 600,
             padding: "3em",
             backdrop: "rgb(14 14 14 / 50%)",
         });
-
         const clickHandler = () => {
-            document.body.removeEventListener("click", clickHandler);
-            const audio = new Audio("https://www6.yggtorrent.lol/soon.mp3");
-            audio.volume = 0.3;
-            audio.play();
+            if (true) {
+                numRef.current = 0;
+                audioRef.current.volume = 0.3;
+                if (audioRef.current.muted === true) {
+                    audioRef.current.play();
+                    audioRef.current.muted = !audioRef.current.muted;
+                } else if (numRef.current === 0) {
+                    audioRef.current.pause();
+                    numRef.current = 2;
+                    audioRef.current.muted = true;
+                }
+            }
         };
 
+        window.addEventListener("touchstart", clickHandler);
         document.body.addEventListener("click", clickHandler);
 
-        // Clean up function
         return () => {
             document.body.removeEventListener("click", clickHandler);
+            window.removeEventListener("touchstart", clickHandler);
         };
     }, []);
 
@@ -55,7 +59,6 @@ const MaintenancePage = () => {
                             width="310.797px"
                             height="100.931px"
                             viewBox="0 0 2430 2430"
-                            xmlnsV="https://vecta.io/nano"
                             xmlSpace="preserve"
                         >
                             <path
@@ -85,11 +88,9 @@ const MaintenancePage = () => {
                         </svg>
                         <div className="card-content">
                             <h1 className="card_head-title">
-                                Le site est en maintenance
+                                {content.fr.title}
                             </h1>
-                            <span>
-                                Veuillez réessayer dans quelques instants.
-                            </span>
+                            <span>{content.fr.message}</span>
                         </div>
                         <div style={{ marginTop: "15px" }}>
                             <a
@@ -97,21 +98,23 @@ const MaintenancePage = () => {
                                 title="Telegram"
                                 className="a-mamot"
                             >
-                                Suivez-nous sur facebook
+                                {content.fr.follow_us}
                             </a>
                         </div>
                         <hr />
                         <div className="content-span">
-                            <span>
-                                Une équipe de Valkyries hautement qualifiées a
-                                été dépêchée pour faire face à cette situation
-                                dans les meilleurs délais.
-                            </span>
+                            <span>{content.fr.team_message}</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="iframe_container"></div>
+            <audio
+                ref={audioRef}
+                id="audio"
+                src="https://www6.yggtorrent.lol/soon.mp3"
+                muted={false}
+            ></audio>
         </>
     );
 };

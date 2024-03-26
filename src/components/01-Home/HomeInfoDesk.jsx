@@ -1,8 +1,8 @@
 import React from "react";
 import HomeTitle from "./HomeTitle";
-// eslint-disable-next-line
-import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
+import BtnContact from "../Button/BtnContact";
+
 const HomeInfoDesk = ({
     welcome,
     presentation,
@@ -54,13 +54,7 @@ const HomeInfoDesk = ({
                 </article>
             </Fade>
             <Fade cascade damping={0.5} triggerOnce="false">
-                <Link
-                    tabIndex="0"
-                    to="contact"
-                    className="btn_a hire-me"
-                >
-                    {hireButtonText}
-                </Link>
+                <BtnContact hireButtonText={hireButtonText} />
             </Fade>
         </div>
     );

@@ -1,14 +1,11 @@
-/* .blog {
-    background: transparent;
-    border: 1px solid #fff;
-} */
-.btn-grad:hover {
-    background-position: right center;
-    /* change the direction of the change here */
-    color: #fff;
+.btn-grad:hover,
+a {
     text-decoration: none;
 }
-
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+}
 .blog #iframe_container iframe {
     position: fixed;
     top: 50%;
@@ -19,23 +16,16 @@
     height: 56.25vw;
     z-index: -1000;
 }
-
 .blog #iframe_container {
     position: relative;
-
     width: auto;
     height: 120%;
-    /* min-height: 100vh; */
-    left: -0;
+    left: 0;
     top: -110px;
-    /* top: -50%; */
-    /* z-index: 1000; */
 }
-
 .swal2-popup {
     padding: 15px !important;
 }
-
 .swal2-styled.swal2-confirm {
     background: linear-gradient(
         -193.33deg,
@@ -60,7 +50,6 @@
     white-space: nowrap;
     z-index: 1;
 }
-
 .swal2-styled.swal2-confirm:hover {
     box-shadow: 0 0.25em 0.9375em #302e4d59;
     transform: scale(1.05);
@@ -68,85 +57,59 @@
     border: none;
 }
 #blog .row {
-    /* position: absolute; */
     display: flex;
-    /* flex-flow: column wrap; */
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
-    /* border: 1px solid #000; */
-    margin: 0 auto;
+    margin: 0 auto 0 8em;
     width: 100%;
     min-width: calc(100vw - 16.89em);
 }
 .open #blog .row {
     min-width: calc(100vw);
 }
-.col {
-    /* width: 600px; */
-}
 span {
     text-shadow: 1px 1px 4px #000000b8;
 }
 
-.main {
-    width: 70%;
-    border-radius: 3px;
-    padding: 23px;
-    padding-top: 10%;
-    font-size: 1.2em;
-    margin: 0 auto;
-    background: #000;
+.a-mamot,
+.a-twitter {
+    padding: 5px;
+    font-weight: 700;
+    font-size: 1em;
 }
-
 .a-twitter {
     border: 0;
     border-radius: 0.25em;
     background: initial;
-    padding: 5px;
-    font-weight: bold;
     background: #00000091;
     color: #73c8f2;
-    font-size: 1em;
 }
-
 .a-mamot {
     border: 0;
     border-radius: 0.25em;
     background: initial;
-    padding: 5px;
-    font-weight: bold;
     background: #00000091;
-    color: #5cfeff;
-    font-size: 1em;
+    color: var(--skin-color);
 }
-
-a {
-    text-decoration: none;
-}
-
 img.logo {
     width: 350px;
     margin-top: 50px;
 }
-
 .card_head-title {
     font-size: 1.3em;
     margin-top: 30px;
 }
-
 .head-title {
     font-size: 2.5em;
     margin-bottom: 20px;
-    /* font-family: "Yanone Kaffeesatz", sans-serif; */
 }
-
 .content-span {
     margin-top: 45px;
     font-size: 0.85em;
+    max-width: 600px;
 }
-
 hr {
     border: 1px dotted #2e39430a;
 }

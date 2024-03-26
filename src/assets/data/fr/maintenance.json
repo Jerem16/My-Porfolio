@@ -1,0 +1,15 @@
+{
+    "fr": {
+      "title": "La section Blog est actuellement en construction.",
+      "message": "Veuillez réessayer dans quelques instants.",
+      "follow_us": "Suivez-nous sur Facebook",
+      "team_message": "Une équipe de Valkyries hautement qualifiées a été dépêchée pour faire face à cette situation dans les meilleurs délais.",
+      "maintenance_title": "Maintenance",
+      "confirm_button_text": "J'ai compris",
+      "maintenance_text": "La section Blog est actuellement en cours de construction. Nous travaillons activement pour la rendre disponible dès que possible. Merci de votre patience",
+      "maintenance_width": 600,
+      "maintenance_padding": "3em",
+      "maintenance_backdrop": "rgb(14 14 14 / 50%)"
+    }
+  }
+  

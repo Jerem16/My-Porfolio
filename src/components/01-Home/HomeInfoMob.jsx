@@ -1,8 +1,7 @@
 import React from "react";
 import HomeTitle from "./HomeTitle";
 import BtnContact from "../Button/BtnContact";
-// eslint-disable-next-line
-import { Link } from "react-router-dom";
+
 const HomeInfoMob = ({
     welcome,
     presentation,
@@ -45,7 +44,7 @@ const HomeInfoMob = ({
                     </div>
                 </div>
             </article>
-            <BtnContact />
+            <BtnContact hireButtonText={hireButtonText} />
         </div>
     );
 };

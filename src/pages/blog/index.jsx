@@ -6,11 +6,7 @@ import { setModalContact } from "../../redux/reducers/classesSlice";
 
 import { usePageTitle } from "../../utils/usePageTitle";
 
-// import SectionBlog from "./section_blog/SectionBlog";
-
-import LazyGhostComponent from "../portfolio/LazyGhostComponent";
 import LazyFooter from "../portfolio/LazyFooter";
-import Modal from "../../components/Modal/Modal";
 import SectionBlog from "./section_blog/SectionBlog";
 
 const LazyModalForm = lazy(() =>
