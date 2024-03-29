@@ -69,7 +69,7 @@ a {
 .open #blog .row {
     min-width: calc(87.4713020662512vw);
 }
-span {
+.maintenance span {
     text-shadow: 1px 1px 4px #000000b8;
 }
 
@@ -106,7 +106,7 @@ img.logo {
     margin-bottom: 20px;
 }
 .content-span {
-    margin-top: 45px;
+    margin-top: 15px;
     font-size: 0.85em;
     max-width: 600px;
 }

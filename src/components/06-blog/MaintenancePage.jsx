@@ -46,7 +46,7 @@ const MaintenancePage = () => {
 
     return (
         <>
-            <div className="row_center">
+            <div className="row_center maintenance">
                 <div className="row">
                     <div className="col">
                         <svg
@@ -96,7 +96,7 @@ const MaintenancePage = () => {
                             <a
                                 href="https://www.facebook.com/people/J%C3%A9r%C3%A9my-Lemaignent/pfbid022R8FyMFPKNyXAN7kGd1rhrSvJFQUSazxHELZk89KTmP5UorsVvZeoAVbEzxBEeNsl/"
                                 title="Telegram"
-                                className="a-mamot"
+                                className="btn"
                             >
                                 {content.fr.follow_us}
                             </a>
