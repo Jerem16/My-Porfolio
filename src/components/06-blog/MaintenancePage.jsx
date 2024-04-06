@@ -3,15 +3,14 @@ import Swal from "sweetalert2";
 import "../../assets/styles/css/blog.css";
 import content from "../../assets/data/fr/maintenance.json";
 import MyLogo from "../99-Svg_Icon/MyLogo";
+import SoonMp3 from "../../assets/music/music.mp3";
 
 const MaintenancePage = () => {
     const audioRef = useRef(null);
     const numRef = useRef(null);
     useEffect(() => {
-        if (true) {
-            document.getElementById("iframe_container").innerHTML =
-                '<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/B0TjyJIIWLA?autoplay=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=0&color=white&mute=1&playlist=8Z1eMy2FoX4"></iframe>';
-        }
+        document.getElementById("iframe_container").innerHTML =
+            '<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/B0TjyJIIWLA?autoplay=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=0&color=white&mute=1&playlist=8Z1eMy2FoX4"></iframe>';
 
         Swal.fire({
             title: content.fr.maintenance_title,
@@ -22,17 +21,21 @@ const MaintenancePage = () => {
             backdrop: "rgb(14 14 14 / 50%)",
         });
         const clickHandler = () => {
-            if (true) {
-                numRef.current = 0;
-                audioRef.current.volume = 0.3;
-                if (audioRef.current.muted === true) {
+            numRef.current = 0;
+            audioRef.current.volume = 0.3;
+            switch (true) {
+                case audioRef.current.muted === true:
                     audioRef.current.play();
                     audioRef.current.muted = !audioRef.current.muted;
-                } else if (numRef.current === 0) {
+                    break;
+                case numRef.current === 0:
                     audioRef.current.pause();
                     numRef.current = 2;
                     audioRef.current.muted = true;
-                }
+                    break;
+                default:
+                    // Gérer tout autre cas ici si nécessaire
+                    break;
             }
         };
 
@@ -61,7 +64,7 @@ const MaintenancePage = () => {
                         <div style={{ marginTop: "15px" }}>
                             <a
                                 href="https://www.facebook.com/people/J%C3%A9r%C3%A9my-Lemaignent/pfbid022R8FyMFPKNyXAN7kGd1rhrSvJFQUSazxHELZk89KTmP5UorsVvZeoAVbEzxBEeNsl/"
-                                title="Telegram"
+                                title="Suivez-nous sur Facebook"
                                 className="btn"
                             >
                                 {content.fr.follow_us}
@@ -74,12 +77,9 @@ const MaintenancePage = () => {
                 </div>
             </div>
             <div id="iframe_container"></div>
-            <audio
-                ref={audioRef}
-                id="audio"
-                src="https://www6.yggtorrent.lol/soon.mp3"
-                muted={false}
-            ></audio>
+            <audio ref={audioRef} id="audio" src={SoonMp3} muted={false}>
+                <track kind="captions" src="" />
+            </audio>
         </>
     );
 };
