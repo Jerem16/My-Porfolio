@@ -35,7 +35,6 @@ const MaintenancePage = () => {
                     audioRef.current.muted = true;
                     break;
                 default:
-                    // Gérer tout autre cas ici si nécessaire
                     break;
             }
         };
@@ -78,14 +77,7 @@ const MaintenancePage = () => {
                 </div>
             </div>
             <div id="iframe_container"></div>
-            <audio
-                ref={audioRef}
-                id="audio"
-                // src={audioRef.current.src}
-                muted={false}
-            >
-                {/* <track kind="captions" src={SoonMp3} /> */}
-            </audio>
+            <audio ref={audioRef} id="audio" muted={false}></audio>
         </>
     );
 };

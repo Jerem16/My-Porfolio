@@ -5,11 +5,8 @@ import { Fade } from "react-awesome-reveal";
 function SectionContact() {
     return (
         <section className="blog section" id="blog">
-            <Fade direction="right" triggerOnce={true}>
-                <LayoutBlog
-                // setIsSuccessModalOpen={setIsSuccessModalOpen}
-                // isSuccessModalOpen={isSuccessModalOpen}
-                />
+            <Fade direction="right" triggerOnce={true} className="blogSection">
+                <LayoutBlog />
             </Fade>
         </section>
     );
