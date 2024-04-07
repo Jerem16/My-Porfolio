@@ -23,6 +23,7 @@ const MaintenancePage = () => {
         const clickHandler = () => {
             numRef.current = 0;
             audioRef.current.volume = 0.3;
+            audioRef.current.src = SoonMp3;
             switch (true) {
                 case audioRef.current.muted === true:
                     audioRef.current.play();
@@ -77,8 +78,13 @@ const MaintenancePage = () => {
                 </div>
             </div>
             <div id="iframe_container"></div>
-            <audio ref={audioRef} id="audio" src={SoonMp3} muted={false}>
-                <track kind="captions" src="" />
+            <audio
+                ref={audioRef}
+                id="audio"
+                // src={audioRef.current.src}
+                muted={false}
+            >
+                {/* <track kind="captions" src={SoonMp3} /> */}
             </audio>
         </>
     );
