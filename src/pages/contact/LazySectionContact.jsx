@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-// import Loader from "../../components/Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 
 const SectionContactContent = lazy(() =>
     import("./section_contact/SectionContact")
