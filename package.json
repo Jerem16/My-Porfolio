@@ -20,7 +20,6 @@
         "react-tsparticles": "^2.12.2",
         "redux": "^4.2.1",
         "sass": "^1.63.6",
-        "sweetalert2": "^11.10.7",
         "tsparticles": "^2.12.0"
     },
     "scripts": {

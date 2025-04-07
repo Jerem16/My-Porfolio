@@ -1,5 +1,4 @@
 import React from "react";
-import profile620 from "../../assets/img/profile-620.webp";
 
 const MobileImage = () => (
     <div className="home-img">
@@ -8,7 +7,7 @@ const MobileImage = () => (
             <img
                 className="mobile"
                 alt="profile_image"
-                src={profile620}
+                src="/profile-620.webp"
                 width={140}
                 height={200}
             />

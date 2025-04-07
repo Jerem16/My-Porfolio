@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Swal from "sweetalert2";
 import "../../assets/styles/css/blog.css";
 import content from "../../assets/data/fr/maintenance.json";
 import MyLogo from "../99-Svg_Icon/MyLogo";
@@ -8,18 +7,11 @@ import SoonMp3 from "../../assets/music/music.mp3";
 const MaintenancePage = () => {
     const audioRef = useRef(null);
     const numRef = useRef(null);
+
     useEffect(() => {
         document.getElementById("iframe_container").innerHTML =
             '<iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/B0TjyJIIWLA?autoplay=1&controls=0&disablekb=1&loop=1&modestbranding=1&playsinline=0&color=white&mute=1&playlist=8Z1eMy2FoX4"></iframe>';
 
-        Swal.fire({
-            title: content.fr.maintenance_title,
-            confirmButtonText: content.fr.confirm_button_text,
-            text: content.fr.maintenance_text,
-            width: 600,
-            padding: "3em",
-            backdrop: "rgb(14 14 14 / 50%)",
-        });
         const clickHandler = () => {
             numRef.current = 0;
             audioRef.current.volume = 0.3;
@@ -27,7 +19,7 @@ const MaintenancePage = () => {
             switch (true) {
                 case audioRef.current.muted === true:
                     audioRef.current.play();
-                    audioRef.current.muted = !audioRef.current.muted;
+                    audioRef.current.muted = false;
                     break;
                 case numRef.current === 0:
                     audioRef.current.pause();
@@ -54,7 +46,6 @@ const MaintenancePage = () => {
                 <div className="row">
                     <div className="col">
                         <MyLogo />
-
                         <div className="card-content">
                             <h1 className="card_head-title">
                                 {content.fr.title}

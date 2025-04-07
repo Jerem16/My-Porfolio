@@ -27,13 +27,6 @@ const ImgComponent = () => {
         let newImageUrl = "";
         let newMediaLink = "";
         switch (true) {
-            case screenWidth >= 300 && screenWidth <= 620:
-                import("./assets/img/profile-620.webp").then((module) => {
-                    newImageUrl = module.default;
-                    newMediaLink = "(min-width:300px) and (max-width:620px)";
-                    applyStyles(newImageUrl, newMediaLink, module.default);
-                });
-                break;
             case screenWidth >= 621 && screenWidth <= 1444:
                 import("./assets/img/profile-1440.webp").then((module) => {
                     newImageUrl = module.default;

@@ -1,20 +1,21 @@
-import React, { useCallback } from "react";
-import HeaderDataLoader from "../HeaderDataLoader";
+import React, { useCallback, lazy, Suspense } from "react";
 import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../../redux/reducers/classesSlice";
 import dataBase from "../../../assets/data/header.json";
-import HeaderDeskHome from "./HeaderDeskHome";
-import HeaderMobHome from "./HeaderMobHome";
 import { useWindowWidth } from "../../../utils/hooks";
 
+// ⬇️ Lazy imports
+const HeaderDataLoader = lazy(() => import("../HeaderDataLoader"));
+const HeaderDeskHome = lazy(() => import("./HeaderDeskHome"));
+const HeaderMobHome = lazy(() => import("./HeaderMobHome"));
 
-const useIsMobile = (windowWidth) => {
-    return windowWidth <= 1024;
-};
+// Exemple de fallback (tu peux le remplacer par un spinner ou un skeleton)
+const Loading = () => <div>Chargement du header...</div>;
+
+const useIsMobile = (windowWidth) => windowWidth <= 1024;
 
 const useDelayedDispatch = () => {
     const dispatch = useDispatch();
-
     return useCallback(() => {
         setTimeout(() => {
             dispatch(toggleClasses("open"));
@@ -29,19 +30,21 @@ const Header = () => {
     const data = dataBase;
 
     return (
-        <HeaderDataLoader>
-            {(headerData) =>
-                isMobile ? (
-                    <HeaderMobHome
-                        data={data}
-                        headerData={headerData}
-                        handleClick={delayedDispatch}
-                    />
-                ) : (
-                    <HeaderDeskHome data={data} headerData={headerData} />
-                )
-            }
-        </HeaderDataLoader>
+        <Suspense fallback={<Loading />}>
+            <HeaderDataLoader>
+                {(headerData) =>
+                    isMobile ? (
+                        <HeaderMobHome
+                            data={data}
+                            headerData={headerData}
+                            handleClick={delayedDispatch}
+                        />
+                    ) : (
+                        <HeaderDeskHome data={data} headerData={headerData} />
+                    )
+                }
+            </HeaderDataLoader>
+        </Suspense>
     );
 };
 

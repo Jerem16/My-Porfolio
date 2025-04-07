@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import MainPortfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
-import NavToggler from "./components/00-Header/NavToggler";
+import LazyNavToggler from "./components/00-Header/LazyNavToggler";
 function App() {
     const currentTheme = useSelector((state) => state.theme.currentTheme);
     const lightTheme = useSelector((state) => state.theme.lightTheme);
@@ -23,7 +23,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className={`${navToggler}`} id="top" style={themeClasses}>
-                <NavToggler />
+                <LazyNavToggler />
                 <Routes>
                     <Route path="/" element={<MainPortfolio />} />
                     <Route path="/contact" element={<Contact />} />

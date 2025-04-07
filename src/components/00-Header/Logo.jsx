@@ -24,4 +24,4 @@ const Logo = ({ data, handleClick }) => {
     );
 };
 
-export default Logo;
+export default React.memo(Logo);

@@ -1,20 +1,25 @@
-import React, { useCallback } from "react";
-import HeaderDataLoader from "../HeaderDataLoader";
+import React, { useCallback, lazy, Suspense } from "react";
 import { useDispatch } from "react-redux";
 import { toggleClasses } from "../../../redux/reducers/classesSlice";
 import dataBase from "../../../assets/data/header.json";
-import HeaderDeskContact from "./HeaderDeskContact";
-import HeaderMobContact from "./HeaderMobContact";
 import { useWindowWidth } from "../../../utils/hooks";
 
+// ✅ Lazy imports (sans doublons)
+const HeaderDeskContact = lazy(() => import("./HeaderDeskContact"));
+const HeaderMobContact = lazy(() => import("./HeaderMobContact"));
+const HeaderDataLoader = lazy(() => import("../HeaderDataLoader"));
 
+// ✅ Hook utilitaire
 const useIsMobile = (windowWidth) => {
     return windowWidth <= 1024;
 };
 
+// ✅ Fallback de chargement
+const Loading = () => <div>Chargement du header...</div>;
+
+// ✅ Hook dispatch avec délai
 const useDelayedDispatch = () => {
     const dispatch = useDispatch();
-
     return useCallback(() => {
         setTimeout(() => {
             dispatch(toggleClasses("open"));
@@ -22,6 +27,7 @@ const useDelayedDispatch = () => {
     }, [dispatch]);
 };
 
+// ✅ Composant principal
 const ContactHeader = () => {
     const windowWidth = useWindowWidth();
     const isMobile = useIsMobile(windowWidth);
@@ -29,19 +35,24 @@ const ContactHeader = () => {
     const data = dataBase;
 
     return (
-        <HeaderDataLoader>
-            {(headerData) =>
-                isMobile ? (
-                    <HeaderMobContact
-                        data={data}
-                        headerData={headerData}
-                        handleClick={delayedDispatch}
-                    />
-                ) : (
-                    <HeaderDeskContact data={data} headerData={headerData} />
-                )
-            }
-        </HeaderDataLoader>
+        <Suspense fallback={<Loading />}>
+            <HeaderDataLoader>
+                {(headerData) =>
+                    isMobile ? (
+                        <HeaderMobContact
+                            data={data}
+                            headerData={headerData}
+                            handleClick={delayedDispatch}
+                        />
+                    ) : (
+                        <HeaderDeskContact
+                            data={data}
+                            headerData={headerData}
+                        />
+                    )
+                }
+            </HeaderDataLoader>
+        </Suspense>
     );
 };
 

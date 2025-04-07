@@ -1,19 +1,19 @@
 import React from "react";
-import ImgComponent from "./Img";
 import ReactDOM from "react-dom/client";
+import ImgComponent from "./Img";
 import App from "./App";
-
-import { Provider } from "react-redux";
-import store from "./redux/store";
+import LazyReduxProvider from "./LazyReduxProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
     <>
         <ImgComponent />
+
         <React.StrictMode>
-            <Provider store={store}>
+            <LazyReduxProvider>
                 <App />
-            </Provider>
+            </LazyReduxProvider>
         </React.StrictMode>
     </>
 );
