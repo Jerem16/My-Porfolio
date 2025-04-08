@@ -4,6 +4,7 @@ import SectionHome from "./section_home/SectionHome";
 import Header from "../../components/00-Header/NavHome/00-Header";
 
 import { usePageTitle } from "../../utils/usePageTitle";
+import SEO from "../../components/SEO";
 
 import SectionAbout from "./section_about/SectionAbout";
 import SectionServices from "./section_services/SectionServices";
@@ -38,6 +39,12 @@ function MainPortfolio() {
 
     return (
         <>
+            <SEO
+                title="Accueil - Jérémy Lemaignent"
+                description="Jérémy Lemaignent, Développeur front-end certifié, créateur de sites interactifs et réactifs. Transformez vos idées en expériences web exceptionnelles."
+                canonical="https://jeremy.lemaignent.com/"
+                url="https://jeremy.lemaignent.com/"
+            />
             <Header />
             <main className="main-content">
                 <SectionHome />

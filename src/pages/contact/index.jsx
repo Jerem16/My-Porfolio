@@ -11,6 +11,7 @@ import SectionContact from "./section_contact/SectionContact";
 import LazyGhostComponent from "../portfolio/LazyGhostComponent";
 import LazyFooter from "../portfolio/LazyFooter";
 import Modal from "../../components/Modal/Modal";
+import SEO from "../../components/SEO";
 
 const LazyModalForm = lazy(() =>
     import("../../components/Modal/ModalForm/ModalForm")
@@ -27,6 +28,13 @@ function MainPortfolio() {
 
     return (
         <>
+            <SEO
+                title="Contact - Jérémy Lemaignent"
+                description="Une question, un projet web ? Contactez-moi dès aujourd’hui pour échanger sur vos besoins en développement front-end."
+                canonical="https://jeremy.lemaignent.com/contact"
+                url="https://jeremy.lemaignent.com/contact"
+            />
+
             <ContactHeader />
             <main className="main-content" id="home">
                 <SectionContact />
