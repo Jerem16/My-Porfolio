@@ -1,19 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ImgComponent from "./Img";
 import App from "./App";
 import LazyReduxProvider from "./LazyReduxProvider";
-
+import { HelmetProvider } from "react-helmet-async";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-    <>
-        <ImgComponent />
-
-        <React.StrictMode>
+    <React.StrictMode>
+        <HelmetProvider>
             <LazyReduxProvider>
                 <App />
             </LazyReduxProvider>
-        </React.StrictMode>
-    </>
+        </HelmetProvider>
+    </React.StrictMode>
 );

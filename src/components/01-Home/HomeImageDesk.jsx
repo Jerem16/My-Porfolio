@@ -1,7 +1,6 @@
 import React from "react";
 import DesktopImage from "./DesktopImage";
-import profile1440 from "../../assets/img/profile-1440.webp";
-import { useWindowWidth } from "../../utils/hooks"; // Assurez-vous de spécifier le bon chemin
+import { useWindowWidth } from "../../utils/hooks"; // Chemin à ajuster si besoin
 
 function HomeImageDesk() {
     const windowWidth = useWindowWidth();
@@ -11,14 +10,17 @@ function HomeImageDesk() {
         <div className="home-img">
             <div className="leftNB"></div>
             <div className="centerNB">
-                {isDesktop && <DesktopImage />}
-                {!isDesktop && (
+                {isDesktop ? (
+                    <DesktopImage />
+                ) : (
                     <img
                         className="mobile"
                         alt="profile_image"
-                        src={profile1440}
+                        src="/profile-1440.webp"
                         width={248}
                         height={353}
+                        loading="lazy"
+                        decoding="async"
                     />
                 )}
             </div>
