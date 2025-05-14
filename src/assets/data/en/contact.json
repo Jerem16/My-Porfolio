@@ -1,8 +1,12 @@
 {
     "contact": {
         "section-title": "Contact Me",
-        "contact-title": "Have You Any Questions ?",
-        "contact-sub-title": "I am at your service",
+        "contact-prez": "An idea, a project ? Let’s talk !",
+        "contact-sub-prez": "Do you have any questions or need help with front-end development ?",
+        "contact-prez-1": "Get in touch with me today.",
+        "contact-prez-2": "Let’s discuss your project, get personalized advice, and start a tailored collaboration.",
+        "contact-title": "Have any questions ?",
+        "contact-sub-title": "I’m at your service",
         "contactInfo": [
             {
                 "title": "Call Us On"

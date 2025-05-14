@@ -4,19 +4,20 @@ const TopContact = ({ data }) => {
     return (
         <div className="row_top">
             <div className="section-title">
-                <h2>
-                    {
-                        <Fade
-                            cascade
-                            triggerOnce="true"
-                            damping={0.05}
-                            delay={350}
-                        >
-                            {data.contact["section-title"]}
-                        </Fade>
-                    }
-                </h2>
+                <h1>
+                    <Fade cascade triggerOnce={true} damping={0.05} delay={350}>
+                        {data.contact["section-title"]}
+                    </Fade>
+                </h1>
+                <div className="contact-prez">
+                    <p className="prez1">{data.contact["contact-prez"]}</p>
+                    <p>{data.contact["contact-sub-prez"]}</p>
+                    <br />
+                    <p className="prez1">{data.contact["contact-prez-1"]}</p>
+                    <p>{data.contact["contact-prez-2"]}</p>
+                </div>
             </div>
+
             <Fade direction="up" triggerOnce="true">
                 <div className="contact-content ">
                     <h3 className="contact-title">

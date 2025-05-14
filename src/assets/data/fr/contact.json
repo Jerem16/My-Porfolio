@@ -1,6 +1,10 @@
 {
     "contact": {
         "section-title": "Me Contacter",
+        "contact-prez": "Une idée, un projet ? Parlons-en !",
+        "contact-sub-prez": "Vous avez des questions ou des besoins en développement front-end ?",
+        "contact-prez-1": "Contactez-moi dès aujourd’hui.",
+        "contact-prez-2": "Discutons ensemble autour de votre projet, bénéficiez de conseils personnalisés et commençons une collaboration sur mesure.",
         "contact-title": "Vous avez des questions ?",
         "contact-sub-title": "Je suis à votre service",
         "contactInfo": [

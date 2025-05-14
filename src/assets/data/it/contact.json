@@ -1,6 +1,10 @@
 {
     "contact": {
         "section-title": "Contattami",
+        "contact-prez": "Un'idea, un progetto ? Parliamone !",
+        "contact-sub-prez": "Hai domande o necessiti supporto nello sviluppo front-end ?",
+        "contact-prez-1": "Contattami oggi stesso.",
+        "contact-prez-2": "Parliamo del tuo progetto, ricevi consigli personalizzati e avviamo una collaborazione su misura.",
         "contact-title": "Hai domande?",
         "contact-sub-title": "Sono a tua disposizione",
         "contactInfo": [
