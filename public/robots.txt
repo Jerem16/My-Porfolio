@@ -1,5 +1,18 @@
 User-agent: *
-Disallow:
-Allow: /
+Disallow: /amplify/
+Disallow: /src/
+Disallow: /utils/
+Disallow: /app/fonts/
+Disallow: /public/css/
+
+# Bloquer uniquement les pages sans contenu
+Disallow: /blog
+Disallow: /reservation
+Disallow: /mentions-legales
+Disallow: /informations-legales
+
+# Optionnel : blocage d'Ã©tats transitoires (chargement, erreur)
+Disallow: /*/loading
+Disallow: /*/error
 
 Sitemap: https://jeremy.lemaignent.com/sitemap.xml
